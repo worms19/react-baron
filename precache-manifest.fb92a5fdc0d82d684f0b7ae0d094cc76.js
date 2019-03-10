@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/react-baron/static/js/runtime~main.db6390a0.js"
   },
   {
-    "revision": "653bcc49003f69393594",
-    "url": "/react-baron/static/js/main.653bcc49.chunk.js"
+    "revision": "3cb9f7fcd8b2fb3e70ae",
+    "url": "/react-baron/static/js/main.3cb9f7fc.chunk.js"
   },
   {
     "revision": "1ee74d09f133790a71dd",
     "url": "/react-baron/static/js/2.1ee74d09.chunk.js"
   },
   {
-    "revision": "653bcc49003f69393594",
+    "revision": "3cb9f7fcd8b2fb3e70ae",
     "url": "/react-baron/static/css/main.2937f810.chunk.css"
   },
   {
-    "revision": "aa95b9f0cf29e1f2526b34b47ecfc2fd",
+    "revision": "d1fcebe9d07932d8266d287a7d385df6",
     "url": "/react-baron/index.html"
   }
 ];
