@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/react-baron/static/css/main.2937f810.chunk.css"
   },
   {
-    "revision": "a6fc04fea8b3bddfbeb5d0c0a3005058",
+    "revision": "915d893fd3d36eb8a39f420ffd86fd5a",
     "url": "/react-baron/index.html"
   }
 ];
