@@ -105,6 +105,9 @@ img {
     margin-bottom: 15px !important;
 }
 
+.mb-05 {
+    margin-bottom: 5px !important;
+}
 .mb-30 {
     margin-bottom: 30px !important;
 }
@@ -448,9 +451,9 @@ img {
 
 .header-area {
     position: absolute;
-    z-index: 1000;
+    z-index: 100;
     width: 100%;
-    top: 20px;
+    top: 0px;
     left: 0;
     z-index: 1000;
     .oneMusic-main-menu {
@@ -674,6 +677,8 @@ img {
     .slide-img {
         position: absolute;
         width: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
         height: 100%;
         z-index: -10;
         left: 0;
@@ -1809,7 +1814,7 @@ img {
 }
 
 .has-bg-img {
-    position: relative;
+    position: fixed;
     z-index: 1;
     .contact-form-area {
         .form-control {

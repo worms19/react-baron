@@ -16,6 +16,13 @@
   padding: 0; }
 
 body {
+  background-image: url(img/bg-img/a13.jpg) !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    background-color: #000000 !important;
+    background-size: cover !important;
+ 
   font-family: "Archivo Narrow", sans-serif;
   font-size: 14px; }
 
@@ -84,6 +91,9 @@ img {
 
 .mb-50 {
   margin-bottom: 50px !important; }
+
+.mb-5 {
+  margin-bottom: 5px !important; }
 
 .mb-70 {
   margin-bottom: 70px !important; }
@@ -665,7 +675,7 @@ img {
     text-align: center;
     position: relative;
     z-index: 1;
-    padding: 30px 15px;
+    padding: 5px 5px;
     background-color: #000;
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms; }
@@ -676,7 +686,7 @@ img {
       transition-duration: 500ms; }
     .single-event-area .event-text .event-meta-data {
       position: relative;
-      margin-bottom: 30px; }
+       }
       .single-event-area .event-text .event-meta-data a {
         -webkit-transition-duration: 500ms;
         transition-duration: 500ms;
@@ -1682,7 +1692,27 @@ img {
 	display: block;
 }
 
+.Background{
+  background-color: #3e3f3fb2;
+  margin-left: 20px;
+}
 
+
+.gallery-photo{
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.col-centered{
+  float: none;
+  margin: 0 auto;
+}
+
+.youtube-centered{
+width: max-content;
+margin: 0 auto;
+margin-bottom : 25px;
+}
 
 /* ====== The End ====== */
 

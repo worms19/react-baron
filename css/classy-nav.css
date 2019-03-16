@@ -13,7 +13,10 @@
   padding: 0; }
 
 body {
-  font-family: "Roboto", sans-serif; }
+  
+  font-family: "Roboto", sans-serif;
+  
+ }
 
 ul,
 ol {
@@ -26,10 +29,20 @@ img {
   height: 100000PX;
   max-width: 100%; }
 
+
+
+
 .bg-img {
+  
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat; }
+
+  .bg-imgEvent {
+    height: 100vh;
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; }
 
 .bg-transparent {
   background-color: transparent !important; }
