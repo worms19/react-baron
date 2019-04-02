@@ -13,7 +13,7 @@ import Events from './Events';
 import PreLoader from './PreLoader';
 import PageAccueil from './PageAccueil';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+import FeedbackForm from './FeedbackForm';
 
 
 
@@ -32,10 +32,13 @@ class App extends Component {
 			 
 
     return (
+			
 <Router >
 
 	<div className="baron" >
 
+
+	
 
 		
 		<PreLoader />
@@ -45,6 +48,7 @@ class App extends Component {
 		<Route path="/Mp3" component={Mp3} />
 		<Route path="/GalleryPhoto" component={Gallery2} />	
 		<Route path="/Events" component={Events} />	
+		<Route path="/Contact" component={Contact}/>
 	
 		
 {/* <PageAccueil /> */}

@@ -6,9 +6,6 @@
  import YouTube from 'react-youtube';
  
 
- const divStyle={
-    backgroundImage: 'url(img/bg-img/a13.jpg)',
-         };
 
       
         const opts = {
@@ -34,7 +31,7 @@
     />
   </div>   
   <div className="youtube-centered">
-    <YouTube
+  <YouTube
     videoId="SDPEbt0uknk"
     />
   </div>

@@ -2,28 +2,27 @@
     
        
  import React from 'react'
+ import EncartBlanc from './EncartBlanc';
 
+ 
+ 
 
-
- const Contact = ({image}) => (
+ const Contact = () => (
   
     
     // {/* <!-- ##### Contact Area Start ##### --> */}
-				<section className="contact-area section-padding-100 bg-img bg-overlay bg-fixed has-bg-img" style={ image }>
+				
+
+	
 					<div className="container ">
-					<div className="row ">
-									<div className="col-12 ">
-											<div className="section-heading white ">
-													<p>See what’s new</p>
-													<h2>Get In Touch</h2>
-											</div>
-									</div>
-							</div>
-			
-							<div className="row">
+					
+					<EncartBlanc text1 = {'See What NeWs'}
+             			text2 = {'Get in touch'} />
+
+							<div className="background-grey"  >
 									<div className="col-12">
 											{/* <!-- Contact Form Area --> */}
-											<div className="contact-form-area">
+											<div className="contact-form-area" >
 													<form action="#" method="post">
 															<div className="row">
 																	<div className="col-md-6 col-lg-4">
@@ -46,7 +45,7 @@
 																					<textarea name="message" className="form-control" id="message" cols="30" rows="10" placeholder="Message"></textarea>
 																			</div>
 																	</div>
-																	<div className="col-12 text-center">
+																	<div className="col-12 text-center mb" >
 																			<button className="btn oneMusic-btn mt-30" type="submit">Send <i className="fa fa-angle-double-right"></i></button>
 																	</div>
 															</div>
@@ -54,8 +53,46 @@
 											</div>
 									</div>
 							</div>
+			<section className="breadcumb-area2"  >
+    			<div className="bradcumbContent ">
+        			<h2>PressKit</h2>
+   				</div>
+			</section>	
+
+				{/* <!-- Single Event Area --> */}
+				<div className="col-12 col-md-6 col-lg-6">
+							<div className="single-event-area mb-5">
+							
+							<div className="event-text">
+                            <h4>VERSION FRANCAISE </h4>
+                            <div className="event-meta-data">
+                                <a href="#" className="event-place">Bio</a>
+                                <a href="#" className="event-date">Presse</a>
+                            </div>
+                            <a target="_blank" rel="noopener noreferrer" href="/dummy/dossier-presse-baron-crane.pdf" className="btn see-more-btn">See Event</a>
+
+                        </div>
+                    </div>
+                </div>
+
+					{/* <!-- Single Event Area --> */}
+					<div className="col-12 col-md-6 col-lg-6">
+							<div className="single-event-area mb-5">
+							
+							<div className="event-text">
+                            <h4>ENGLISH VERSION </h4>
+                            <div className="event-meta-data">
+                                <a href="#" className="event-place">Bio</a>
+                                <a href="#" className="event-date">Reviews</a>
+                            </div>
+                            <a target="_blank" rel="noopener noreferrer" href="/dummy/press-kit-baron-crane.pdf" className="btn see-more-btn">See Event</a>
+
+                        </div>
+                    </div>
+                </div>
+
 					</div>
-            </section>             
+                    
              )
  
  export default Contact

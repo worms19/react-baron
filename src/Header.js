@@ -47,7 +47,7 @@
                                     
                                     <li><Link  to="/GalleryPhoto" >PHOTOS</Link></li>
                                     <li><Link  to="/Events" >TOUR</Link></li>
-                                   
+                                    <li><Link  to="/Contact" >Contact</Link></li>
                                     <li><a target="_blank" rel="noopener noreferrer" href="https://baroncrane.bigcartel.com/" className="btn see-more-btn">SHOP</a></li>
                                     <li><a target="_blank" rel="noopener noreferrer" href="https://baroncrane.bandcamp.com/" className="btn see-more-btn">MUSIC</a></li>
                                     
