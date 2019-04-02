@@ -5,14 +5,14 @@
 
 
 
- const EncartBlanc = ({text1,text2}) => (
+ const EncartBlanc = () => (
 
 
 // {/* <!-- ##### Breadcumb Area Start ##### --> */}
-<section className="breadcumb-area"  >
+<section className="breadcumb-area mb-100"  >
     <div className="bradcumbContent ">
-        <p>{text1}</p>
-        <h2>{text2}</h2>
+        <p>See what’s new</p>
+        <h2>Latest Albums</h2>
     </div>
 </section>
 // {/* <!-- ##### Breadcumb Area End ##### --> */}

@@ -16,6 +16,11 @@
   padding: 0; }
 
 body {
+  background-image: url(img/bg-img/a13.jpg) !important;
+  background-position: center center !important;
+  background-repeat: repeat-y !important;
+  background-attachment: fixed !important;
+  background-color: #000000 !important;
   font-family: "Archivo Narrow", sans-serif;
   font-size: 14px; }
 
@@ -257,6 +262,13 @@ img {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat; }
+
+  .bg-accueuil {
+    height: 100vh; 
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+  
 
 .bg-white {
   background-color: #ffffff !important; }
@@ -665,7 +677,7 @@ img {
     text-align: center;
     position: relative;
     z-index: 1;
-    padding: 30px 15px;
+    padding: 5px 5px;
     background-color: #000;
     -webkit-transition-duration: 500ms;
     transition-duration: 500ms; }

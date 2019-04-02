@@ -40,57 +40,19 @@
                             </div>
     
                             {/* <!-- Nav Start --> */}
-                            <div className="classynav">
+                            <div className="classynav align-items-center">
                                 <ul>
-                                    <li><Link onClick={this.forceUpdateHandler} exact to="/react-baron">Home</Link></li>
-                                    <li><Link to="/Mp3">Mp3</Link></li>
+                                    <li><Link exact to="/react-baron">HOME</Link></li>
+                                    <li><Link to="/Mp3">VIDEOS</Link></li>
                                     
-                                    <li><Link  to="/GalleryPhoto" >GalleryPhoto</Link></li>
-                                    <li><Link  to="/Events" >Events</Link></li>
-                                    <li><a href="#">Pages</a>
-                                        <ul className="dropdown">
-                                            <li><a href="#">Home</a></li>
-                                            <li><a href="#">Albums</a></li>
-                                            <li><a href="#">Events</a></li>
-                                            <li><a href="#">News</a></li>
-                                            <li><a href="#">Contact</a></li>
-                                            <li><a href="#">Elements</a></li>
-                                            <li><a href="#">Login</a></li>
-                                            <li><a href="#">Dropdown</a>
-                                                <ul className="dropdown">
-                                                    <li><a href="#">Even Dropdown</a></li>
-                                                    <li><a href="#">Even Dropdown</a></li>
-                                                    <li><a href="#">Even Dropdown</a></li>
-                                                    <li><a href="#">Even Dropdown</a>
-                                                        <ul className="dropdown">
-                                                            <li><a href="#">Deeply Dropdown</a></li>
-                                                            <li><a href="#">Deeply Dropdown</a></li>
-                                                            <li><a href="#">Deeply Dropdown</a></li>
-                                                            <li><a href="#">Deeply Dropdown</a></li>
-                                                            <li><a href="#">Deeply Dropdown</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="#">Even Dropdown</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li><a href="">Events</a></li>
+                                    <li><Link  to="/GalleryPhoto" >PHOTOS</Link></li>
+                                    <li><Link  to="/Events" >TOUR</Link></li>
+                                   
+                                    <li><a target="_blank" rel="noopener noreferrer" href="https://baroncrane.bigcartel.com/" className="btn see-more-btn">SHOP</a></li>
+                                    <li><a target="_blank" rel="noopener noreferrer" href="https://baroncrane.bandcamp.com/" className="btn see-more-btn">MUSIC</a></li>
                                     
                                     </ul>
     
-                                {/* <!-- Login/Register & Cart Button --> */}
-                                <div className="login-register-cart-button d-flex align-items-center">
-                                    {/* <!-- Login/Register --> */}
-                                    <div className="login-register-btn mr-50">
-                                        <a href="" id="loginBtn">Login / Register</a>
-                                    </div>
-    
-                                    {/* <!-- Cart Button --> */}
-                                    <div className="cart-btn">
-                                        <p><span className="icon-shopping-cart"></span> <span className="quantity">1</span></p>
-                                    </div>
-                                </div>
                             </div>
                             {/* <!-- Nav End --> */}
     

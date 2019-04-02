@@ -10,7 +10,7 @@
          };
 
  const PageAccueil = () => (
-     
+
 
 <section className="hero-area">
         <div className="hero-slides owl-carousel">

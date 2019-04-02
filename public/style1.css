@@ -38,7 +38,7 @@ audio:not([controls]) {
 
 /* line 97, sass/libs/_normalize.scss */
 html {
-  background: #fff;
+  /* background: #fff; */
   color: #000;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%; }
@@ -53,6 +53,7 @@ textarea {
 
 /* line 119, sass/libs/_normalize.scss */
 body {
+  
   margin: 0; }
 
 /* line 132, sass/libs/_normalize.scss */
@@ -2591,6 +2592,7 @@ body {
 
 /* line 50, sass/pages/_gallery.scss */
 .filterable-items .filterable-item {
+  
   -webkit-transition-property: -webkit-transform, opacity;
           transition-property: transform, opacity;
   -webkit-transition-duration: .3s;

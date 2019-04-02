@@ -28,6 +28,11 @@
 }
 
 body {
+    	background-image: url(img/bg-img/a13.jpg) !important;
+    background-position: center center !important;
+    background-repeat: repeat-y !important;
+    background-attachment: fixed !important;
+    background-color: #000000 !important;
     font-family: $fonts;
     font-size: 14px;
 }
@@ -327,6 +332,14 @@ img {
 }
 
 /* :: 3.6.0 Miscellaneous */
+
+
+.bg-accueil {
+    height: 100vh; 
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat; }
+
 
 .bg-img {
     background-position: center center;

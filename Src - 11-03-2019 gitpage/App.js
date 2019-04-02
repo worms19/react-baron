@@ -5,8 +5,6 @@ import Header from './Header'
 import GalleryPhoto from './GalleryPhoto'
 import Contact from './Contact'
 import Mp3 from './Mp3'
-import Mp4 from './Mp4'
-import Gallery2 from './Gallery2'
 import AfficheCd from './AfficheCd'
 import EncartBlanc from './EncartBlanc';
 import Events from './Events';
@@ -34,22 +32,23 @@ class App extends Component {
     return (
 <Router >
 
-	<div className="baron" >
+	<div className="baron" className="slide-img bg-img"   style={divStyle} >
 
 
 		
 		<PreLoader />
 		<Header/>
 		<br />    
-		<Route exact path="/react-baron" component={Mp4} />
+		<Route exact path="/react-baron"   component={PageAccueil} />
 		<Route path="/Mp3" component={Mp3} />
-		<Route path="/GalleryPhoto" component={Gallery2} />	
-		<Route path="/Events" component={Events} />	
-	
+		<Route   path="/GalleryPhoto" component={GalleryPhoto} />	
+		<Route   path="/Events" component={Events} />	
 		
 {/* <PageAccueil /> */}
 
-	
+		<Contact 
+		image = {divStyle2}/>
+
 
 	</div>	
 	</Router>

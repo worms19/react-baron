@@ -1,96 +1,53 @@
 
     
  import React from 'react'
-import EncartBlanc from './EncartBlanc';
-import AfficheCd from './AfficheCd'
+ import EncartBlanc from './EncartBlanc';
+ import AfficheCd from './AfficheCd'
+ import YouTube from 'react-youtube';
+ 
 
+ const divStyle={
+    backgroundImage: 'url(img/bg-img/a13.jpg)',
+         };
 
- const Mp3 = () => (
-  
+      
+        const opts = {
+            height: '390',
+            width: '640',
+            playerVars: { 
+              autoplay: 1
+            }
+        };
 
-// {/* <!-- ##### Song Area Start ##### --> */}
-<div className="one-music-songs-area mb-70">
-<EncartBlanc />
-<AfficheCd />
+  const Mp3 = () => (
+    <div className="slide-img bg-img"   >
+ 
+ {/* <!-- ##### Song Area Start ##### --> */}
 
-    <div className="container">
-        <div className="row">
+ <EncartBlanc text1 = {'See What NeWs'}
+             text2 = {'Latests Videos'} />
 
-            {/* <!-- Single Song Area --> */}
-            <div className="col-12">
-                <div className="single-song-area mb-30 d-flex flex-wrap align-items-end">
-                    <div className="song-thumbnail">
-                        <img src="img\core-img\logobaron.png" alt="" />
-                    </div>
-                    <div className="song-play-area">
-                        <div className="song-name">
-                            <p>01. Drop the bomb</p>
-                        </div>
-                        <audio preload="auto" controls>
-                            <source src="audio/videoplaybac.mp3" />
-                        </audio>
-                    </div>
-                </div>
-            </div>
-AfficheCd
-            {/* <!-- Single Song Area --> */}
-            <div className="col-12">
-                <div className="single-song-area mb-30 d-flex flex-wrap align-items-end">
-                    <div className="song-thumbnail">
-                    <img src="img\core-img/logobaron.png" alt="" />
-                    </div>
-                    <div className="song-play-area">
-                        <div className="song-name">
-                            <p>01. Drop the bomb</p>
-                        </div>
-                        <audio preload="auto" controls>
-                            <source src="audio/videoplaybac.mp3" />
-                        </audio>
-                    </div>
-                </div>
-            </div>
-
-            {/* <!-- Single Song Area --> */}
-            <div className="col-12">
-                <div className="single-song-area mb-30 d-flex flex-wrap align-items-end">
-                    <div className="song-thumbnail">
-                    <img src="img\core-img/logobaron.png" alt="" />
-                    </div>
-                    <div className="song-play-area">
-                        <div className="song-name">
-                            <p>01. Drop the bomb</p>
-                        </div>
-                        <audio preload="auto" controls>
-                            <source src="audio/videoplaybac.mp3" />
-                        </audio>
-                    </div>
-                </div>
-            </div>
-
-            {/* <!-- Single Song Area --> */}
-            <div className="col-12">
-                <div className="single-song-area mb-30 d-flex flex-wrap align-items-end">
-                    <div className="song-thumbnail">
-                    <img src="img\core-img/logobaron.png" alt="" />
-                    </div>
-                    <div className="song-play-area">
-                        <div className="song-name">
-                            <p>01. Drop the bomb</p>
-                        </div>
-                        <audio preload="auto" controls>
-                            <source src="audio/videoplaybac.mp3" />
-                        </audio>
-                    </div>
-                </div>
-            </div>
-            
-
-        </div>
-    </div>
+<div className="background-grey">     
+  <div className="youtube-centered">     
+    <YouTube
+    videoId="QWusFkPm2E4"
+    />
+  </div>   
+  <div className="youtube-centered">
+    <YouTube
+    videoId="SDPEbt0uknk"
+    />
+  </div>
 </div>
-// {/* <!-- ##### Song Area End ##### --> */}
+ 
+     
 
-)
+
+
+ </div>
+ // {/* <!-- ##### Song Area End ##### --> */}
  
-export default Mp3
- 
+ )
+  
+ export default Mp3
+  

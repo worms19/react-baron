@@ -8,36 +8,93 @@
          };
  
   const Events = () => (
+	<div  className="slide-img bg-img"    >
 
-
-    <section className="events-area section-padding-100">
-    <EncartBlanc />
+    <section className="events-area " >
+    <EncartBlanc text1 = {'See what’s new'}
+                         text2 = {'Latests SHOWS'} />
         <div className="container">
             <div className="row">
 
                 {/* <!-- Single Event Area --> */}
                 <div className="col  col-lg-12">
-                    <div className="single-event-area mb-30">
+                    <div className="single-event-area mb-5">
                         <div className="event-thumbnail">
                             <img src="img/bg-img/a15.jpg" alt="" />
                         </div>
                         <div className="event-text">
-                            <h4>Celebration Days Act XXII // Dätcha Mandala</h4>
-                            <div className="event-meta-data">
-                                <a href="#" className="event-place">La Grange à Musique </a>
-                                <a href="#" className="event-date">June 15, 2018</a>
+                        <div className="dateLeft">
+                                <span className="dateLeft-dateJour">15</span><br/>
+                                <span className="dateLeft-dateJour2"> Juin 2012 </span><br/>
+                                <span className="dateLeft-dateJour2">le Picolo café</span>
                             </div>
+                            <h4>Celebration Days Act XXII // Dätcha Mandala</h4>
+                           
                             <a  target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/events/2279537552296287/" className="btn see-more-btn">See Event</a>
                         </div>
                     </div>
                 </div>
 
-                {/* <!-- Single Event Area --> */}
-                <div className="col-12 col-md-6 col-lg-6">
-                    <div className="single-event-area mb-30">
-                        <div className="event-thumbnail">
-                            <img src="img/bg-img/a16.jpg" alt="" />
+                
+
+               
+                 {/* <!-- Single Event Area --> */}
+                 <div className="col-12 col-md-6 col-lg-6">
+                    <div className="single-event-area mb-5">
+                   
+                        <div className="event-text">
+                            <div className="dateLeft">
+                                <span className="dateLeft-dateJour">15</span><br/>
+                                <span className="dateLeft-dateJour2"> Juin 2012 </span><br/>
+                                <span className="dateLeft-dateJour2">le Picolo café</span>
+                            </div>
+                                <h4>Baron-Crâne • Effet-Barré •  </h4>
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/events/281099735922703/" className="btn see-more-btn">See Event</a>
+                            
                         </div>
+                    </div>
+                </div>
+
+                
+                 {/* <!-- Single Event Area --> */}
+                 <div className="col-12 col-md-6 col-lg-6">
+                    <div className="single-event-area mb-5">
+                   
+                        <div className="event-text">
+                            <div className="dateLeft">
+                                <span className="dateLeft-dateJour">15</span><br/>
+                                <span className="dateLeft-dateJour2">Juin</span><br/>
+                                <span className="dateLeft-dateJour2">le Picolo café</span>
+                            </div>
+                                <h4>Baron-Crâne • Effet-Barré  </h4>
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/events/281099735922703/" className="btn see-more-btn">See Event</a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+                
+                 {/* <!-- Single Event Area --> */}
+                 <div className="col-12 col-md-6 col-lg-6">
+                    <div className="single-event-area mb-5">
+                        
+                        <div className="event-text">
+                            <h4>Baron-Crâne • Effet-Barré • Homecoming </h4>
+                            <div className="event-meta-data">
+                                <a href="#" className="event-place">le Picolo café</a>
+                                <a href="#" className="event-date">June 15, 2018</a>
+                            </div>
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/events/281099735922703/" className="btn see-more-btn">See Event</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                
+                 {/* <!-- Single Event Area --> */}
+                 <div className="col-12 col-md-6 col-lg-6">
+                    <div className="single-event-area mb-5">
+                        
                         <div className="event-text">
                             <h4>Baron-Crâne • Effet-Barré • Homecoming </h4>
                             <div className="event-meta-data">
@@ -49,23 +106,36 @@
                     </div>
                 </div>
 
-                {/* <!-- Single Event Area --> */}
-                <div className="col-12 col-md-6 col-lg-6">
-                    <div className="single-event-area mb-30">
-                        <div className="event-thumbnail">
-                            <img src="img/bg-img/a17.jpg" alt="" />
-                        </div>
+                   {/* <!-- Single Event Area --> */}
+                   <div className="col-12 col-md-6 col-lg-6">
+                    <div className="single-event-area mb-5">
+                        
                         <div className="event-text">
-                            <h4>Planet ibiza</h4>
+                            <h4>Baron-Crâne • Effet-Barré • Homecoming </h4>
                             <div className="event-meta-data">
-                                <a href="#" className="event-place">Space Ibiza</a>
+                                <a href="#" className="event-place">le Picolo café</a>
                                 <a href="#" className="event-date">June 15, 2018</a>
                             </div>
-                            <a target="_blank" rel="noopener noreferrer"  href="https://www.facebook.com/events/272097440130055/" className="btn see-more-btn">See Event</a>
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/events/281099735922703/" className="btn see-more-btn">See Event</a>
                         </div>
                     </div>
                 </div>
-
+								
+                                   {/* <!-- Single Event Area --> */}
+                 <div className="col-12 col-md-6 col-lg-6">
+                    <div className="single-event-area mb-5">
+                        
+                        <div className="event-text">
+                            <h4>Baron-Crâne • Effet-Barré • Homecoming </h4>
+                            <div className="event-meta-data">
+                                <a href="#" className="event-place">le Picolo café</a>
+                                <a href="#" className="event-date">June 15, 2018</a>
+                            </div>
+                            <a target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/events/281099735922703/" className="btn see-more-btn">See Event</a>
+                        </div>
+                    </div>
+                </div>
+								
 								
 
              
@@ -82,7 +152,7 @@
             </div>
         </div>
     </section>
-
+    </div>
 
    
     )
