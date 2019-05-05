@@ -1,14 +1,17 @@
 {
-  "main.css": "/react-baron/static/css/main.d5eb32a1.chunk.css",
-  "main.js": "/react-baron/static/js/main.074bd3dd.chunk.js",
-  "main.js.map": "/react-baron/static/js/main.074bd3dd.chunk.js.map",
+  "main.css": "/react-baron/static/css/main.817ff036.chunk.css",
+  "main.js": "/react-baron/static/js/main.da964097.chunk.js",
+  "main.js.map": "/react-baron/static/js/main.da964097.chunk.js.map",
   "runtime~main.js": "/react-baron/static/js/runtime~main.7e41ee93.js",
   "runtime~main.js.map": "/react-baron/static/js/runtime~main.7e41ee93.js.map",
-  "static/js/2.2351e43c.chunk.js": "/react-baron/static/js/2.2351e43c.chunk.js",
-  "static/js/2.2351e43c.chunk.js.map": "/react-baron/static/js/2.2351e43c.chunk.js.map",
+  "static/css/2.b5cda636.chunk.css": "/react-baron/static/css/2.b5cda636.chunk.css",
+  "static/js/2.add82720.chunk.js": "/react-baron/static/js/2.add82720.chunk.js",
+  "static/js/2.add82720.chunk.js.map": "/react-baron/static/js/2.add82720.chunk.js.map",
   "index.html": "/react-baron/index.html",
-  "precache-manifest.39c57651a2680205136e0860941402fb.js": "/react-baron/precache-manifest.39c57651a2680205136e0860941402fb.js",
+  "precache-manifest.a36f13f0be34cc0665980a6ee2055cb6.js": "/react-baron/precache-manifest.a36f13f0be34cc0665980a6ee2055cb6.js",
   "service-worker.js": "/react-baron/service-worker.js",
-  "static/css/main.d5eb32a1.chunk.css.map": "/react-baron/static/css/main.d5eb32a1.chunk.css.map",
-  "static/media/logo.svg": "/react-baron/static/media/logo.5d5d9eef.svg"
+  "static/css/2.b5cda636.chunk.css.map": "/react-baron/static/css/2.b5cda636.chunk.css.map",
+  "static/css/main.817ff036.chunk.css.map": "/react-baron/static/css/main.817ff036.chunk.css.map",
+  "static/media/mdb.css": "/react-baron/static/media/arrow_right.8ef6a08c.svg",
+  "static/media/all.min.css": "/react-baron/static/media/fa-solid-900.ff8d9f8a.ttf"
 }
