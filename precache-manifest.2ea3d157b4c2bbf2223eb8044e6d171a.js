@@ -1,10 +1,10 @@
 self.__precacheManifest = [
   {
-    "revision": "8ef6a08cdc1154920165680a4edde771",
-    "url": "/react-baron/static/media/arrow_right.8ef6a08c.svg"
+    "revision": "11911410dca2de148f30954eb2fd5eab",
+    "url": "/react-baron/static/media/arrow_left.11911410.svg"
   },
   {
-    "revision": "da9640975b774f4da30e",
+    "revision": "44e7272d897bcdd713aa",
     "url": "/react-baron/static/css/main.817ff036.chunk.css"
   },
   {
@@ -28,12 +28,12 @@ self.__precacheManifest = [
     "url": "/react-baron/static/media/fa-regular-400.427d721b.woff"
   },
   {
-    "revision": "dcce4b7fbd5e895561e18af4668265af",
-    "url": "/react-baron/static/media/fa-regular-400.dcce4b7f.eot"
-  },
-  {
     "revision": "65b9977aa23185e8964b36eddbce7a20",
     "url": "/react-baron/static/media/fa-regular-400.65b9977a.ttf"
+  },
+  {
+    "revision": "dcce4b7fbd5e895561e18af4668265af",
+    "url": "/react-baron/static/media/fa-regular-400.dcce4b7f.eot"
   },
   {
     "revision": "5e2f92123d241cabecf0b289b9b08d4a",
@@ -52,24 +52,24 @@ self.__precacheManifest = [
     "url": "/react-baron/static/media/fa-solid-900.a7140145.woff"
   },
   {
-    "revision": "98b6db59be947f563350d2284fc9ea36",
-    "url": "/react-baron/static/media/fa-brands-400.98b6db59.ttf"
-  },
-  {
     "revision": "a7b95dbdd87e0c809570affaf366a434",
     "url": "/react-baron/static/media/fa-brands-400.a7b95dbd.eot"
+  },
+  {
+    "revision": "98b6db59be947f563350d2284fc9ea36",
+    "url": "/react-baron/static/media/fa-brands-400.98b6db59.ttf"
   },
   {
     "revision": "5eb754ab7dbd2fee562360528db4c3c0",
     "url": "/react-baron/static/media/fa-regular-400.5eb754ab.svg"
   },
   {
-    "revision": "ff8d9f8adb0d09f11d4816a152672f53",
-    "url": "/react-baron/static/media/fa-solid-900.ff8d9f8a.ttf"
-  },
-  {
     "revision": "46e7cec623d8bd790d9fdbc8de2d3ee7",
     "url": "/react-baron/static/media/fa-solid-900.46e7cec6.eot"
+  },
+  {
+    "revision": "ff8d9f8adb0d09f11d4816a152672f53",
+    "url": "/react-baron/static/media/fa-solid-900.ff8d9f8a.ttf"
   },
   {
     "revision": "5bf145531213545e03ff41cd27df7d2b",
@@ -80,12 +80,12 @@ self.__precacheManifest = [
     "url": "/react-baron/static/media/fa-solid-900.49279363.svg"
   },
   {
-    "revision": "11911410dca2de148f30954eb2fd5eab",
-    "url": "/react-baron/static/media/arrow_left.11911410.svg"
+    "revision": "8ef6a08cdc1154920165680a4edde771",
+    "url": "/react-baron/static/media/arrow_right.8ef6a08c.svg"
   },
   {
-    "revision": "da9640975b774f4da30e",
-    "url": "/react-baron/static/js/main.da964097.chunk.js"
+    "revision": "44e7272d897bcdd713aa",
+    "url": "/react-baron/static/js/main.44e7272d.chunk.js"
   },
   {
     "revision": "dfe56a876d0282555d1e2458e278060f",
@@ -112,10 +112,6 @@ self.__precacheManifest = [
     "url": "/react-baron/static/media/Roboto-Thin.954bbdeb.woff2"
   },
   {
-    "revision": "2751ee43015f9884c3642f103b7f70c9",
-    "url": "/react-baron/static/media/Roboto-Regular.2751ee43.woff2"
-  },
-  {
     "revision": "69f8a0617ac472f78e45841323a3df9e",
     "url": "/react-baron/static/media/Roboto-Light.69f8a061.woff2"
   },
@@ -128,20 +124,24 @@ self.__precacheManifest = [
     "url": "/react-baron/static/media/Roboto-Bold.39b2c303.woff2"
   },
   {
-    "revision": "ba3dcd8903e3d0af5de7792777f8ae0d",
-    "url": "/react-baron/static/media/Roboto-Regular.ba3dcd89.woff"
+    "revision": "2751ee43015f9884c3642f103b7f70c9",
+    "url": "/react-baron/static/media/Roboto-Regular.2751ee43.woff2"
+  },
+  {
+    "revision": "7500519de3d82e33d1587f8042e2afcb",
+    "url": "/react-baron/static/media/Roboto-Thin.7500519d.woff"
   },
   {
     "revision": "3b813c2ae0d04909a33a18d792912ee7",
     "url": "/react-baron/static/media/Roboto-Light.3b813c2a.woff"
   },
   {
-    "revision": "fc78759e93a6cac50458610e3d9d63a0",
-    "url": "/react-baron/static/media/Roboto-Medium.fc78759e.woff"
+    "revision": "ba3dcd8903e3d0af5de7792777f8ae0d",
+    "url": "/react-baron/static/media/Roboto-Regular.ba3dcd89.woff"
   },
   {
-    "revision": "7500519de3d82e33d1587f8042e2afcb",
-    "url": "/react-baron/static/media/Roboto-Thin.7500519d.woff"
+    "revision": "fc78759e93a6cac50458610e3d9d63a0",
+    "url": "/react-baron/static/media/Roboto-Medium.fc78759e.woff"
   },
   {
     "revision": "dc81817def276b4f21395f7ea5e88dcd",
@@ -168,7 +168,7 @@ self.__precacheManifest = [
     "url": "/react-baron/static/css/2.b5cda636.chunk.css"
   },
   {
-    "revision": "9a2afdd5a69858d127c58f9368f40302",
+    "revision": "c39f2df5da6d448aef7b16c0393ed633",
     "url": "/react-baron/index.html"
   }
 ];
