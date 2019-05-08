@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/react-baron/static/media/arrow_right.8ef6a08c.svg"
   },
   {
-    "revision": "82e92d722d5ab1494848",
+    "revision": "4edff0a03b5bc6856054",
     "url": "/react-baron/static/css/main.fc948313.chunk.css"
   },
   {
@@ -28,12 +28,12 @@ self.__precacheManifest = [
     "url": "/react-baron/static/media/fa-regular-400.427d721b.woff"
   },
   {
-    "revision": "dcce4b7fbd5e895561e18af4668265af",
-    "url": "/react-baron/static/media/fa-regular-400.dcce4b7f.eot"
-  },
-  {
     "revision": "65b9977aa23185e8964b36eddbce7a20",
     "url": "/react-baron/static/media/fa-regular-400.65b9977a.ttf"
+  },
+  {
+    "revision": "dcce4b7fbd5e895561e18af4668265af",
+    "url": "/react-baron/static/media/fa-regular-400.dcce4b7f.eot"
   },
   {
     "revision": "5e2f92123d241cabecf0b289b9b08d4a",
@@ -52,12 +52,12 @@ self.__precacheManifest = [
     "url": "/react-baron/static/media/fa-solid-900.a7140145.woff"
   },
   {
-    "revision": "98b6db59be947f563350d2284fc9ea36",
-    "url": "/react-baron/static/media/fa-brands-400.98b6db59.ttf"
-  },
-  {
     "revision": "a7b95dbdd87e0c809570affaf366a434",
     "url": "/react-baron/static/media/fa-brands-400.a7b95dbd.eot"
+  },
+  {
+    "revision": "98b6db59be947f563350d2284fc9ea36",
+    "url": "/react-baron/static/media/fa-brands-400.98b6db59.ttf"
   },
   {
     "revision": "5eb754ab7dbd2fee562360528db4c3c0",
@@ -84,12 +84,16 @@ self.__precacheManifest = [
     "url": "/react-baron/static/media/arrow_left.11911410.svg"
   },
   {
-    "revision": "82e92d722d5ab1494848",
-    "url": "/react-baron/static/js/main.82e92d72.chunk.js"
+    "revision": "4edff0a03b5bc6856054",
+    "url": "/react-baron/static/js/main.4edff0a0.chunk.js"
   },
   {
     "revision": "dfe56a876d0282555d1e2458e278060f",
     "url": "/react-baron/static/media/Roboto-Thin.dfe56a87.eot"
+  },
+  {
+    "revision": "30799efa5bf74129468ad4e257551dc3",
+    "url": "/react-baron/static/media/Roboto-Regular.30799efa.eot"
   },
   {
     "revision": "a990f611f2305dc12965f186c2ef2690",
@@ -108,12 +112,16 @@ self.__precacheManifest = [
     "url": "/react-baron/static/media/Roboto-Thin.954bbdeb.woff2"
   },
   {
-    "revision": "69f8a0617ac472f78e45841323a3df9e",
-    "url": "/react-baron/static/media/Roboto-Light.69f8a061.woff2"
-  },
-  {
     "revision": "2751ee43015f9884c3642f103b7f70c9",
     "url": "/react-baron/static/media/Roboto-Regular.2751ee43.woff2"
+  },
+  {
+    "revision": "574fd0b50367f886d359e8264938fc37",
+    "url": "/react-baron/static/media/Roboto-Medium.574fd0b5.woff2"
+  },
+  {
+    "revision": "69f8a0617ac472f78e45841323a3df9e",
+    "url": "/react-baron/static/media/Roboto-Light.69f8a061.woff2"
   },
   {
     "revision": "39b2c3031be6b4ea96e2e3e95d307814",
@@ -132,28 +140,12 @@ self.__precacheManifest = [
     "url": "/react-baron/static/media/Roboto-Regular.ba3dcd89.woff"
   },
   {
-    "revision": "dc81817def276b4f21395f7ea5e88dcd",
-    "url": "/react-baron/static/media/Roboto-Bold.dc81817d.woff"
-  },
-  {
-    "revision": "30799efa5bf74129468ad4e257551dc3",
-    "url": "/react-baron/static/media/Roboto-Regular.30799efa.eot"
-  },
-  {
-    "revision": "574fd0b50367f886d359e8264938fc37",
-    "url": "/react-baron/static/media/Roboto-Medium.574fd0b5.woff2"
-  },
-  {
     "revision": "fc78759e93a6cac50458610e3d9d63a0",
     "url": "/react-baron/static/media/Roboto-Medium.fc78759e.woff"
   },
   {
-    "revision": "46e48ce0628835f68a7369d0254e4283",
-    "url": "/react-baron/static/media/Roboto-Light.46e48ce0.ttf"
-  },
-  {
-    "revision": "df7b648ce5356ea1ebce435b3459fd60",
-    "url": "/react-baron/static/media/Roboto-Regular.df7b648c.ttf"
+    "revision": "dc81817def276b4f21395f7ea5e88dcd",
+    "url": "/react-baron/static/media/Roboto-Bold.dc81817d.woff"
   },
   {
     "revision": "94998475f6aea65f558494802416c1cf",
@@ -164,11 +156,19 @@ self.__precacheManifest = [
     "url": "/react-baron/static/media/Roboto-Medium.894a2ede.ttf"
   },
   {
+    "revision": "df7b648ce5356ea1ebce435b3459fd60",
+    "url": "/react-baron/static/media/Roboto-Regular.df7b648c.ttf"
+  },
+  {
+    "revision": "46e48ce0628835f68a7369d0254e4283",
+    "url": "/react-baron/static/media/Roboto-Light.46e48ce0.ttf"
+  },
+  {
     "revision": "dbf7cf3eced25daba368",
     "url": "/react-baron/static/css/2.b5cda636.chunk.css"
   },
   {
-    "revision": "48cf07d93035a5b0f484ecf73f8f241a",
+    "revision": "4d7d0feb29350a535f9e65774f8218aa",
     "url": "/react-baron/index.html"
   }
 ];
