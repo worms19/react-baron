@@ -5,7 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { env } from './config';
 
-ReactDOM.render(<App env={env}/>, document.getElementById('oneMusicNav'));
+ReactDOM.render(<App env={env}/>, document.getElementById('baronCrane'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
