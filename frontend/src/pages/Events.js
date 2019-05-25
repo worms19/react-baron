@@ -1,9 +1,9 @@
 
 import React,{Component} from 'react';
-import EncartBlanc from './EncartBlanc';
+import EncartBlanc from './components/Encart/EncartBlanc';
 import EncartEvent from './components/Events/EventList/EncartEvent/EncartEvent';
 import EncartEventLarge from './components/Events/EventList/EncartEvent/EncartEventLarge';
-import Footer from './Footer';
+import Footer from './components/Footer/Footer';
 import AuthContext from "./context/auth-context";
 import Spinner from "./components/Spinner/Spinner";
 import EventList from "./components/Events/EventList/EventList";

@@ -2,7 +2,6 @@
 
 import React from 'react';
 
-import AfficheCd from './AfficheCd';
 
 const divStyle = {
   position: 'absolute',

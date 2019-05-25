@@ -2,10 +2,10 @@
 import React from 'react';
 import Gallery from 'react-photo-gallery';
 import Lightbox from 'react-images';
-import EncartBlanc from './EncartBlanc';
-import Footer from './Footer';
+import EncartBlanc from '../components/Encart/EncartBlanc';
+import Footer from '../components/Footer/Footer';
 
-export default class Gallery2 extends React.Component {
+export default class Gallery extends React.Component {
   constructor() {
     super();
     this.state = { currentImage: 0 };

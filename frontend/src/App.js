@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './Header';
-import Contact from './Contact';
-import Mp3 from './Mp3';
-import Mp4 from './Mp4';
-import Gallery2 from './Gallery2';
+import Header from './components/Header/Header';
+import Contact from './pages/Contact';
+import Video from './pages/Video';
+import Accueil from './pages/Accueil';
+import GalleryPhoto from './pages/GalleryPhoto';
 import AuthPage from './pages/Auth';
-import Events from './Events';
-import PreLoader from './PreLoader';
+import Events from './pages/Events';
+
 import EventPage from './pages/Event';
 import MainNavigation from './components/Navigation/MainNavigation';
 import AuthContext from './context/auth-context';
@@ -47,6 +47,8 @@ class App extends Component {
 
       <Router>
 
+
+
         <div className="baron">
 
 
@@ -54,9 +56,9 @@ class App extends Component {
           <AuthContext.Provider value={{token: this.state.token,userId: this.state.userId, login: this.login, logout: this.logout}}>
           {this.state.token ? <MainNavigation/> : <Header />}
           <Switch>
-          <Route exact path="/react-baron" component={Mp4} />
-          <Route path="/Mp3" component={Mp3} />
-          <Route path="/GalleryPhoto" component={Gallery2} />
+          <Route exact path="/react-baron" component={Accueil} />
+          <Route path="/Mp3" component={Video} />
+          <Route path="/GalleryPhoto" component={GalleryPhoto} />
           <Route path="/Events" component={Events} />
             {!this.state.token &&
               <Route path="/auth" component={AuthPage} />}

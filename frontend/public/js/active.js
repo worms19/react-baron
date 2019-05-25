@@ -98,7 +98,7 @@
         });
     }
 
-    // :: 4.0 Masonary Gallery Active Code
+    // :: 4.0 Masonary GalleryPhoto Active Code
     if ($.fn.imagesLoaded) {
         $('.oneMusic-albums').imagesLoaded(function () {
             // filter items on button click
@@ -206,7 +206,7 @@
         new WOW().init();
     }
     
-    // :: 14.0 Gallery Menu Active Code
+    // :: 14.0 GalleryPhoto Menu Active Code
     $('.catagory-menu a').on('click', function () {
         $('.catagory-menu a').removeClass('active');
         $(this).addClass('active');

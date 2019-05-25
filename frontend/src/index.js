@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-import { env } from './config';
+import { env } from './components/FeedBackForm/config';
 
 ReactDOM.render(<App env={env}/>, document.getElementById('baronCrane'));
 

@@ -1,10 +1,10 @@
 
     
  import React from 'react'
- import EncartBlanc from './EncartBlanc';
+ import EncartBlanc from './components/Encart/EncartBlanc';
  import AfficheCd from './AfficheCd'
  import YouTube from 'react-youtube';
- import Footer from './Footer';
+ import Footer from './components/Footer/Footer';
  import './App.css';
 
       
@@ -16,7 +16,7 @@
             }
         };
 
-  const Mp3 = () => (
+  const Video = () => (
     <div className="slide-img bg-img"   >
  
  {/* <!-- ##### Song Area Start ##### --> */}
@@ -53,5 +53,5 @@
  
  )
   
- export default Mp3
+ export default Video
   
