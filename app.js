@@ -11,7 +11,7 @@ const app = express();
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
-var port = process.env.PORT || 8080;
+var port = process.env.PORT || 8000;
 
 app.use(bodyParser.json());
 
@@ -32,6 +32,10 @@ app.use('/graphql', graphQlHttp({
   rootValue: graphQlResolver,
   graphiql: true,
 }));
+
+app.get('/', (req, res) => {
+  res.sendFile(`${__dirname}/frontend/public/index.html`);
+});
 
 mongoose.connect(
   `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@eventcluster-qqgzo.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`,
