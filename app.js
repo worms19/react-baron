@@ -9,6 +9,9 @@ const isAuth = require('./middleware/is-auth');
 
 const app = express();
 
+// set the port of our application
+// process.env.PORT lets the port be set by Heroku
+var port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 
@@ -33,7 +36,7 @@ app.use('/graphql', graphQlHttp({
 mongoose.connect(
   `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@eventcluster-qqgzo.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`,
 ).then(() => {
-  app.listen(8000);
+  app.listen(port);
 }).catch((err) => {
   console.log(err);
 });
