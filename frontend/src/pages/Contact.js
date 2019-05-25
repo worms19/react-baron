@@ -2,8 +2,8 @@
     
        
  import React from 'react'
- import EncartBlanc from './EncartBlanc';
- import Footer from "./Footer";
+ import EncartBlanc from '../components/Encart/EncartBlanc';
+ import Footer from "../components/Footer/Footer";
 
  
  

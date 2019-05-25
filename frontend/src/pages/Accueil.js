@@ -23,7 +23,7 @@ const divStyle3 = {
 };
 
 
-const Mp4 = () => (
+const Accueil = () => (
 
 
   <div className="">
@@ -42,4 +42,4 @@ const Mp4 = () => (
 
 );
 
-export default Mp4;
+export default Accueil;

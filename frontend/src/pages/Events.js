@@ -1,13 +1,10 @@
 
 import React,{Component} from 'react';
-import EncartBlanc from './components/Encart/EncartBlanc';
-import EncartEvent from './components/Events/EventList/EncartEvent/EncartEvent';
-import EncartEventLarge from './components/Events/EventList/EncartEvent/EncartEventLarge';
-import Footer from './components/Footer/Footer';
-import AuthContext from "./context/auth-context";
-import Spinner from "./components/Spinner/Spinner";
-import EventList from "./components/Events/EventList/EventList";
-import EventListLs from "./components/Events/EventList/EventListLs";
+import EncartBlanc from '../components/Encart/EncartBlanc';
+import Footer from '../components/Footer/Footer';
+import AuthContext from "../context/auth-context";
+import Spinner from "../components/Spinner/Spinner";
+import EventListLs from "../components/Events/EventList/EventListLs";
 
 
 class Events extends Component {

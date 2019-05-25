@@ -1,11 +1,10 @@
 
     
  import React from 'react'
- import EncartBlanc from './components/Encart/EncartBlanc';
- import AfficheCd from './AfficheCd'
+ import EncartBlanc from '../components/Encart/EncartBlanc';
  import YouTube from 'react-youtube';
- import Footer from './components/Footer/Footer';
- import './App.css';
+ import Footer from '../components/Footer/Footer';
+ import '../App.css';
 
       
         const opts = {

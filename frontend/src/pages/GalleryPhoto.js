@@ -5,7 +5,7 @@ import Lightbox from 'react-images';
 import EncartBlanc from '../components/Encart/EncartBlanc';
 import Footer from '../components/Footer/Footer';
 
-export default class Gallery extends React.Component {
+export default class GalleryPhoto extends React.Component {
   constructor() {
     super();
     this.state = { currentImage: 0 };
