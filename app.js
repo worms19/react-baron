@@ -9,6 +9,7 @@ const isAuth = require('./middleware/is-auth');
 const port = process.env.PORT || 8000;
 
 const app = express();
+const server = http.createServer(app);
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
@@ -48,7 +49,9 @@ app.get('/ping', function (req, res) {
 mongoose.connect(
   `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@eventcluster-qqgzo.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`,
 ).then(() => {
-  app.listen(port);
+  server.listen(port, () => {
+    console.log(`server listening to port ${port}`);
+  });
 }).catch((err) => {
   console.log(err);
 });
