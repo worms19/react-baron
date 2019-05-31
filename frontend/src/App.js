@@ -56,7 +56,7 @@ class App extends Component {
           <AuthContext.Provider value={{token: this.state.token,userId: this.state.userId, login: this.login, logout: this.logout}}>
           {this.state.token ? <MainNavigation/> : <Header />}
           <Switch>
-          <Route exact path="/react-baron" component={Accueil} />
+          <Route exact path="/" component={Accueil} />
           <Route path="/Mp3" component={Video} />
           <Route path="/GalleryPhoto" component={GalleryPhoto} />
           <Route path="/Events" component={Events} />

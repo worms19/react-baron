@@ -35,15 +35,15 @@ app.use('/graphql', graphQlHttp({
 }));
 app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'frontend', 'build')));
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 app.get('/ping', function (req, res) {
   return res.send('pong');
 });
 
 
-app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 
 mongoose.connect(
   `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@eventcluster-qqgzo.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`,
