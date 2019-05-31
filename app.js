@@ -12,8 +12,6 @@ const app = express();
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
-app.use(express.static(__dirname));
-app.use(express.static(path.join(__dirname, 'frontend', 'build')));
 
 app.use(bodyParser.json());
 
@@ -35,6 +33,8 @@ app.use('/graphql', graphQlHttp({
   rootValue: graphQlResolver,
   graphiql: true,
 }));
+app.use(express.static(__dirname));
+app.use(express.static(path.join(__dirname, 'frontend', 'build')));
 
 app.get('/ping', function (req, res) {
   return res.send('pong');
