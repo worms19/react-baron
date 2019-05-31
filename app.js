@@ -6,13 +6,13 @@ const path = require('path');
 const graphQlSchema = require('./graphql/schema/index');
 const graphQlResolver = require('./graphql/resolvers/index');
 const isAuth = require('./middleware/is-auth');
+const port = process.env.PORT || 8000;
 
 const app = express();
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
-var port = process.env.PORT || 8000;
-
+app.use(express.static(__dirname));
 app.use(express.static(path.join(__dirname, 'frontend', 'build')));
 
 app.use(bodyParser.json());
@@ -29,11 +29,17 @@ app.use((req, res, next) => {
 
 app.use(isAuth);
 
+
 app.use('/graphql', graphQlHttp({
   schema: graphQlSchema,
   rootValue: graphQlResolver,
   graphiql: true,
 }));
+
+app.get('/ping', function (req, res) {
+  return res.send('pong');
+});
+
 
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
