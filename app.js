@@ -13,6 +13,8 @@ const app = express();
 // process.env.PORT lets the port be set by Heroku
 var port = process.env.PORT || 8000;
 
+app.use(express.static(path.join(__dirname, 'frontend', 'build')));
+
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
@@ -33,8 +35,8 @@ app.use('/graphql', graphQlHttp({
   graphiql: true,
 }));
 
-app.get('/', (req, res) => {
-  res.sendFile(`${__dirname}/frontend/public/index.html`);
+app.get('/*', function (req, res) {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
 mongoose.connect(
