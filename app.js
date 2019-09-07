@@ -7,6 +7,7 @@ const graphQlSchema = require('./graphql/schema/index');
 const graphQlResolver = require('./graphql/resolvers/index');
 const isAuth = require('./middleware/is-auth');
 const port = process.env.PORT || 8000;
+const http = require('http');
 
 const app = express();
 const server = http.createServer(app);
