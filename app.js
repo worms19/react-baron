@@ -34,7 +34,7 @@ app.use('/graphql', graphQlHttp({
 }));
 
 app.get('/', (req, res) => {
-  res.sendFile(`${__dirname}/frontend/public/index.html`);
+  res.sendFile(`/frontend/public/index.html`);
 });
 
 mongoose.connect(
