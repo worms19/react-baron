@@ -38,7 +38,7 @@ app.get('/', (req, res) => {
 });
 
 mongoose.connect(
-  `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@eventcluster-qqgzo.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`,
+  `mongodb+srv://Dams:Chat0666@eventcluster-qqgzo.mongodb.net/baron-crane?retryWrites=true`,
 ).then(() => {
   app.listen(port);
 }).catch((err) => {
