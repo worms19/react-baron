@@ -33,8 +33,10 @@ app.use('/graphql', graphQlHttp({
   graphiql: true,
 }));
 
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 app.get('/', (req, res) => {
-  res.sendFile(`${__dirname}../frontend/build/index.html`);
+  res.sendFile(path.join(__dirname+'/client/build/index.html'));
 });
 
 mongoose.connect(
