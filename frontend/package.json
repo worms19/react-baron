@@ -1,5 +1,4 @@
 {
-  "homepage": "http://worms19.github.io/react-baron",
   "name": "baron",
   "version": "0.1.0",
   "private": true,
@@ -28,7 +27,6 @@
     "not op_mini all"
   ],
   "devDependencies": {
-    "css-loader": "^2.1.0",
-    "gh-pages": "^2.0.1"
+    "css-loader": "^2.1.0"
   }
 }
