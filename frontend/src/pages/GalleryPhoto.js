@@ -59,11 +59,11 @@ export default class GalleryPhoto extends React.Component {
           { src: 'react-baron/dummy/9.jpg',   width: 3, height: 2 },
 
           { src: 'react-baron/dummy/10.jpg', width: 3, height: 2 } */
-      { src: 'react-baron/dummy/large-gallery/13.jpg', width: 3, height: 2 },
-      { src: 'react-baron/dummy/large-gallery/14.jpg', width: 3, height: 2 },
-      { src: 'react-baron/dummy/large-gallery/15.jpg', width: 3, height: 2 },
-      { src: 'react-baron/dummy/large-gallery/16.jpg', width: 3, height: 2 },
-      { src: 'react-baron/dummy/large-gallery/17.jpg', width: 3, height: 2 },
+      { src: '/dummy/large-gallery/13.jpg', width: 3, height: 2 },
+      { src: '/dummy/large-gallery/14.jpg', width: 3, height: 2 },
+      { src: '/dummy/large-gallery/15.jpg', width: 3, height: 2 },
+      { src: '/dummy/large-gallery/16.jpg', width: 3, height: 2 },
+      { src: '/dummy/large-gallery/17.jpg', width: 3, height: 2 },
     ];
 
 
