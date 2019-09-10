@@ -34,12 +34,13 @@ app.use('/graphql', graphQlHttp({
 }));
 
 app.get('/', (req, res) => {
-  res.sendFile(`${__dirname}/frontend/build/`);
+  res.sendFile(`${__dirname}/frontend/build/index.html`);
 });
 
 mongoose.connect(
   `mongodb+srv://Dams:Chat0666@eventcluster-qqgzo.mongodb.net/baron-crane?retryWrites=true`,
 ).then(() => {
+  console.log('application connecté')
   app.listen(port);
 }).catch((err) => {
   console.log(err);
