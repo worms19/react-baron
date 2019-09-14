@@ -1,0 +1,29 @@
+{
+  "name": "react-baron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "build": "babel . --ignore node_modules,build --out-dir build",
+    "start:prod": "node build/app.js",
+    "lint": "eslint .",
+    "test": "jest --watchAll --verbose false --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/worms19/react-baron.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+
+  },
+  "bugs": {
+    "url": "https://github.com/worms19/react-baron/issues"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.0"
+  },
+  "homepage": "https://github.com/worms19/react-baron#readme"
+}
