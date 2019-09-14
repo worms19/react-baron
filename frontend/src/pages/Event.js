@@ -129,7 +129,7 @@ class EventPage extends Component{
         const token = this.context.token;
 
 
-        fetch('/graphql',{
+        fetch('https://react-baron.herokuapp.com/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
