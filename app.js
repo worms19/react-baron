@@ -34,6 +34,7 @@ app.use('/graphql', graphQlHttp({
   rootValue: graphQlResolver,
   graphiql: true,
 }));
+
 app.use(express.static('frontend/build'));
 //app.use(express.static(path.join(__dirname, 'frontend/build')));
 
@@ -44,7 +45,7 @@ app.get('*', (req, res) => {
 mongoose.connect(
   `mongodb+srv://Dams:Chat0666@eventcluster-qqgzo.mongodb.net/baron-crane?retryWrites=true`,
 ).then(() => {
-  console.log('application connecté')
+  console.log('application connecté sur le port ' + port);
   app.listen(port);
 }).catch((err) => {
   console.log(err);

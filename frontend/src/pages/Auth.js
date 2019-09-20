@@ -59,7 +59,7 @@ class AuthPage extends Component{
             };
         }
 
-        fetch('https://react-baron.herokuapp.com/graphql',{
+        fetch('http://localhost:8000/graphql',{
           method: 'POST',
           body: JSON.stringify(requestBody),
             headers: {
