@@ -11,6 +11,13 @@ module.exports = buildSchema(`
             updatedAt: String!
         }
         
+        type Contact {
+            _id: ID!
+           nom: String! 
+           mail: String! 
+           message: String!
+           date: String!
+        }
         type Event {
           _id: ID!
           barName: String!

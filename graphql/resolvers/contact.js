@@ -1,4 +1,4 @@
-import {transformContactsMessage} from "./merge";
+const {transformContactsMessage} = require('./merge')
 
 const Contact = require('../../models/contact');
 

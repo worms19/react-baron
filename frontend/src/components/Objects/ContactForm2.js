@@ -6,7 +6,54 @@ class ContactForm2 extends Component{
 
     constructor(props) {
         super(props);
+        this.nameElRef = React.createRef();
+        this.emailElRef = React.createRef();
+        this.phoneElRef = React.createRef();
+        this.messageElRef = React.createRef();
     }
+
+    modalConfirmHandler = () =>{
+
+        const name = this.nameElRef.current.value;
+        const email = this.emailElRef.current.value;
+        const phone = +this.phoneElRef.current.value;
+        const message = this.messageElRef.current.value;
+
+
+
+        const contactMessage = {name, email, phone, message};
+        console.log(contactMessage);
+
+        const requestBody = {
+            query: `
+                mutation {
+                    createContactMessage(contactInput:{ nom: "${name}",mail: "${email}",message: ${message},date: "${Date.now()}"})
+                    {
+                        _id
+                         message
+                    }
+                }
+            `
+        };
+
+
+        fetch('http://localhost:8000/graphql',{
+            method: 'POST',
+            body: JSON.stringify(requestBody),
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(res =>{
+                if(res.status !== 200 && res.status !== 201){
+                    throw new Error('Failed!');
+                }
+                return res.json();
+            })
+            .catch(err =>{
+                console.log(err)
+            });
+    };
     render(){
 
         return(
@@ -15,7 +62,7 @@ class ContactForm2 extends Component{
                     <h3>Quick Contact</h3>
                     <h4>Contact us today, and get reply with in 24 hours!</h4>
                     <fieldset>
-                        <input placeholder="Your name" type="text" tabIndex="1" required autoFocus/>
+                        <input placeholder="Your name" type="text" tabIndex="1"  required autoFocus/>
                     </fieldset>
                     <fieldset>
                         <input placeholder="Your Email Address" type="email" tabIndex="2" required/>
@@ -24,13 +71,10 @@ class ContactForm2 extends Component{
                         <input placeholder="Your Phone Number" type="tel" tabIndex="3" required/>
                     </fieldset>
                     <fieldset>
-                        <input placeholder="Your Web Site starts with http://" type="url" tabIndex="4" required/>
+                        <textarea placeholder="Type your Message Here...."  tabIndex="5" required></textarea>
                     </fieldset>
                     <fieldset>
-                        <textarea placeholder="Type your Message Here...." tabIndex="5" required></textarea>
-                    </fieldset>
-                    <fieldset>
-                        <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+                       <input name="submit" type="button" onClick={this.modalConfirmHandler} id="contact-submit" >Submit</input>*/
                     </fieldset>
                 </form>
 
