@@ -3,24 +3,24 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const contactSchema = new Schema({
-    name: {
+    nom: {
         type: String,
         required: true,
     },
-    emailAdress: {
+    mail: {
         type: String,
         required: true,
     },
     phoneContact: {
         type: String,
-        required: true,
+        required: false,
     },
     message: {
         type: String,
         required: true,
     },
     date: {
-        type: Date,
+        type: String,
         required: true,
     },
 });

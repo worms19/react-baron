@@ -57,14 +57,6 @@ const transformEvent = event => {
     };
 };
 
-const transformContactsMessage = contactMessage => {
-    return {
-        ...contactMessage._doc,
-        _id: contactMessage.id,
-        date: dateToString(contactMessage._doc.date),
-
-    };
-};
 
 
 exports.user= user;
@@ -72,4 +64,3 @@ exports.events = events;
 exports.singleEvent = singleEvent;
 exports.transformEvent = transformEvent;
 exports.transformBookings = transformBookings;
-exports.transformContactsMessage = transformContactsMessage;

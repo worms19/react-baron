@@ -16,6 +16,7 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 
 import { BrowserRouter as Router, Route,Redirect,Switch } from 'react-router-dom';
+import Contacts from "./pages/Contacts";
 
 
 
@@ -68,6 +69,8 @@ class App extends Component {
                 /* page d'aauht*/
             <Redirect path="/auth"  to="/eventpage" exact />
             }
+            {this.state.token &&
+            (<Route path="/contactPage" component={Contacts} />)}
 
           <Route path="/Contact" component={Contact} />
           </Switch>

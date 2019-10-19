@@ -19,7 +19,7 @@ const mainNavigation = props =>(
                             {context.token && (
                                 <React.Fragment>
 
-                            <li><NavLink to="/bookings">Bookings</NavLink></li>
+                            <li><NavLink to="/contactPage">Bookings</NavLink></li>
                             <li>
                                 <button onClick={context.logout}>Logout</button>
                             </li>

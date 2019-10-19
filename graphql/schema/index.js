@@ -25,6 +25,14 @@ module.exports = buildSchema(`
             password: String
         }
         
+         type Contact{
+           _id: ID!
+           nom: String! 
+           mail: String! 
+           message: String!
+           date: String!
+        }
+        
         type AuthData {
             userId: ID!
             token: String!
@@ -38,7 +46,7 @@ module.exports = buildSchema(`
            date: String!
         }
         
-        input ContactInput {
+        input ContactInput{
            nom: String! 
            mail: String! 
            message: String!
