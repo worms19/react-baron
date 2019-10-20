@@ -1,26 +1,21 @@
 import React, {Component} from 'react';
-
 import Modal from '../components/Modal/Modal'
 import Backdrop from '../components/Backdrop/Backdrop'
 import './Events.css'
 import AuthContext from '../context/auth-context'
 import EventList from '../components/Events/EventList/EventList'
 import Spinner from '../components/Spinner/Spinner'
-import EncartEvent from "../components/Events/EventList/EncartEvent/EncartEvent";
 import {helpers} from '../helpers/date';
 
-
-
 class EventPage extends Component{
+
     state = {
         creating:false,
         events:[],
         isLoading: false,
         selectedEvent: null
     };
-
     static contextType = AuthContext;
-
     constructor(props) {
         super(props);
         this.barNameElRef = React.createRef();
@@ -28,15 +23,12 @@ class EventPage extends Component{
         this.dateElRef = React.createRef();
         this.fbLinkElRef = React.createRef();
     }
-
     componentDidMount() {
         this.fetchEvents();
     }
-
     startCreateEventHandler = () =>{
         this.setState({creating:true});
     };
-
     modalConfirmHandler = () =>{
         this.setState({creating:false});
         const barName = this.barNameElRef.current.value;
@@ -104,11 +96,9 @@ class EventPage extends Component{
                 console.log(err)
             });
     };
-
     modalCancelHandler = () =>{
         this.setState({creating:false, selectedEvent: null});
     };
-
     fetchEvents = () => {
         this.setState({isLoading: true})
         const requestBody = {
@@ -155,7 +145,6 @@ class EventPage extends Component{
                 this.setState({isLoading:false})
             });
     };
-
     onDeleteEvent =(eventId) => {
 
        const requestBody = {
@@ -205,7 +194,6 @@ class EventPage extends Component{
                 console.log(err)
             });
     };
-
 
     render(){
 

@@ -4,14 +4,15 @@ import EncartBlanc from '../components/Encart/EncartBlanc';
 import Footer from '../components/Footer/Footer';
 import AuthContext from "../context/auth-context";
 import Spinner from "../components/Spinner/Spinner";
-import EventListLs from "../components/Events/EventList/EventListLs";
+import ContactList from "../components/Contact/ContactList";
+
 
 
 class Contacts extends Component {
     state = {
         creating:false,
-        events:[],
-        isLoading: false,
+        contactsMessages:[],
+        isLoading: true,
         selectedEvent: null
     };
 
@@ -57,7 +58,7 @@ class Contacts extends Component {
             })
             .then(resData =>{
                 const contactsMessages = resData.data.contactsMessages;
-                console.log(contactsMessages)
+                console.table('constact message Fetched ', contactsMessages)
                 this.setState({contactsMessages: contactsMessages, isLoading:false})
             })
             .catch(err =>{
@@ -72,13 +73,10 @@ class Contacts extends Component {
     render() {
         return (
 
-            <div className="slide-img bg-img">
+            <div className=" bg-img">
 
                 <section className="events-area ">
-                    <EncartBlanc
-                        text1="See what’s new"
-                        text2="Latests SHOWS"
-                    />
+
                     <div className="container">
                         <div className="row">
 
@@ -86,7 +84,10 @@ class Contacts extends Component {
                                 ?    <Spinner/>
                                 :   (
 
-                                    <p> TEst</p>
+                                    <ContactList
+
+                                        contacts={this.state.contactsMessages}
+                                        onDeleteEvent = {console.log('salut')}/>
                                 )
                             }
 
@@ -107,7 +108,7 @@ class Contacts extends Component {
                         </div>
                     </div>
                 </section>
-                <Footer/>
+
             </div>
 
 

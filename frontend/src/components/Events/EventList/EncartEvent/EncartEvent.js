@@ -9,7 +9,7 @@ import AuthContext from "../../../../context/auth-context";
 const EncartEvent = (props) => (
 
 
-<div className={props.index == 0 ? "col-12 col-md-6 col-lg-12" : "col-12 col-md-6 {col-lg-6"}>
+<div className={props.index === 0 ? "col-12 col-md-6 col-lg-12" : "col-12 col-md-6 {col-lg-6"}>
     <div className="single-event-area  mb-1">
 
         <div className="event-text">
@@ -25,8 +25,8 @@ const EncartEvent = (props) => (
             <a target="_blank"
                rel= "noopener noreferrer"
                href={props.lienFb}
-               className={props.lienFb == '' ? "btn see-more-btn Eventdisabled" : "btn see-more-btn " }
-            >{props.lienFb == '' ? 'COMING SOON' : 'SEE EVENT' }</a>
+               className={props.lienFb === '' ? "btn see-more-btn Eventdisabled" : "btn see-more-btn " }
+            >{props.lienFb === '' ? 'COMING SOON' : 'SEE EVENT' }</a>
             {console.log(`props.eventId ${props.eventId}`)}
             <button onClick={props.deleteThisEvent.bind(this, props.eventId)}>X</button>
 
