@@ -9,6 +9,7 @@ import ContactList from "../components/Contact/ContactList";
 
 
 class Contacts extends Component {
+
     state = {
         creating:false,
         contactsMessages:[],
@@ -66,9 +67,6 @@ class Contacts extends Component {
                 this.setState({isLoading:false})
             });
     };
-
-
-
 
     render() {
         return (

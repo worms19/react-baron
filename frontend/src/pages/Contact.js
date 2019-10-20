@@ -3,7 +3,6 @@
  import Footer from "../components/Footer/Footer";
  import BlackWindow from "../components/Objects/blackWindow";
  import BlackWindow2 from "../components/Objects/blackWindow2";
- import ContactForm from "../components/Objects/ContactForm";
  import ContactForm2 from "../components/Objects/ContactForm2";
  import ContactBooking from "../components/Objects/ContactBooking";
 
@@ -11,23 +10,19 @@
 
  			<div>
 					<div className="container ">
-						<EncartBlanc
-							text1 = {'See What NeWs'}
-							text2 = {'Get in touch'} />
-						<ContactForm2/>
-						<ContactBooking/>
-
-						<section className="breadcumb-area2"  >
-							<div className="bradcumbContent ">
-								<h2>PressKit</h2>
-							</div>
-						</section>
-
-					<BlackWindow/>
-					<BlackWindow2/>
-
-
-
+							<EncartBlanc
+								text1 = {'See What NeWs'}
+								text2 = {'Get in touch'}
+							/>
+							<ContactForm2/>
+							<ContactBooking/>
+							<section className="breadcumb-area2"  >
+								<div className="bradcumbContent ">
+									<h2>PressKit</h2>
+								</div>
+							</section>
+						<BlackWindow/>
+						<BlackWindow2/>
 					</div>
 				<Footer/>
  			</div>

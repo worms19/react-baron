@@ -145,6 +145,7 @@ class EventPage extends Component{
                 this.setState({isLoading:false})
             });
     };
+
     onDeleteEvent =(eventId) => {
 
        const requestBody = {

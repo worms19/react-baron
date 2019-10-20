@@ -1,15 +1,9 @@
-
-
-
 import React from 'react'
 import {helpers} from '../../../../helpers/date';
-import AuthContext from "../../../../context/auth-context";
-
 
 const EncartEvent = (props) => (
 
-
-<div className={props.index === 0 ? "col-12 col-md-6 col-lg-12" : "col-12 col-md-6 {col-lg-6"}>
+<div className={props.index === 0 ? "col-12 col-md-6 col-lg-12" : "col-12 col-md-6 col-lg-6"}>
     <div className="single-event-area  mb-1">
 
         <div className="event-text">

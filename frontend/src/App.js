@@ -16,6 +16,7 @@ import 'mdbreact/dist/css/mdb.css';
 import { BrowserRouter as Router, Route,Redirect,Switch } from 'react-router-dom';
 import Contacts from "./pages/Contacts";
 import Footer from "./components/Footer/Footer";
+import YoutubeLinkPage from "./pages/CreationYoutubeLink";
 
 class App extends Component {
 
@@ -54,6 +55,9 @@ class App extends Component {
               <Route path="/auth" component={AuthPage} />}
             {this.state.token &&
             <Route path="/eventpage" component={EventPage} />
+            }
+            {this.state.token &&
+            <Route path="/youtubePage" component={YoutubeLinkPage} />
             }
             {this.state.token &&
                 /* page d'aauht*/

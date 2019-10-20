@@ -18,6 +18,7 @@ module.exports = buildSchema(`
            message: String!
            date: String!
         }
+        
         type Event {
           _id: ID!
           barName: String!
@@ -31,7 +32,12 @@ module.exports = buildSchema(`
             email: String!
             password: String
         }
-        
+  
+        type YoutubeLink {
+            _id: ID!
+           link: String! 
+          
+        }
         
         type AuthData {
             userId: ID!
@@ -53,6 +59,10 @@ module.exports = buildSchema(`
            date: String!
         }
         
+        input YoutubeLinkInput{
+           link: String! 
+        }
+        
         input UserInput{
             email: String!
             password: String!
@@ -62,16 +72,19 @@ module.exports = buildSchema(`
             events: [Event!]!
             bookings: [Booking!]!
             contactsMessages: [Contact!]!
+            youtubeLinks: [YoutubeLink!]!
             login(email:String!, password: String!): AuthData!
         }
         
         type RootMutation{
             createEvent(eventInput : EventInput): Event
             createContactMessage(contactInput : ContactInput): Contact
+            createYoutubeLink(youtubeLinkInput : YoutubeLinkInput): YoutubeLink
             createUser(userInput : UserInput):User
             bookEvent(eventId: ID!): Booking!
             cancelBooking(bookingId: ID!): Event!
             cancelEvent(eventId: ID!): Event!
+            cancelYoutubeLink(youtubeLinkId: ID!): YoutubeLink!
         }
         
         schema {
