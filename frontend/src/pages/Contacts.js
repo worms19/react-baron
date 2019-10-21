@@ -23,8 +23,9 @@ class Contacts extends Component {
 
     componentDidMount() {
         this.fetchContacts();
+        console.log('fetch terminé');
     }
-    static contextType = AuthContext;
+
 
     fetchContacts = () => {
         this.setState({isLoading: true})
@@ -71,12 +72,11 @@ class Contacts extends Component {
     render() {
         return (
 
-            <div className=" bg-img">
 
-                <section className="events-area ">
 
-                    <div className="container">
-                        <div className="row">
+    <React.Fragment>
+
+
 
                             {this.state.isLoading
                                 ?    <Spinner/>
@@ -85,29 +85,12 @@ class Contacts extends Component {
                                     <ContactList
 
                                         contacts={this.state.contactsMessages}
-                                        onDeleteEvent = {console.log('salut')}/>
+                                        />
                                 )
                             }
 
 
-
-
-                        </div>
-
-                        <div className="row">
-                            <div className="col-12">
-                                <div className="load-more-btn text-center mt-70">
-                                    <a href="#" className="btn oneMusic-btn">
-                                        Load More
-                                        <i className="fa fa-angle-double-right"/>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-            </div>
+    </React.Fragment>
 
 
         );

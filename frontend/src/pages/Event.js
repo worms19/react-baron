@@ -202,9 +202,7 @@ class EventPage extends Component{
 
 
             <React.Fragment>
-                {(this.state.creating || this.state.selectedEvent) &&
-                    <Backdrop/>
-                }
+
                 {this.state.creating &&  (
                     <Modal
                         title="Add Event"
@@ -233,19 +231,6 @@ class EventPage extends Component{
                         </form>
                     </Modal>
                 )}
-                {this.state.selectedEvent &&  (
-                    <Modal
-                        title={this.state.selectedEvent.title}
-                        canConfirm
-                        canCancel
-                        onCancel={this.modalCancelHandler}
-                        onConfirm={this.bookEventHandler}
-                        confirmText="Book">
-                    <h1>{this.state.selectedEvent.title}</h1>
-                        <h2>{this.state.selectedEvent.price}$ - {new Date(this.state.selectedEvent.date).toLocaleDateString('Fr-fr')}</h2>
-                        <p>{this.state.selectedEvent.description}</p>
-                    </Modal>
-                )}
 
                 {this.context.token && (<div className="events-control_">
                 <p> Share your own event </p>
@@ -259,7 +244,6 @@ class EventPage extends Component{
 
                         events={this.state.events}
                         authUserId={this.context.userId}
-                        onViewDetail={this.showDetailHandler}
                         onDeleteEvent = {this.onDeleteEvent}/>
                         )
                 }

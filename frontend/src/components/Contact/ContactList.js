@@ -15,7 +15,6 @@ const ContactList = props =>{
                 index={index}
                 key={contactMessage._id}
                 contactMessageId = {contactMessage._id}
-                deleteThisEvent = {props.onDeleteEvent}
                 />
                 );
         });
