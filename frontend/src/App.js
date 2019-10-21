@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header/Header';
 import Contact from './pages/Contact';
-import Video from './pages/Video';
 import Accueil from './pages/Accueil';
 import GalleryPhoto from './pages/GalleryPhoto';
 import AuthPage from './pages/Auth';
@@ -15,8 +14,8 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import { BrowserRouter as Router, Route,Redirect,Switch } from 'react-router-dom';
 import Contacts from "./pages/Contacts";
-import Footer from "./components/Footer/Footer";
 import YoutubeLinkPage from "./pages/CreationYoutubeLink";
+import DisplayYoutubeLink from "./pages/DisplayYoutubeLink";
 
 class App extends Component {
 
@@ -48,23 +47,14 @@ class App extends Component {
           {this.state.token ? <MainNavigation/> : <Header />}
           <Switch>
           <Route exact path="/react-baron" component={Accueil} />
-          <Route path="/Mp3" component={Video} />
+          <Route path="/Mp3" component={DisplayYoutubeLink} />
           <Route path="/GalleryPhoto" component={GalleryPhoto} />
           <Route path="/Events" component={Events} />
-            {!this.state.token &&
-              <Route path="/auth" component={AuthPage} />}
-            {this.state.token &&
-            <Route path="/eventpage" component={EventPage} />
-            }
-            {this.state.token &&
-            <Route path="/youtubePage" component={YoutubeLinkPage} />
-            }
-            {this.state.token &&
-                /* page d'aauht*/
-            <Redirect path="/auth"  to="/eventpage" exact />
-            }
-            {this.state.token &&
-            (<Route path="/contactPage" component={Contacts} />)}
+          {!this.state.token && <Route path="/auth" component={AuthPage} />}
+          {this.state.token && <Route path="/eventpage" component={EventPage} />}
+          {this.state.token && <Route path="/youtubePage" component={YoutubeLinkPage} />}
+          {this.state.token && <Redirect path="/auth"  to="/eventpage" exact />}
+          {this.state.token && (<Route path="/contactPage" component={Contacts} />)}
           <Route path="/Contact" component={Contact} />
           </Switch>
           </AuthContext.Provider>

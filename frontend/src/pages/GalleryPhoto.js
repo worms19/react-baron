@@ -1,4 +1,3 @@
-
 import React from 'react';
 import Gallery from 'react-photo-gallery';
 import Lightbox from 'react-images';
@@ -68,26 +67,25 @@ export default class GalleryPhoto extends React.Component {
 
 
     return (
-      <div className="slide-img bg-img">
+      <div className="">
         <EncartBlanc
           text1="See What’s NeWs"
           text2="Latests Photos"
         />
-
-
         <div className="gallery-photo">
-
-
-          <Gallery photos={photos} direction="column" columns={4} onClick={this.openLightbox} />
-          <Lightbox
-            images={photos}
-            onClose={this.closeLightbox}
-            onClickPrev={this.gotoPrevious}
-            onClickNext={this.gotoNext}
-            currentImage={this.state.currentImage}
-            isOpen={this.state.lightboxIsOpen}
-          />
-
+            <Gallery photos={photos}
+                     direction="column"
+                     columns={4}
+                     onClick={this.openLightbox}
+            />
+            <Lightbox
+              images={photos}
+              onClose={this.closeLightbox}
+              onClickPrev={this.gotoPrevious}
+              onClickNext={this.gotoNext}
+              currentImage={this.state.currentImage}
+              isOpen={this.state.lightboxIsOpen}
+            />
         </div>
         <Footer />
       </div>

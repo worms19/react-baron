@@ -81,9 +81,8 @@ module.exports = buildSchema(`
             createContactMessage(contactInput : ContactInput): Contact
             createYoutubeLink(youtubeLinkInput : YoutubeLinkInput): YoutubeLink
             createUser(userInput : UserInput):User
-            bookEvent(eventId: ID!): Booking!
-            cancelBooking(bookingId: ID!): Event!
             cancelEvent(eventId: ID!): Event!
+            cancelMessage(messageId: ID!): Contact!
             cancelYoutubeLink(youtubeLinkId: ID!): YoutubeLink!
         }
         

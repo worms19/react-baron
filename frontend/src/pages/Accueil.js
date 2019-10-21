@@ -1,7 +1,4 @@
-
-
 import React from 'react';
-
 
 const divStyle = {
   position: 'absolute',
@@ -19,15 +16,10 @@ const divStyle3 = {
   position: 'absolute',
   bottom: '30px',
   left: '110px',
-
 };
 
-
 const Accueil = () => (
-
-
   <div className="">
-
     <a className="fac-ic" style={divStyle} target="_blank" rel="noopener noreferrer" href="https://www.facebook.com/baroncrane/">
       <i className="fab fa-facebook-f fa-lg white-text fa-2x"> </i>
     </a>
@@ -38,8 +30,6 @@ const Accueil = () => (
       <i className="fab fa-youtube fa-lg white-text fa-2x"> </i>
     </a>
   </div>
-  // {/* <!-- ##### Song Area End ##### --> */}
-
 );
 
 export default Accueil;

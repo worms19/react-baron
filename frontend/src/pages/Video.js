@@ -16,7 +16,7 @@
         };
 
   const Video = () => (
-    <div className="slide-img bg-img"   >
+    <div className=""  >
  
  {/* <!-- ##### Song Area Start ##### --> */}
 

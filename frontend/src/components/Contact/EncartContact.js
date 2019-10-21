@@ -10,6 +10,7 @@ const EncartContact = (props) => (
             <p>mail :{props.mail}</p>
             <p>tel: {props.phoneContact}</p>
             <p>message: {props.message}</p>
+            <button onClick={props.onDeleteContact.bind(this, props.contactMessageId)}>X</button>
         </div>
     </div>
 </div>

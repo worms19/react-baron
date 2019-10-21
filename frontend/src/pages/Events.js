@@ -124,10 +124,7 @@ class Events extends Component {
         return (
             <div className="slide-img bg-img">
                 <section className="events-area ">
-                    <EncartBlanc
-                        text1="See what’s new"
-                        text2="Latests SHOWS"
-                    />
+
                     <div className="container">
                         <div className="row">
 
@@ -137,21 +134,11 @@ class Events extends Component {
                                     <EventListLs
                                         events={this.state.events}
                                         authUserId={this.context.userId}
-                                        onViewDetail={this.showDetailHandler}
                                         />
                                 )
                             }
                         </div>
-                        <div className="row">
-                            <div className="col-12">
-                                <div className="load-more-btn text-center mt-70">
-                                    <a href="#" className="btn oneMusic-btn">
-                                        Load More
-                                        <i className="fa fa-angle-double-right"/>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+
                     </div>
                 </section>
                 <Footer/>

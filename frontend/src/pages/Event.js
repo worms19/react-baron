@@ -145,7 +145,6 @@ class EventPage extends Component{
                 this.setState({isLoading:false})
             });
     };
-
     onDeleteEvent =(eventId) => {
 
        const requestBody = {
@@ -197,12 +196,8 @@ class EventPage extends Component{
     };
 
     render(){
-
         return(
-
-
             <React.Fragment>
-
                 {this.state.creating &&  (
                     <Modal
                         title="Add Event"
@@ -231,23 +226,23 @@ class EventPage extends Component{
                         </form>
                     </Modal>
                 )}
-
-                {this.context.token && (<div className="events-control_">
-                <p> Share your own event </p>
-                <button className="btn_" onClick={this.startCreateEventHandler} > Create Event</button>
-            </div>)}
+                {this.context.token &&
+                    (<div className="events-control_">
+                        <p> Share your own event </p>
+                        <button className="btn_"
+                                onClick={this.startCreateEventHandler}> Create Event
+                        </button>
+                    </div>)
+                }
                 {this.state.isLoading
                     ?    <Spinner/>
                     :   (
-
                         <EventList
-
                         events={this.state.events}
                         authUserId={this.context.userId}
                         onDeleteEvent = {this.onDeleteEvent}/>
                         )
                 }
-
             </React.Fragment>
         );
     }

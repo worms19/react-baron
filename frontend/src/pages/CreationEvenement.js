@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 
 import Modal from '../components/Modal/Modal'
-import Backdrop from '../components/Backdrop/Backdrop'
 import './CreationEvenement.css'
 import AuthContext from '../context/auth-context'
 import EventList from '../components/Events/EventList/EventList'
@@ -172,12 +171,7 @@ class EventPage extends Component{
     render(){
 
         return(
-
-
             <React.Fragment>
-                {(this.state.creating || this.state.selectedEvent) &&
-                <Backdrop/>
-                }
                 {this.state.creating &&  (
                     <Modal
                         title="Add Event"
@@ -206,12 +200,12 @@ class EventPage extends Component{
                         </form>
                     </Modal>
                 )}
-
-
-                {this.context.token && (<div className="events-control">
+                {this.context.token &&
+                    (<div className="events-control">
                     <p> Share your own event </p>
                     <button className="btn" onClick={this.startCreateEventHandler} > Create Event</button>
-                </div>)}
+                    </div>)
+                }
                 {this.state.isLoading
                     ?    <Spinner/>
                     :   (<EventList
@@ -219,7 +213,6 @@ class EventPage extends Component{
                         authUserId={this.context.userId}
                         onViewDetail={this.showDetailHandler}/>)
                 }
-
             </React.Fragment>
         );
     }
