@@ -13,6 +13,7 @@
 							<EncartBlanc
 								text1 = {'See What NeWs'}
 								text2 = {'Get in touch'}
+								size = {1}
 							/>
 							<ContactForm2/>
 							<ContactBooking/>

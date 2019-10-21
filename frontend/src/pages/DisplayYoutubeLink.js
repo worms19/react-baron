@@ -76,6 +76,7 @@ class DisplayYoutubeLink extends Component{
                 <div className="slide-img bg-img"   >
                     <EncartBlanc text1 = {'See What NeWs'}
                                  text2 = {'Latests Videos'}
+                                 size = {1}
                     />
                     <div className="background-grey">
                         {this.state.isLoading

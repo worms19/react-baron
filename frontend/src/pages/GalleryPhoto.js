@@ -71,6 +71,7 @@ export default class GalleryPhoto extends React.Component {
         <EncartBlanc
           text1="See What’s NeWs"
           text2="Latests Photos"
+          size = {1}
         />
         <div className="gallery-photo">
             <Gallery photos={photos}
