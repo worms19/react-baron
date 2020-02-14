@@ -1,0 +1,57 @@
+.event-card {
+    background-color: black;
+    padding: 8px 5px;
+    margin-bottom: 4px;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+    position: relative;
+    -webkit-transition: all .6s ease-in;
+    -moz-transition: all .6s ease-in;
+    -o-transition: all .6s ease-in;
+    transition: all .6s ease-in;
+}
+
+.padded {
+    padding: 0px 3px !important;
+}
+
+.date {
+    text-align: center;
+    border-right: 2px dashed #dadde6;
+    color: white;
+}
+.date h3 span {
+    font-size: 15px;
+    display: block;
+    color: #bbb;
+}
+.dateSize
+{
+font-size: 2.3rem;
+}
+.whiteText {
+    color: white;
+}
+
+.event-card:hover .whiteText {
+    -webkit-transition: all .6s ease-in;
+    -moz-transition: all .6s ease-in;
+    -o-transition: all .6s ease-in;
+    transition: all .6s ease-in;
+    color: black;
+}
+.event-card:hover .date h3 span{
+    -webkit-transition: all .6s ease-in;
+    -moz-transition: all .6s ease-in;
+    -o-transition: all .6s ease-in;
+    transition: all .6s ease-in;
+    color: black;
+}
+
+.event-card:hover{
+    background: white;
+
+}
+
+.center{
+    text-align: center;
+}

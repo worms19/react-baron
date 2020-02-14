@@ -1562,7 +1562,9 @@ img {
 .has-bg-img {
   position: relative;
   z-index: 1; }
-  .has-bg-img .contact-form-area .form-control {
+  .has-bg-img .contact-f
+NEXEN SQUARE FOR PEOPLE
+AUSTRALIA , SEDNEYorm-area .form-control {
     color: #fff;
     border-bottom: 1px solid #fff; }
     .has-bg-img .contact-form-area .form-control:focus {
@@ -1748,6 +1750,7 @@ img {
   background-color: rgba(63, 63, 63, 0.527);
   padding: 35px 50px 0px;
   margin-bottom: 30px;
+  min-height: 700px;
 }
 
 .col-centered{

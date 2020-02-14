@@ -30,7 +30,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="footer-copyright text-center py-3">
-© 2018 Copyright:
+© 2020 Copyright:
       <a href="https:/github.com/worms19"> Worms19</a>
     </div>
 
