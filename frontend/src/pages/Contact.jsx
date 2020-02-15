@@ -5,6 +5,7 @@ import './Contact.css';
 import ContactForm2 from '../components/Objects/ContactForm2';
 import BookingEncart from "../components/Events/2/BookingEncart";
 import PressKitEncart from "../components/Events/2/PressKitEncart";
+import Footer2 from "../components/Footer2/Footer2";
 
 const Contact = (props) => (
 
@@ -27,11 +28,23 @@ const Contact = (props) => (
             </div>
           </div>
         <div className="marg">
-            <PressKitEncart/>
-            <PressKitEncart/>
+            <PressKitEncart
+                t1={"ENGLISH VERSION"}
+                t2={"Bio"}
+                t3={"Review"}
+                t4={"DOWNLOAD"}
+                l1={"dummy/press-kit-baron-crane.pdf"}
+            />
+            <PressKitEncart
+                t1={"VERSION FRANCAISE"}
+                t2={"Bio"}
+                t3={"Presse"}
+                t4={"TELECHARGER"}
+                l1={"dummy/dossier-presse-baron-crane.pdf"}
+            />
         </div>
       </div>
-      <Footer />
+      <Footer2/>
     </div>
 
 );

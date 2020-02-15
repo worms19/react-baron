@@ -56,7 +56,7 @@ const eventListLs = (props) => {
       <li>
         <EncartBlanc
           text1="See what’s new"
-          text2="Latests SHOWS"
+          text2="next SHOWS"
         />
       </li>
       <li>
@@ -66,7 +66,6 @@ const eventListLs = (props) => {
       </li>
       <li>
         <EncartBlanc
-          text1="See what’s new"
           text2="Past SHOWS"
         />
       </li>

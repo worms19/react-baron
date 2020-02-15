@@ -9,13 +9,12 @@ import Events from './pages/Events';
 import EventPage from './pages/Event';
 import MainNavigation from './components/Navigation/MainNavigation';
 import AuthContext from './context/auth-context';
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import 'bootstrap-css-only/css/bootstrap.min.css';
-import 'mdbreact/dist/css/mdb.css';
 import { BrowserRouter as Router, Route,Redirect,Switch } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Contacts from "./pages/Contacts";
 import YoutubeLinkPage from "./pages/CreationYoutubeLink";
 import DisplayYoutubeLink from "./pages/DisplayYoutubeLink";
+import SectionNavbars from "./components/Header/Header2";
 
 class App extends Component {
 
@@ -44,7 +43,7 @@ class App extends Component {
       <Router>
         <div className="baron">
           <AuthContext.Provider value={{token: this.state.token,userId: this.state.userId, login: this.login, logout: this.logout}}>
-          {this.state.token ? <MainNavigation/> : <Header />}
+          {this.state.token ? <MainNavigation/> : <SectionNavbars />}
           <Switch>
           <Route exact path="/react-baron" component={Accueil} />
           <Route path="/Mp3" component={DisplayYoutubeLink} />

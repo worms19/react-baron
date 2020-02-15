@@ -16,8 +16,8 @@ const BookingEncart = (props) => (
       </div>
       <div className="row">
         <div className="col-md-12 center">
-            <div className="your-item">
-                <div className="aaa">
+            <div className="your-item beige">
+                <div className="inline">
                     <span>
                       booking.baroncrane@gmail.com
                     </span>

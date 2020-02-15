@@ -10,31 +10,39 @@ const PressKitEncart = (props) => (
     <div className="event-card">
       <div className="row">
         <div className="col-md-12 center">
-          <h4 className="whiteText"> ENGLISH VERSION</h4>
+          <h4 className="whiteText">{props.t1}</h4>
         </div>
       </div>
       <div className="row">
-        <div className="col-md-6 md-text-right xs-center your-item">
-            <span>
-              Bio
-            </span>
-        </div>
-        <div className="col-md-6 ">
-            <span>
-              Review
-            </span>
-        </div>
+          <div className="col-md-12 center">
+              <div className="your-item beige">
+                  <div className="inline">
+                    <span>
+                        {props.t2}
+                    </span>
+                  </div>
+                  <span>
+                        {props.t3}
+
+                </span>
+
+              </div>
+          </div>
       </div>
         <div className="row">
-            <div className="col-md-12 center">
+            <div className="col-md-12 center beige">
+
+
                 <i className="fas fa-file-pdf">&nbsp;&nbsp;</i>
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
-                    href={props.lienFb}
+                    href={props.l1}
                 >
-                    DOWNLOAD
+                        {props.t4}
+
                 </a>
+
             </div>
         </div>
     </div>

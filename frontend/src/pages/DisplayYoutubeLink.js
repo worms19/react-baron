@@ -10,6 +10,7 @@ import EncartBlanc from "../components/Encart/EncartBlanc";
 import YouTube from "react-youtube";
 import Footer from "../components/Footer/Footer";
 import YoutubeListLs from "../components/Youtube/YoutubeListLs";
+import Footer2 from "../components/Footer2/Footer2";
 
 class DisplayYoutubeLink extends Component{
     state = {
@@ -87,7 +88,7 @@ class DisplayYoutubeLink extends Component{
                         }
                     </div>
                 </div>
-                <Footer/>
+                <Footer2/>
             </React.Fragment>
         );
     }

@@ -64,12 +64,19 @@ font-size: 2.3rem;
     border-right: 3px solid;
 }
 
-.aaa{
+.inline{
     padding-right: 10px;
     display: inline-block;
     position: relative;
 }
 
+.beige{
+    color: #a7b7c1;
+    -webkit-transition: all .6s ease-in;
+    -moz-transition: all .6s ease-in;
+    -o-transition: all .6s ease-in;
+    transition: all .6s ease-in;
+}
 .your-item span:first-child::after {
     position: absolute;
     content: '|';
@@ -84,7 +91,8 @@ font-size: 2.3rem;
     transition: all .6s ease-in;
 }
 
- .event-card:hover .your-item span:first-child::after {
+ .event-card:hover .your-item span:first-child::after,
+ .event-card:hover .beige {
     color: #000000;
 }
 

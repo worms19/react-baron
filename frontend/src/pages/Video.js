@@ -4,6 +4,7 @@ import YouTube from 'react-youtube';
 import EncartBlanc from '../components/Encart/EncartBlanc';
 import Footer from '../components/Footer/Footer';
 import '../App.css';
+import Footer2 from "../components/Footer2/Footer2";
 
 
 const opts = {
@@ -42,13 +43,8 @@ const Video = () => (
       </div>
 
     </div>
-
-    {/* eslint-disable-next-line react/jsx-no-undef */}
-    <Footer />
-
-
+      <Footer2 />
   </div>
-  // {/* <!-- ##### Song Area End ##### --> */}
 
 );
 

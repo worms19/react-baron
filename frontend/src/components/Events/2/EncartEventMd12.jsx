@@ -2,6 +2,8 @@
 import React from 'react';
 import helpers from '../../../helpers/date';
 import './E.css';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faFacebookF} from "@fortawesome/free-brands-svg-icons";
 
 
 const EncartEventMd12 = (props) => (
@@ -25,13 +27,13 @@ const EncartEventMd12 = (props) => (
           <h4 className="whiteText">{props.nomEvenement}</h4>
           <div className="row">
             <div className="col-md-12 center">
-              <i className="fab fa-facebook-f whiteText">&nbsp;&nbsp;&nbsp;</i>
+              <FontAwesomeIcon icon={faFacebookF} color={"white"} className={"beige"}/>
               <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={props.lienFb}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={props.lienFb}
               >
-                {props.lienFb === '' ? 'COMING SOON' : 'SEE EVENT' }
+                &nbsp;&nbsp;SEE EVENT
               </a>
             </div>
           </div>

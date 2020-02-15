@@ -5,6 +5,7 @@ import Footer from '../components/Footer/Footer';
 import AuthContext from "../context/auth-context";
 import Spinner from "../components/Spinner/Spinner";
 import EventListLs from "../components/Events/EventList/EventListLs";
+import Footer2 from "../components/Footer2/Footer2";
 
 
 class Events extends Component {
@@ -141,7 +142,7 @@ class Events extends Component {
 
                     </div>
                 </section>
-                <Footer/>
+                <Footer2/>
             </div>
 
 

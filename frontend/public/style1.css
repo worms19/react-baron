@@ -4,7 +4,7 @@
  * Email: info@themezy.com
  * URL: http://themezy.com
  */
-/*=========================================== 
+/*===========================================
  * Importing CSS Libraries
  *===========================================*/
 /* line 45, sass/libs/_normalize.scss */
@@ -53,7 +53,7 @@ textarea {
 
 /* line 119, sass/libs/_normalize.scss */
 body {
-  
+
   margin: 0; }
 
 /* line 132, sass/libs/_normalize.scss */
@@ -1886,7 +1886,7 @@ body {
     .mobile-menu .menu .current-menu-item a {
       color: #fd5927; }
 
-/* 
+/*
  * 	Core Owl Carousel CSS File
  *	v1.3.3
  */
@@ -2592,7 +2592,7 @@ body {
 
 /* line 50, sass/pages/_gallery.scss */
 .filterable-items .filterable-item {
-  
+
   -webkit-transition-property: -webkit-transform, opacity;
           transition-property: transform, opacity;
   -webkit-transition-duration: .3s;

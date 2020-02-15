@@ -3,6 +3,7 @@ import Gallery from 'react-photo-gallery';
 import Lightbox from 'react-images';
 import EncartBlanc from '../components/Encart/EncartBlanc';
 import Footer from '../components/Footer/Footer';
+import Footer2 from "../components/Footer2/Footer2";
 
 export default class GalleryPhoto extends React.Component {
   constructor() {
@@ -89,7 +90,7 @@ export default class GalleryPhoto extends React.Component {
             isOpen={this.state.lightboxIsOpen}
           />
         </div>
-        <Footer />
+        <Footer2 />
       </div>
     );
   }
