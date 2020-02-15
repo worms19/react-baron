@@ -1,56 +1,55 @@
 
-    
- import React from 'react'
- import EncartBlanc from '../components/Encart/EncartBlanc';
- import YouTube from 'react-youtube';
- import Footer from '../components/Footer/Footer';
- import '../App.css';
+import React from 'react';
+import YouTube from 'react-youtube';
+import EncartBlanc from '../components/Encart/EncartBlanc';
+import Footer from '../components/Footer/Footer';
+import '../App.css';
 
-      
-        const opts = {
-            height: '390',
-            width: '640',
-            playerVars: { 
-              autoplay: 1
-            }
-        };
 
-  const Video = () => (
-    <div className=""  >
- 
- {/* <!-- ##### Song Area Start ##### --> */}
+const opts = {
+  height: '390',
+  width: '640',
+  playerVars: {
+    autoplay: 1,
+  },
+};
 
- <EncartBlanc text1 = {'See What NeWs'}
-             text2 = {'Latests Videos'} />
+const Video = () => (
+  <div className="">
 
-<div className="background-grey">     
-  <div className="youtube-centered">     
-    <YouTube
-    videoId="QWusFkPm2E4"
+    {/* <!-- ##### Song Area Start ##### --> */}
+
+    <EncartBlanc
+      text1="See What NeWs"
+      text2="Latests Videos"
     />
-  </div>
-  <div className="youtube-centered">
-  <YouTube
-    videoId="SDPEbt0uknk"
-    />
-  </div>
-    <div className="youtube-centered">
+
+    <div className="background-grey">
+      <div className="youtube-centered">
         <YouTube
-            videoId="uWqmB2M1Cu0"
+          videoId="QWusFkPm2E4"
         />
+      </div>
+      <div className="youtube-centered">
+        <YouTube
+          videoId="SDPEbt0uknk"
+        />
+      </div>
+      <div className="youtube-centered">
+        <YouTube
+          videoId="uWqmB2M1Cu0"
+        />
+      </div>
+
     </div>
 
-</div>
- 
-        {/* eslint-disable-next-line react/jsx-no-undef */}
-     <Footer/>
+    {/* eslint-disable-next-line react/jsx-no-undef */}
+    <Footer />
 
 
+  </div>
+  // {/* <!-- ##### Song Area End ##### --> */}
 
- </div>
- // {/* <!-- ##### Song Area End ##### --> */}
- 
- )
-  
- export default Video
-  
+);
+
+export default Video;

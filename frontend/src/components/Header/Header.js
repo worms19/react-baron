@@ -31,24 +31,24 @@ export default class Header extends React.Component {
                   {/* <!-- Close Button --> */}
                   <div className="classycloseIcon">
                     <div className="cross-wrap">
-                <span className="top" />
-                <span className="bottom" />
-              </div>
+                      <span className="top" />
+                      <span className="bottom" />
+                    </div>
                   </div>
 
                   {/* <!-- Nav Start --> */}
                   <div className="classynav align-items-center">
                     <ul>
-                <li><Link exact to="/react-baron">HOME</Link></li>
-                <li><Link to="/Mp3">VIDEOS</Link></li>
+                      <li><Link exact to="/react-baron">HOME</Link></li>
+                      <li><Link to="/Mp3">VIDEOS</Link></li>
 
-                <li><Link to="/GalleryPhoto">PHOTOS</Link></li>
-                <li><Link to="/Events">TOUR</Link></li>
-                <li><Link to="/Contact">CONTACT</Link></li>
-                <li><a target="_blank" rel="noopener noreferrer" href="https://baroncrane.bigcartel.com/" className="btn see-more-btn">SHOP</a></li>
-                <li><a target="_blank" rel="noopener noreferrer" href="https://baroncrane.bandcamp.com/" className="btn see-more-btn">MUSIC</a></li>
+                      <li><Link to="/GalleryPhoto">PHOTOS</Link></li>
+                      <li><Link to="/Events">TOUR</Link></li>
+                      <li><Link to="/Contact">CONTACT</Link></li>
+                      <li><a target="_blank" rel="noopener noreferrer" href="https://baroncrane.bigcartel.com/" className="btn see-more-btn">SHOP</a></li>
+                      <li><a target="_blank" rel="noopener noreferrer" href="https://baroncrane.bandcamp.com/" className="btn see-more-btn">MUSIC</a></li>
 
-              </ul>
+                    </ul>
 
                   </div>
                   {/* <!-- Nav End --> */}

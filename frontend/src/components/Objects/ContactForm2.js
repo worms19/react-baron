@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './contact.css'
 const moment = require('moment');
 
-class ContactForm2 extends Component{
+export default class ContactForm2 extends Component{
 
     constructor(props) {
         super(props);
@@ -47,6 +47,7 @@ class ContactForm2 extends Component{
         });
         console.log('damdam', this.state.NameOfMessage, this.state.EmailOfMessage, this.state.PhoneOfMessage, this.state.Message);
     }*/
+
 
     sendMessage = (event) =>{
         this.setState({creating:false});
@@ -165,5 +166,3 @@ class ContactForm2 extends Component{
         );
     }
 }
-
-export default  ContactForm2;

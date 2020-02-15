@@ -8,10 +8,10 @@ import EventListLs from "../components/Events/EventList/EventListLs";
 
 
 class Events extends Component {
-    state = {
+    state= {
         creating:false,
         events:[],
-        isLoading: false,
+        isLoading: true,
         selectedEvent: null
     };
 

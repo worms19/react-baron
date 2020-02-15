@@ -71,22 +71,23 @@ export default class GalleryPhoto extends React.Component {
         <EncartBlanc
           text1="See What’s NeWs"
           text2="Latests Photos"
-          size = {1}
+          size={1}
         />
         <div className="gallery-photo">
-            <Gallery photos={photos}
-                     direction="column"
-                     columns={4}
-                     onClick={this.openLightbox}
-            />
-            <Lightbox
-              images={photos}
-              onClose={this.closeLightbox}
-              onClickPrev={this.gotoPrevious}
-              onClickNext={this.gotoNext}
-              currentImage={this.state.currentImage}
-              isOpen={this.state.lightboxIsOpen}
-            />
+          <Gallery
+            photos={photos}
+            direction="column"
+            columns={4}
+            onClick={this.openLightbox}
+          />
+          <Lightbox
+            images={photos}
+            onClose={this.closeLightbox}
+            onClickPrev={this.gotoPrevious}
+            onClickNext={this.gotoNext}
+            currentImage={this.state.currentImage}
+            isOpen={this.state.lightboxIsOpen}
+          />
         </div>
         <Footer />
       </div>
