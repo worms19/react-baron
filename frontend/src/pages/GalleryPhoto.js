@@ -1,9 +1,9 @@
-
 import React from 'react';
 import Gallery from 'react-photo-gallery';
 import Lightbox from 'react-images';
 import EncartBlanc from '../components/Encart/EncartBlanc';
 import Footer from '../components/Footer/Footer';
+import Footer2 from "../components/Footer2/Footer2";
 
 export default class GalleryPhoto extends React.Component {
   constructor() {
@@ -59,26 +59,30 @@ export default class GalleryPhoto extends React.Component {
           { src: 'react-baron/dummy/9.jpg',   width: 3, height: 2 },
 
           { src: 'react-baron/dummy/10.jpg', width: 3, height: 2 } */
-      { src: 'react-baron/dummy/large-gallery/13.jpg', width: 3, height: 2 },
-      { src: 'react-baron/dummy/large-gallery/14.jpg', width: 3, height: 2 },
-      { src: 'react-baron/dummy/large-gallery/15.jpg', width: 3, height: 2 },
-      { src: 'react-baron/dummy/large-gallery/16.jpg', width: 3, height: 2 },
-      { src: 'react-baron/dummy/large-gallery/17.jpg', width: 3, height: 2 },
+      { src: '/dummy/large-gallery/13.jpg', width: 3, height: 2 },
+      { src: '/dummy/large-gallery/14.jpg', width: 3, height: 2 },
+      { src: '/dummy/large-gallery/15.jpg', width: 3, height: 2 },
+      { src: '/dummy/large-gallery/16.jpg', width: 3, height: 2 },
+      { src: '/dummy/large-gallery/17.jpg', width: 3, height: 2 },
     ];
 
 
     return (
-      <div className="slide-img bg-img">
+        <div>
+
+      <div className="container">
         <EncartBlanc
           text1="See What’s NeWs"
           text2="Latests Photos"
+          size={1}
         />
-
-
         <div className="gallery-photo">
-
-
-          <Gallery photos={photos} direction="column" columns={4} onClick={this.openLightbox} />
+          <Gallery
+            photos={photos}
+            direction="column"
+            columns={4}
+            onClick={this.openLightbox}
+          />
           <Lightbox
             images={photos}
             onClose={this.closeLightbox}
@@ -87,10 +91,12 @@ export default class GalleryPhoto extends React.Component {
             currentImage={this.state.currentImage}
             isOpen={this.state.lightboxIsOpen}
           />
-
         </div>
-        <Footer />
       </div>
+        <Footer2
+          isOn={true}
+        />
+        </div>
     );
   }
 }

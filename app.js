@@ -2,6 +2,8 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const graphQlHttp = require('express-graphql');
 const mongoose = require('mongoose');
+const path = require('path');
+
 
 const graphQlSchema = require('./graphql/schema/index');
 const graphQlResolver = require('./graphql/resolvers/index');
@@ -33,13 +35,17 @@ app.use('/graphql', graphQlHttp({
   graphiql: true,
 }));
 
-app.get('/', (req, res) => {
-  res.sendFile(`${__dirname}/frontend/public/index.html`);
+app.use(express.static('frontend/build'));
+//app.use(express.static(path.join(__dirname, 'frontend/build')));
+
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname+'/frontend/build/index.html'));
 });
 
 mongoose.connect(
-  `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@eventcluster-qqgzo.mongodb.net/${process.env.MONGO_DB}?retryWrites=true`,
+  `mongodb+srv://Dams:Chat0666@eventcluster-qqgzo.mongodb.net/baron-crane?retryWrites=true`,
 ).then(() => {
+  console.log('application connecté sur le port ' + port);
   app.listen(port);
 }).catch((err) => {
   console.log(err);

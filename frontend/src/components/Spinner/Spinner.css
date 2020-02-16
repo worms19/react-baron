@@ -2,19 +2,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 85vh;
 }
 .lds-default {
     display: inline-block;
-    position: relative;
-    width: 64px;
-    height: 64px;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
 }
 .lds-default div {
     position: absolute;
     width: 5px;
     height: 5px;
-    background: #d632ff;
+    background: #ffd000;
     border-radius: 50%;
     animation: lds-default 1.2s linear infinite;
 }

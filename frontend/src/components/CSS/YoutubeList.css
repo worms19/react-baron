@@ -1,0 +1,14 @@
+
+.event__list{
+    max-width: 90%;
+    margin: 2rem auto;
+    list-style: none;
+    padding: 0;
+}
+
+.youtubeLink__list{
+    max-width: 90%;
+    margin: 8rem auto;
+    list-style: none;
+    padding: 0;
+}

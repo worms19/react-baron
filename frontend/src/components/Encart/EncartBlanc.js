@@ -1,23 +1,14 @@
 
+import React from 'react';
+import '../CSS/encart.css';
 
-    
- import React from 'react'
-
-
-
- const EncartBlanc = ({text1,text2}) => (
-
-
-// {/* <!-- ##### Breadcumb Area Start ##### --> */}
-<section className="breadcumb-area"  >
-    <div className="bradcumbContent ">
-        <p>{text1}</p>
-        <h2>{text2}</h2>
+const EncartBlanc = ({ text1, text2, size }) => (
+  <section className="whitePage">
+    <div className="bradcumbContent2 ">
+      <p>{text1}</p>
+      <h2>{text2}</h2>
     </div>
-</section>
-// {/* <!-- ##### Breadcumb Area End ##### --> */}
+  </section>
+);
 
-)
- 
-export default EncartBlanc
- 
+export default EncartBlanc;
