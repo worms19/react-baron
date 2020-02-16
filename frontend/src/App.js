@@ -46,6 +46,7 @@ class App extends Component {
           {this.state.token ? <MainNavigation/> : <SectionNavbars />}
           <Switch>
           <Route exact path="/react-baron" component={Accueil} />
+          <Route exact path="/" component={Accueil} />
           <Route path="/Mp3" component={DisplayYoutubeLink} />
           <Route path="/GalleryPhoto" component={GalleryPhoto} />
           <Route path="/Events" component={Events} />
