@@ -67,7 +67,7 @@ const eventListLs = (props) => {
           text2="Past SHOWS"
         />
 
-        <section>
+        <section className="pastEvent">
           <div className="container text-uppercase">
             <div className="row">
               {pastEvent}

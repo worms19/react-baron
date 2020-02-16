@@ -10,6 +10,8 @@ const ContactList = (props) => {
       mail={contactMessage.mail}
       phoneContact={contactMessage.phoneContact}
       message={contactMessage.message}
+      phone={contactMessage.phone}
+      date={contactMessage.date}
       index={index}
       key={contactMessage._id}
       contactMessageId={contactMessage._id}
@@ -18,9 +20,9 @@ const ContactList = (props) => {
   ));
 
   return (
-    <ul className="contactMessage__list">
+    <div className="container newBooking">
       {contacts}
-    </ul>
+    </div>
   );
 };
 

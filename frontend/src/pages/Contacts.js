@@ -38,6 +38,7 @@ class Contacts extends Component {
                         _id 
                         nom
                         mail
+                        phone
                         message
                         date
                     }

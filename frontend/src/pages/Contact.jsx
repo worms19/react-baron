@@ -1,6 +1,5 @@
 import React from 'react';
 import EncartBlanc from '../components/Encart/EncartBlanc';
-import Footer from '../components/Footer/Footer';
 import './Contact.css';
 import ContactForm2 from '../components/Objects/ContactForm2';
 import BookingEncart from "../components/Events/2/BookingEncart";

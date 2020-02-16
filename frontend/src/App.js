@@ -49,12 +49,12 @@ class App extends Component {
           <Route path="/Mp3" component={DisplayYoutubeLink} />
           <Route path="/GalleryPhoto" component={GalleryPhoto} />
           <Route path="/Events" component={Events} />
+          <Route path="/Contact" component={Contact} />
           {!this.state.token && <Route path="/auth" component={AuthPage} />}
           {this.state.token && <Route path="/eventpage" component={EventPage} />}
           {this.state.token && <Route path="/youtubePage" component={YoutubeLinkPage} />}
           {this.state.token && <Redirect path="/auth"  to="/eventpage" exact />}
           {this.state.token && (<Route path="/contactPage" component={Contacts} />)}
-          <Route path="/Contact" component={Contact} />
           </Switch>
           </AuthContext.Provider>
         </div>

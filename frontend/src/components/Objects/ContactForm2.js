@@ -9,8 +9,7 @@ export default class ContactForm2 extends Component{
         this.handleNameOfMessage = this.handleNameOfMessage.bind(this);
         this.handleEmailOfMessage = this.handleEmailOfMessage.bind(this);
         this.handlePhoneOfMessage = this.handlePhoneOfMessage.bind(this);
-        this.handleMessage = this.handleMessage.bind(this);
-
+        this.handleMessage = this.handleMessage.bind(this)
         this.state = {
             SignatureOfGuest: "",
             EmailOfMessage: "",
@@ -20,18 +19,14 @@ export default class ContactForm2 extends Component{
         };
     }
 
-
     handleNameOfMessage(event) {
         this.setState({ NameOfMessage: event.target.value });
-        console.log('damdam', event.target.value);
     }
     handleEmailOfMessage(event) {
         this.setState({EmailOfMessage: event.target.value });
-        console.log('damdam', event.target.value);
     }
     handlePhoneOfMessage(event) {
         this.setState({ PhoneOfMessage: event.target.value });
-        console.log('damdam', event.target.value);
     }
     handleMessage(event) {
         this.setState({ Message: event.target.value });
@@ -48,22 +43,26 @@ export default class ContactForm2 extends Component{
         console.log('damdam', this.state.NameOfMessage, this.state.EmailOfMessage, this.state.PhoneOfMessage, this.state.Message);
     }*/
 
-
     sendMessage = (event) =>{
         this.setState({creating:false});
         const nom = this.state.NameOfMessage;
         const mail = this.state.EmailOfMessage;
+        const phone = this.state.PhoneOfMessage;
         const message = this.state.Message;
         const date = moment().format("MMM Do YY");
-
-
         const messageLog = {nom, mail, message, date};
-        console.log(messageLog);
 
         const requestBody = {
             query: `
                 mutation {
-                    createContactMessage(contactInput:{ nom: "${nom}", mail: "${mail}", message: "${message}",date: "${date}"})
+                    createContactMessage(contactInput:
+                    {
+                     nom: "${nom}",
+                     mail: "${mail}",
+                     message: "${message}",
+                     date: "${date}",
+                     phone:"${phone}"
+                    })
                     {
                         _id
                     }
@@ -82,7 +81,7 @@ export default class ContactForm2 extends Component{
                 if(res.status !== 200 && res.status !== 201){
                     throw new Error('Failed!');
                 }
-                return res.json();
+                //return res.json();
             })
             .catch(err =>{
                 console.log(err)
@@ -96,10 +95,7 @@ export default class ContactForm2 extends Component{
         });
     };
 
-
-
     render(){
-
         return(
             <div className="container">
                 <form id="contact" >
@@ -113,8 +109,6 @@ export default class ContactForm2 extends Component{
                             value={this.state.NameOfMessage}
                             placeholder="Your name"
                             tabIndex="1"
-                            required
-                            autoFocus
                         />
                     </fieldset>
                     <fieldset>
@@ -125,7 +119,6 @@ export default class ContactForm2 extends Component{
                             value={this.state.EmailOfMessage}
                             placeholder="Your Email Address"
                             tabIndex="2"
-                            required
                         />
                     </fieldset>
                     <fieldset>
@@ -134,9 +127,8 @@ export default class ContactForm2 extends Component{
                             onChange={this.handlePhoneOfMessage}
                             className="NameinputForm"
                             value={this.state.PhoneOfMessage}
-                            placeholder="Your name"
+                            placeholder="Your phone"
                             tabIndex="3"
-                            required
                         />
                     </fieldset>
                     <fieldset>
@@ -144,24 +136,20 @@ export default class ContactForm2 extends Component{
                             onChange={this.handleMessage}
                             placeholder="Type your Message Here...."
                             value={this.state.Message}
-                            tabIndex="5"
-                            required
-                            autoFocus
+                            tabIndex="4"
                         />
                     </fieldset>
                     <fieldset>
 
                     <button
                         className="submit"
-                        type="submit"
+                        type="button"
                         onClick={this.sendMessage}
                     >
                         Submit</button>
                     </fieldset>
 
                 </form>
-
-
             </div>
         );
     }

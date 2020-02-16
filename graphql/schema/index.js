@@ -15,6 +15,7 @@ module.exports = buildSchema(`
             _id: ID!
            nom: String! 
            mail: String! 
+           phone: String!
            message: String!
            date: String!
         }
@@ -55,6 +56,7 @@ module.exports = buildSchema(`
         input ContactInput{
            nom: String! 
            mail: String! 
+           phone: String!
            message: String!
            date: String!
         }

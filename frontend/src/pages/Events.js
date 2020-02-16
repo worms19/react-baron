@@ -4,7 +4,6 @@ import AuthContext from "../context/auth-context";
 import Spinner from "../components/Spinner/Spinner";
 import EventListLs from "../components/Events/EventList/EventListLs";
 import Footer2 from "../components/Footer2/Footer2";
-import '../components/Footer2/Footer2.css'
 import './Events.css'
 
 class Events extends Component {
@@ -61,7 +60,7 @@ class Events extends Component {
             })
             .then(resData =>{
                 const events = resData.data.events;
-                // this.setState({events: events, isLoading:false})
+                this.setState({events: events, isLoading:false})
             })
             .catch(err =>{
                 console.log(err)
@@ -131,11 +130,9 @@ class Events extends Component {
                             />)
                     }
                 </div>
-                <div style="bottom">
                 <Footer2
                     isOn={true}
                 />
-                </div>
             </div>
         );
     }

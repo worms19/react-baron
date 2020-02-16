@@ -71,36 +71,29 @@ const eventList = (props) => {
   return (
 
 
-    <ul className="event__list">
-      <li>
-        <EncartBlanc
-          text1="See what’s new"
-          text2="Latests SHOWS"
-        />
-      </li>
-      <li>
-        <section className="container text-uppercase">
-          <div className="row">
-            {futurEvent}
-          </div>
-        </section>
-      </li>
-      <li>
-        <EncartBlanc
-          text1="See what’s new"
-          text2="Past SHOWS"
-        />
-      </li>
-      <li>
-        <section>
-          <div className="container text-uppercase">
-            <div className="row">
-              {pastEvent}
-            </div>
-          </div>
-        </section>
-      </li>
-    </ul>
+      <div className="container">
+
+          <EncartBlanc
+              text1="See what’s new"
+              text2="next SHOWS"
+          />
+
+          <section className="displayBlock">
+              {futurEvent}
+          </section>
+
+          <EncartBlanc
+              text2="Past SHOWS"
+          />
+
+          <section className="pastEvent">
+              <div className=" text-uppercase">
+                  <div className="row">
+                      {pastEvent}
+                  </div>
+              </div>
+          </section>
+      </div>
 
   );
 };

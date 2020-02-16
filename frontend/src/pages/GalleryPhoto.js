@@ -94,7 +94,7 @@ export default class GalleryPhoto extends React.Component {
         </div>
       </div>
         <Footer2
-        isOn={true}
+          isOn={true}
         />
         </div>
     );

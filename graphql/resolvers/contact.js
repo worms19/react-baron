@@ -17,6 +17,7 @@ module.exports = {
             nom: args.contactInput.nom,
             mail: args.contactInput.mail,
             message: args.contactInput.message,
+            phone: args.contactInput.phone,
             date: args.contactInput.date,
         });
         try {
