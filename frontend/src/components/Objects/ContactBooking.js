@@ -14,7 +14,6 @@ const ContactBooking = () => (
       </div>
     </div>
   </div>
-
 );
 
 export default ContactBooking;

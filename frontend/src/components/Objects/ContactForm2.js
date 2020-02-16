@@ -1,5 +1,8 @@
 import React, {Component} from 'react';
 import './contact.css'
+import Button from "@material-ui/core/Button";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faExclamationTriangle} from "@fortawesome/free-solid-svg-icons/faExclamationTriangle";
 const moment = require('moment');
 
 export default class ContactForm2 extends Component{
@@ -16,6 +19,10 @@ export default class ContactForm2 extends Component{
             PhoneOfMessage: "",
             NameOfMessage: "",
             Message: "",
+            handleErrorNom: false,
+            handleErrorMail:false,
+            handleErrorPhone:false,
+            handleErrorMessage:false
         };
     }
 
@@ -32,25 +39,54 @@ export default class ContactForm2 extends Component{
         this.setState({ Message: event.target.value });
     }
 
-    /*sendMessage = event => {
-        event.preventDefault();
-        this.setState({
-            NameOfMessage: event.target.value,
-            EmailOfMessage: event.target.value,
-            PhoneOfMessage: event.target.value,
-            Message: event.target.value
-        });
-        console.log('damdam', this.state.NameOfMessage, this.state.EmailOfMessage, this.state.PhoneOfMessage, this.state.Message);
-    }*/
-
     sendMessage = (event) =>{
-        this.setState({creating:false});
+
+        const verifyInput = (nom, mail, phone, message) => {
+            let error = false;
+            if(nom === "" || nom === undefined){
+                error = true;
+                this.setState({
+                    handleErrorNom:true
+                });
+            }
+            if(mail === "" || mail === undefined){
+                error = true;
+                this.setState({
+                    handleErrorMail:true
+                });
+            }
+            if(phone === "" || phone === undefined){
+                error = true;
+                this.setState({
+                    handleErrorPhone:true
+                });
+            }
+            if(message === "" || message === undefined){
+                error = true;
+                this.setState({
+                    handleErrorMessage:true
+                });
+            }
+            return error;
+        };
+
+        this.setState({
+            creating:false,
+            handleErrorNom: false,
+            handleErrorMail: false,
+            handleErrorPhone: false,
+            handleErrorMessage: false
+        });
         const nom = this.state.NameOfMessage;
         const mail = this.state.EmailOfMessage;
         const phone = this.state.PhoneOfMessage;
         const message = this.state.Message;
         const date = moment().format("MMM Do YY");
         const messageLog = {nom, mail, message, date};
+        const error = verifyInput(nom, mail, phone, message);
+        console.log('salut');
+        console.log(error);
+        if(error === false){
 
         const requestBody = {
             query: `
@@ -88,17 +124,59 @@ export default class ContactForm2 extends Component{
             });
 
         this.setState({
-            NameOfMessage: event.target.value,
-            EmailOfMessage: event.target.value,
-            PhoneOfMessage: event.target.value,
-            Message: event.target.value
+            NameOfMessage: "",
+            EmailOfMessage: "",
+            PhoneOfMessage: "",
+            Message: ""
         });
+        }
     };
 
     render(){
+        const red={
+            color: 'red'
+        };
+        const button={
+            width: '100%',
+            textAlign: 'center',
+            color: 'white'
+        };
         return(
             <div className="container">
                 <form id="contact" >
+                    {(this.state.handleErrorMessage === true ||
+                    this.state.handleErrorMail === true ||
+                    this.state.handleErrorPhone === true ||
+                    this.state.handleErrorMessage === true) &&
+                    <ul>
+                        <li>{
+                            this.state.handleErrorNom === true &&
+                                <h4 style={red}>
+                                    <FontAwesomeIcon icon={faExclamationTriangle}/>
+                                    &nbsp;The Name Input must be filled
+                                </h4>}
+                        </li>
+                        <li>{
+                            this.state.handleErrorMail === true &&
+                                <h4 style={red}>
+                                    <FontAwesomeIcon icon={faExclamationTriangle}/>
+                                    &nbsp;The Mail Input must be filled
+                                </h4>
+                        }</li>
+                        <li>{this.state.handleErrorPhone === true &&
+                            <h4 style={red}>
+                                <FontAwesomeIcon icon={faExclamationTriangle}/>
+                                &nbsp;The Phone Input must be filled
+                            </h4>
+                        }</li>
+                        <li>{this.state.handleErrorMessage === true &&
+                            <h4 style={red}>
+                            <FontAwesomeIcon icon={faExclamationTriangle}/>
+                            &nbsp;The Message Input must be filled
+                            </h4>
+                        }</li>
+                    </ul>
+                    }
                     <h3>Quick Contact</h3>
                     <h4>Contact us today, and get reply with in 24 hours!</h4>
                     <fieldset>
@@ -140,13 +218,9 @@ export default class ContactForm2 extends Component{
                         />
                     </fieldset>
                     <fieldset>
-
-                    <button
-                        className="submit"
-                        type="button"
-                        onClick={this.sendMessage}
-                    >
-                        Submit</button>
+                        <div style={button}>
+                            <Button variant="outlined" color="inherit" onClick={this.sendMessage}>Submit</Button>
+                        </div>
                     </fieldset>
 
                 </form>
