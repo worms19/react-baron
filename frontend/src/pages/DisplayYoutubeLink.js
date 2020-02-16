@@ -95,7 +95,7 @@ class DisplayYoutubeLink extends Component{
                          &&
                                <Spinner/>
                         }
-                        <div className="caca" style={!this.state.isDisplay ? noDisplay : {}}>
+                        <div className="caca " style={!this.state.isDisplay ? noDisplay : {}}>
                               <div className="background-grey">
                                     <YoutubeListLs
                                     youtubeLinks={this.state.youtubeLinks}
