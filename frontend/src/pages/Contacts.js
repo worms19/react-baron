@@ -1,11 +1,8 @@
 
 import React,{Component} from 'react';
-import EncartBlanc from '../components/Encart/EncartBlanc';
-import Footer from '../components/Footer/Footer';
 import AuthContext from "../context/auth-context";
 import Spinner from "../components/Spinner/Spinner";
 import ContactList from "../components/Contact/ContactList";
-import EventList from "../components/Events/EventList/EventList";
 
 
 
