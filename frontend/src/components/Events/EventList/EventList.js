@@ -69,6 +69,8 @@ const eventList = (props) => {
 
 
   return (
+
+
     <ul className="event__list">
       <li>
         <EncartBlanc
@@ -99,6 +101,7 @@ const eventList = (props) => {
         </section>
       </li>
     </ul>
+
   );
 };
 

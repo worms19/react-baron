@@ -68,7 +68,9 @@ export default class GalleryPhoto extends React.Component {
 
 
     return (
-      <div className="">
+        <div>
+
+      <div className="container">
         <EncartBlanc
           text1="See What’s NeWs"
           text2="Latests Photos"
@@ -90,11 +92,11 @@ export default class GalleryPhoto extends React.Component {
             isOpen={this.state.lightboxIsOpen}
           />
         </div>
+      </div>
         <Footer2
         isOn={true}
-
         />
-      </div>
+        </div>
     );
   }
 }

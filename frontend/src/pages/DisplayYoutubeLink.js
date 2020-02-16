@@ -86,23 +86,25 @@ class DisplayYoutubeLink extends Component{
 
         return(
             <React.Fragment>
-                <div className="slide-img bg-img"   >
-                    <EncartBlanc text1 = {'See What NeWs'}
-                                 text2 = {'Latests Videos'}
-                                 size = {1}
-                    />
-                        {this.state.isLoading
-                         &&
-                               <Spinner/>
-                        }
-                        <div className="caca " style={!this.state.isDisplay ? noDisplay : {}}>
-                              <div className="background-grey">
-                                    <YoutubeListLs
-                                    youtubeLinks={this.state.youtubeLinks}
-                                    onReady={this.finishLoading}
+                <div className="container">
+                            {this.state.isLoading
+                             &&
+                                   <Spinner/>
+                            }
+                            <div  style={!this.state.isDisplay ? noDisplay : {}}>
+                                <div className="slide-img bg-img"   >
+                                    <EncartBlanc text1 = {'See What NeWs'}
+                                                 text2 = {'Latests Videos'}
+                                                 size = {1}
                                     />
-                                </div>
-                        </div>
+                                  <div className="background-grey">
+                                        <YoutubeListLs
+                                        youtubeLinks={this.state.youtubeLinks}
+                                        onReady={this.finishLoading}
+                                        />
+                                    </div>
+                            </div>
+                    </div>
                 </div>
                 <Footer2
         isOn={true}
