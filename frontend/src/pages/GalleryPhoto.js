@@ -90,7 +90,10 @@ export default class GalleryPhoto extends React.Component {
             isOpen={this.state.lightboxIsOpen}
           />
         </div>
-        <Footer2 />
+        <Footer2
+        isOn={true}
+
+        />
       </div>
     );
   }

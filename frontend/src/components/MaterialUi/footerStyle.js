@@ -26,8 +26,13 @@ const footerStyle = {
     textAlign: "center",
     display: "flex",
     zIndex: "2",
-    position: "relative",
+    position: "relative"
+  },
+  back: {
     backgroundColor: "black"
+  },
+  noBack: {
+    backgroundColor: "none"
   },
   a: {
     color: primaryColor,

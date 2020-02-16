@@ -43,7 +43,10 @@ const Video = () => (
       </div>
 
     </div>
-      <Footer2 />
+      <Footer2
+        isOn={false}
+        />
+        />
   </div>
 
 );

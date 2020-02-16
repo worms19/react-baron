@@ -1,29 +1,28 @@
 import React, {Component} from 'react';
-
-import Modal from '../components/Modal/Modal'
-import Backdrop from '../components/Backdrop/Backdrop'
 import './CreationEvenement.css'
 import AuthContext from '../context/auth-context'
 import Spinner from '../components/Spinner/Spinner'
-import YoutubeList from "../components/Youtube/YoutubeList";
 import EncartBlanc from "../components/Encart/EncartBlanc";
-import YouTube from "react-youtube";
-import Footer from "../components/Footer/Footer";
 import YoutubeListLs from "../components/Youtube/YoutubeListLs";
 import Footer2 from "../components/Footer2/Footer2";
 
 class DisplayYoutubeLink extends Component{
-    state = {
-        creating:false,
-        youtubeLinks:[],
-        isLoading: false,
-        selectedYoutubeLink: null
-    };
+
+
+
 
     static contextType = AuthContext;
 
     constructor(props) {
         super(props);
+        this.finishLoading = this.finishLoading.bind(this);
+        this.state= {
+            creating:false,
+            youtubeLinks:[],
+            isLoading: true,
+            selectedYoutubeLink: null,
+            isDisplay: false
+        };
     }
 
     componentDidMount() {
@@ -63,15 +62,28 @@ class DisplayYoutubeLink extends Component{
             })
             .then(resData =>{
                 const youtubeLinks = resData.data.youtubeLinks;
-                this.setState({youtubeLinks: youtubeLinks, isLoading:false})
+                this.setState({youtubeLinks: youtubeLinks});
+                // this.setState({isLoading:false});
+
             })
             .catch(err =>{
                 console.log(err)
-                this.setState({isLoading:false})
             });
     };
 
+    finishLoading = () => {
+        this.setState({
+            isLoading:false,
+            isDisplay: true
+        });
+    };
+
     render(){
+        const noDisplay ={
+            display: 'none',
+
+        };
+
         return(
             <React.Fragment>
                 <div className="slide-img bg-img"   >
@@ -79,16 +91,22 @@ class DisplayYoutubeLink extends Component{
                                  text2 = {'Latests Videos'}
                                  size = {1}
                     />
-                    <div className="background-grey">
                         {this.state.isLoading
-                            ?    <Spinner/>
-                            :   <YoutubeListLs
-                                youtubeLinks={this.state.youtubeLinks}
-                                />
+                         &&
+                               <Spinner/>
                         }
-                    </div>
+                        <div className="caca" style={!this.state.isDisplay ? noDisplay : {}}>
+                              <div className="background-grey">
+                                    <YoutubeListLs
+                                    youtubeLinks={this.state.youtubeLinks}
+                                    onReady={this.finishLoading}
+                                    />
+                                </div>
+                        </div>
                 </div>
-                <Footer2/>
+                <Footer2
+        isOn={true}
+        />
             </React.Fragment>
         );
     }

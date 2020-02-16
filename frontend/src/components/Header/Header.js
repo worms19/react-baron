@@ -39,7 +39,7 @@ export default class Header extends React.Component {
                   {/* <!-- Nav Start --> */}
                   <div className="classynav align-items-center">
                     <ul>
-                      <li><Link exact to="/react-baron">HOME</Link></li>
+                      <li><Link to="/react-baron">HOME</Link></li>
                       <li><Link to="/Mp3">VIDEOS</Link></li>
 
                       <li><Link to="/GalleryPhoto">PHOTOS</Link></li>

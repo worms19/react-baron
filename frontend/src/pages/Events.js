@@ -61,7 +61,6 @@ class Events extends Component {
             })
             .then(resData =>{
                 const events = resData.data.events;
-                console.log(events)
                 this.setState({events: events, isLoading:false})
             })
             .catch(err =>{
@@ -142,7 +141,9 @@ class Events extends Component {
 
                     </div>
                 </section>
-                <Footer2/>
+                <Footer2
+        isOn={true}
+        />
             </div>
 
 

@@ -31,7 +31,7 @@ export default function SectionNavbars() {
                             classes.navLink + " " + classes.socialIconsButton
                           }
                       >
-                          <Link exact to="/react-baron">HOME</Link>
+                          <Link to="/react-baron">HOME</Link>
                       </Button>
                     </ListItem>
                       <ListItem className={classes.listItem}>
@@ -41,7 +41,7 @@ export default function SectionNavbars() {
                             classes.navLink + " " + classes.socialIconsButton
                           }
                       >
-                          <div classname="prout">
+                          <div className="prout">
                             <Link to="/Mp3">VIDEOS</Link>
                           </div>
                       </Button>

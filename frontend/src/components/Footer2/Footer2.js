@@ -16,15 +16,18 @@ const useStyles = makeStyles(styles);
 
 export default function Footer2(props) {
   const classes = useStyles();
-  const { whiteFont } = props;
+  const { whiteFont, noBack } = props;
   const footerClasses = classNames({
     [classes.footer]: true,
-    [classes.footerWhiteFont]: whiteFont
+    [classes.footerWhiteFont]: whiteFont,
+    [classes.noBack]: noBack,
+    [classes.back]: !noBack
   });
   const aClasses = classNames({
     [classes.a]: true,
     [classes.footerWhiteFont]: whiteFont
   });
+  console.log(footerClasses);
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>
@@ -47,15 +50,19 @@ export default function Footer2(props) {
             </ListItem>
           </List>
         </div>
+        {
+          props.isOn &&
         <div className={classes.right}>
           &copy; {1900 + new Date().getYear()} Copyright:
           <a href="https:/github.com/worms19"> Worms19</a>
         </div>
+        }
       </div>
     </footer>
   );
 }
 
 Footer2.propTypes = {
-  whiteFont: PropTypes.bool
+  whiteFont: PropTypes.bool,
+  isOn: PropTypes.bool
 };

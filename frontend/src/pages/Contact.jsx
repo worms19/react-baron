@@ -44,7 +44,10 @@ const Contact = (props) => (
             />
         </div>
       </div>
-      <Footer2/>
+      <Footer2
+        isOn={true}
+        noBack={false}
+        />
     </div>
 
 );
