@@ -12,7 +12,7 @@ const EncartEventMd6 = (props) => (
     <div className="event-card">
       <div className="row">
         <div className="col-md-3 date">
-          <h3 className="dateSize whiteText">
+          <h3 className="dateSize flex  whiteText">
             {new Date(props.date).getDate()}
             <span>
               {helpers.monthToString(new Date(props.date))}
@@ -21,11 +21,11 @@ const EncartEventMd6 = (props) => (
             </span>
           </h3>
         </div>
-        <div className="col-md-9">
+        <div className="col-md-9 center ">
           <span className="text-capitalize whiteText">{props.nomBar}</span>
           <h4 className="whiteText">{props.nomEvenement}</h4>
           <div className="row">
-            <div className="col-md-10">
+            <div className="col-md-12">
               <FontAwesomeIcon icon={faFacebookF} color={"white"} className={"beige"}/>
               <a
                 target="_blank"
