@@ -12,7 +12,6 @@ module.exports = {
         }
     },
     createContactMessage: async (args, req) => {
-        console.log("test");
         const contactMessage = new Contact({
             nom: args.contactInput.nom,
             mail: args.contactInput.mail,
@@ -22,7 +21,6 @@ module.exports = {
         });
         try {
             const result = await contactMessage.save();
-            console.log(result);
             return result;
         }catch (e) {
             throw e;
@@ -34,7 +32,6 @@ module.exports = {
         }
         try{
             const message = await Contact.findById(args.messageId);
-            console.log(message)
             await Contact.deleteOne({_id: args.messageId});
             return message;
         }catch (e) {

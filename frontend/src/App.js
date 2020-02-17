@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header/Header';
 import Contact from './pages/Contact';
 import Accueil from './pages/Accueil';
 import GalleryPhoto from './pages/GalleryPhoto';

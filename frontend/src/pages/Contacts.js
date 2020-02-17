@@ -8,20 +8,19 @@ import ContactList from "../components/Contact/ContactList";
 
 class Contacts extends Component {
 
-    state = {
-        creating:false,
-        contactsMessages:[],
-        isLoading: true,
-        selectedEvent: null
-    };
 
     constructor(props) {
         super(props);
+        this.state = {
+            creating:false,
+            contactsMessages:[],
+            isLoading: true,
+            selectedEvent: null
+        };
     }
 
     componentDidMount() {
         this.fetchContacts();
-        console.log('fetch terminé');
     }
     static contextType = AuthContext;
 
@@ -99,12 +98,10 @@ class Contacts extends Component {
                 return res.json();
             })
             .then(resData =>{
-                console.log(resData);
                 this.setState( prevState =>{
                     const updatedMessages = prevState.contactsMessages.filter(contactsMessage => {
                         return contactsMessage._id !== messageId;
                     });
-                    console.table(updatedMessages);
                     return{contactsMessages: updatedMessages};
                 });
             })

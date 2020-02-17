@@ -30,7 +30,7 @@ const EncartEventMd6Adm = (props) => (
                 rel="noopener noreferrer"
                 href={props.lienFb}
               >
-                {props.lienFb == '' ? 'COMING SOON' : 'SEE EVENT' }
+                {props.lienFb === '' ? 'COMING SOON' : 'SEE EVENT' }
               </a>
               <button onClick={props.deleteThisEvent.bind(this, props.eventId)}>X</button>
             </div>

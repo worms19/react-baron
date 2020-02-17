@@ -44,7 +44,6 @@ class DisplayYoutubeLink extends Component{
         };
 
         const token = this.context.token;
-        console.log(`token = ${token}`)
 
         fetch('http://localhost:8000/graphql',{
             method: 'POST',

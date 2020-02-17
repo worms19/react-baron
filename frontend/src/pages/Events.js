@@ -111,13 +111,6 @@ class Events extends Component {
 
 
     render() {
-
-        const bottom ={
-        position: 'absolute',
-        bottom: '0',
-        width: '100%'
-        };
-
         return (
             <div>
                 <div className="container">

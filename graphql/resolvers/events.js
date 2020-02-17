@@ -17,7 +17,6 @@ module.exports = {
     createEvent: async (args, req) => {
 
         if (!req.isAuth){
-            console.log(`req = ${req.isAuth}`);
             throw new Error('Unauthentificated');
         }
         const event = new Event({
@@ -30,9 +29,7 @@ module.exports = {
         let createdEvent;
         try {
             const result = await event.save();
-            console.log(result);
             createdEvent = transformEvent(result);
-            console.log(createdEvent);
             return createdEvent;
         }catch (e) {
             throw e;
@@ -46,7 +43,6 @@ module.exports = {
         let createdEvent;
         try{
             const event = await Event.findById(args.eventId);
-            console.log(event)
             createdEvent = transformEvent(event);
             await Event.deleteOne({_id: args.eventId});
             return event;
