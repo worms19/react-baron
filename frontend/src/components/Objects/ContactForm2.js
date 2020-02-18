@@ -174,7 +174,7 @@ export default class ContactForm2 extends Component{
                     </ul>
                     }
                     <h3>Quick Contact</h3>
-                    <h4>Contact us today, and get reply with in 24 hours!</h4>
+                    <h4>Contact us today, and get reply within 24 hours!</h4>
                     <fieldset>
                         <input
                             type="text"

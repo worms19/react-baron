@@ -3,6 +3,7 @@ import './App.css';
 import Contact from './pages/Contact';
 import Accueil from './pages/Accueil';
 import GalleryPhoto from './pages/GalleryPhoto';
+import GalleryPhoto2 from './pages/GalleryPhoto2';
 import AuthPage from './pages/Auth';
 import Events from './pages/Events';
 import EventPage from './pages/Event';
@@ -14,6 +15,7 @@ import Contacts from "./pages/Contacts";
 import YoutubeLinkPage from "./pages/CreationYoutubeLink";
 import DisplayYoutubeLink from "./pages/DisplayYoutubeLink";
 import SectionNavbars from "./components/Header/Header2";
+import SectionNavbars2 from "./components/Header/Header3";
 
 class App extends Component {
 
@@ -42,12 +44,12 @@ class App extends Component {
       <Router>
         <div className="baron">
           <AuthContext.Provider value={{token: this.state.token,userId: this.state.userId, login: this.login, logout: this.logout}}>
-          {this.state.token ? <MainNavigation/> : <SectionNavbars />}
+          {this.state.token ? <SectionNavbars2/> : <SectionNavbars />}
           <Switch>
           <Route exact path="/react-baron" component={Accueil} />
           <Route exact path="/" component={Accueil} />
           <Route path="/Mp3" component={DisplayYoutubeLink} />
-          <Route path="/GalleryPhoto" component={GalleryPhoto} />
+          <Route path="/GalleryPhoto" component={GalleryPhoto2} />
           <Route path="/Events" component={Events} />
           <Route path="/Contact" component={Contact} />
           {!this.state.token && <Route path="/auth" component={AuthPage} />}

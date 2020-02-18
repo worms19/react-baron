@@ -16,8 +16,13 @@
 
 .date {
     text-align: center;
-    border-right: 2px dashed #6e7183;
     color: white;
+}
+
+@media (min-width: 767px) {
+    .date {
+        border-right: 2px dashed #6e7183;
+    }
 }
 .date h3 span {
     font-size: 15px;

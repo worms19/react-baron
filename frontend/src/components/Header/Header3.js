@@ -6,12 +6,13 @@ import ListItem from "@material-ui/core/ListItem";
 import Header from "../MaterialUi/Header.js";
 import Button from "../MaterialUi/Button.js";
 import styles from "../MaterialUi/navbarsStyle.js";
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import './Header2.css'
+import AuthContext from "../../context/auth-context";
 
 const useStyles = makeStyles(styles);
 
-export default function SectionNavbars() {
+export default function SectionNavbars2() {
     const [mobileOpen2, setMobileOpen2] = React.useState(false);
     const handleDrawerToggle2 = () => {
         setMobileOpen2(!mobileOpen2);
@@ -28,6 +29,8 @@ export default function SectionNavbars() {
                 color="transparent"
                 prout={mobileOpen2}
                 rightLinks={
+                    <AuthContext.Consumer>
+                        { (context) => (
                   <List className={classes.list}>
                     <ListItem className={classes.listItem}>
                       <Button
@@ -36,7 +39,7 @@ export default function SectionNavbars() {
                             classes.navLink + " " + classes.socialIconsButton
                           }
                       >
-                          <Link onClick={handleDrawerToggle2} to="/react-baron">HOME</Link>
+                          <NavLink onClick={handleDrawerToggle2} to="/eventpage">Events</NavLink>
                       </Button>
                     </ListItem>
                       <ListItem className={classes.listItem}>
@@ -46,10 +49,7 @@ export default function SectionNavbars() {
                             classes.navLink + " " + classes.socialIconsButton
                           }
                       >
-                          <div className="prout">
-                            <Link onClick={handleDrawerToggle2}
-                                  to="/Mp3">VIDEOS</Link>
-                          </div>
+                              <NavLink onClick={handleDrawerToggle2} to="/contactPage">Bookings</NavLink>
                       </Button>
                     </ListItem>
                       <ListItem className={classes.listItem}>
@@ -60,26 +60,8 @@ export default function SectionNavbars() {
                               }
 
                           >
-                              <Link
-                                  onClick={handleDrawerToggle2}
-                                  className={classes.socialIconsButton}
-                                  to="/GalleryPhoto"
-                              >
-                                  PHOTOS
-                              </Link>
-                          </Button>
-                      </ListItem>
-                      <ListItem className={classes.listItem}>
-                          <Button
-                              color="transparent"
-                              className={
-                                  classes.navLink + " " + classes.socialIconsButton
-                              }
+                              <NavLink onClick={handleDrawerToggle2} to="/youtubePage">Youtube</NavLink>
 
-                          >
-                              <Link
-                                  onClick={handleDrawerToggle2}
-                                  to="/Events">TOUR</Link>
                           </Button>
                       </ListItem>
                       <ListItem className={classes.listItem}>
@@ -88,34 +70,17 @@ export default function SectionNavbars() {
                               className={
                                   classes.navLink + " " + classes.socialIconsButton
                               }
+                              onClick={context.logout}
+                          >
+                              Logout
 
-                          >
-                              <Link
-                                  onClick={handleDrawerToggle2}
-                                  to="/Contact">CONTACT</Link>
-                          </Button>
-                      </ListItem>
-                      <ListItem className={classes.listItem}>
-                          <Button
-                              color="transparent"
-                              className={
-                                  classes.navLink + " " + classes.socialIconsButton
-                              }
 
-                          >
-                              <a onClick={handleDrawerToggle2} target="_blank" rel="noopener noreferrer" href="https://baroncrane.bigcartel.com/" >SHOP</a>                          </Button>
-                      </ListItem>
-                      <ListItem className={classes.listItem}>
-                          <Button
-                              color="transparent"
-                              className={
-                                  classes.navLink + " " + classes.socialIconsButton
-                              }
-                          >
-                              <a onClick={handleDrawerToggle2} target="_blank" rel="noopener noreferrer" href="https://baroncrane.bandcamp.com/" >MUSIC</a>
                           </Button>
                       </ListItem>
+
                   </List>
+                        )}
+                    </AuthContext.Consumer>
                 }
             />
           </div>

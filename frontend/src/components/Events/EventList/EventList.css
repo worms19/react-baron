@@ -22,7 +22,7 @@
     }
 @media only screen and (min-width: 767px) {
     .whitePage {
-        height: 270px; } }
+        height: 100px; } }
 .whitePage .bradcumbContent {
     position: absolute;
     background-color: #bbb;
