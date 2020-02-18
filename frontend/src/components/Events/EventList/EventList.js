@@ -75,7 +75,7 @@ const eventList = (props) => {
 
           <EncartBlanc
               text1="See what’s new"
-              text2="next SHOWS"
+              text2="Next Shows"
           />
 
           <section className="displayBlock">
@@ -83,7 +83,7 @@ const eventList = (props) => {
           </section>
 
           <EncartBlanc
-              text2="Past SHOWS"
+              text2="Past Shows"
           />
 
           <section className="pastEvent">
