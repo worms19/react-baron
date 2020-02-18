@@ -58,9 +58,7 @@ const headerLinksStyle = theme => ({
       marginBottom: "8px",
       marginTop: "8px",
       textAlign: "left",
-      "& > span:first-child": {
-        justifyContent: "flex-start"
-      }
+
     }
   },
   notificationNavLink: {

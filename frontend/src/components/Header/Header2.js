@@ -33,11 +33,12 @@ export default function SectionNavbars() {
                       <Button
                           color="transparent"
                           className={
-                            classes.navLink + " " + classes.socialIconsButton
+                            classes.navLink + " " + classes.socialIconsButton 
                           }
                       >
-                          <Link onClick={handleDrawerToggle2} to="/react-baron">HOME</Link>
+                            <Link onClick={handleDrawerToggle2} to="/react-baron"><span className="p">HOME</span></Link>
                       </Button>
+
                     </ListItem>
                       <ListItem className={classes.listItem}>
                       <Button

@@ -36,6 +36,9 @@ const EncartEventMd12Adm = (props) => (
                   &nbsp;&nbsp;SEE EVENT
                 </a>
                 <button onClick={props.deleteThisEvent.bind(this, props.eventId)}>X</button>
+    /* align-content: center; */
+    justify-content: center;
+
               </div>
             </div>
           </div>
