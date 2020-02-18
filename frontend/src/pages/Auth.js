@@ -33,8 +33,6 @@ class AuthPage extends Component{
         {
             return;
         }
-        console.log(email,password);
-
         let requestBody = {
             query: `
                 query {
@@ -79,7 +77,6 @@ class AuthPage extends Component{
                         resData.data.login.userId,
                         resData.data.tokenExpiration);
                 }
-                console.log(resData);
             })
             .catch(err =>{
             console.log(err)

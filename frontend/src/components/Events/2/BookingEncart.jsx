@@ -1,12 +1,8 @@
-
 import React from 'react';
-import helpers from '../../../helpers/date';
 import './E.css';
 
 
 const BookingEncart = (props) => (
-
-
   <div className="col-md-8 col-md-offset-2">
     <div className="event-card">
       <div className="row">
@@ -31,7 +27,6 @@ const BookingEncart = (props) => (
       </div>
     </div>
   </div>
-
 );
 
 

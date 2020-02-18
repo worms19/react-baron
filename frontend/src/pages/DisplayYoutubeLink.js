@@ -44,7 +44,6 @@ class DisplayYoutubeLink extends Component{
         };
 
         const token = this.context.token;
-        console.log(`token = ${token}`)
 
         fetch('https://react-baron.herokuapp.com/graphql',{
             method: 'POST',

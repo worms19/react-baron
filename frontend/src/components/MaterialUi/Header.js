@@ -53,7 +53,9 @@ export default function Header(props) {
         .classList.remove(classes[changeColorOnScroll.color]);
     }
   };
-  const { color, rightLinks, leftLinks, brand, fixed, absolute } = props;
+  const { color, rightLinks, leftLinks, brand, fixed, absolute, prout } = props;
+  console.log(rightLinks);
+
   const appBarClasses = classNames({
     [classes.appBar]: true,
     [classes[color]]: color,
@@ -91,7 +93,7 @@ export default function Header(props) {
         <Drawer
           variant="temporary"
           anchor={"right"}
-          open={mobileOpen}
+          open={mobileOpen ^ prout}
           classes={{
             paper: classes.drawerPaper
           }}

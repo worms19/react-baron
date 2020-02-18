@@ -82,53 +82,49 @@ export default class ContactForm2 extends Component{
         const phone = this.state.PhoneOfMessage;
         const message = this.state.Message;
         const date = moment().format("MMM Do YY");
-        const messageLog = {nom, mail, message, date};
         const error = verifyInput(nom, mail, phone, message);
-        console.log('salut');
-        console.log(error);
         if(error === false){
-
-        const requestBody = {
-            query: `
-                mutation {
-                    createContactMessage(contactInput:
-                    {
-                     nom: "${nom}",
-                     mail: "${mail}",
-                     message: "${message}",
-                     date: "${date}",
-                     phone:"${phone}"
-                    })
-                    {
-                        _id
+            const requestBody = {
+                query: `
+                    mutation {
+                        createContactMessage(contactInput:
+                        {
+                         nom: "${nom}",
+                         mail: "${mail}",
+                         message: "${message}",
+                         date: "${date}",
+                         phone:"${phone}"
+                        })
+                        {
+                            _id
+                        }
                     }
-                }
-            `
-        };
+                `
+            };
 
         fetch('https://react-baron.herokuapp.com/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
                 'Content-Type': 'application/json',
-            }
-        })
-            .then(res =>{
-                if(res.status !== 200 && res.status !== 201){
-                    throw new Error('Failed!');
                 }
-                //return res.json();
             })
-            .catch(err =>{
-                console.log(err)
-            });
+                .then(res =>{
+                    if(res.status !== 200 && res.status !== 201){
+                        throw new Error('Failed!');
+                    }
+                    //return res.json();
+                })
+                .catch(err =>{
+                    console.log(err)
+                });
 
-        this.setState({
-            NameOfMessage: "",
-            EmailOfMessage: "",
-            PhoneOfMessage: "",
-            Message: ""
-        });
+            this.setState({
+                NameOfMessage: "",
+                EmailOfMessage: "",
+                PhoneOfMessage: "",
+                Message: ""
+            });
         }
     };
 
@@ -178,7 +174,7 @@ export default class ContactForm2 extends Component{
                     </ul>
                     }
                     <h3>Quick Contact</h3>
-                    <h4>Contact us today, and get reply with in 24 hours!</h4>
+                    <h4>Contact us today, and get reply within 24 hours!</h4>
                     <fieldset>
                         <input
                             type="text"

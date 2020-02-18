@@ -45,10 +45,6 @@ class EventPage extends Component{
             description.trim().length === 0 ){
             return;
         }
-
-        const event = {title, price, date, description};
-        console.log(event);
-
         const requestBody = {
             query: `
                 mutation {
@@ -69,7 +65,6 @@ class EventPage extends Component{
         };
 
         const token = this.context.token;
-        console.log(`token = ${token}`)
 
         fetch('https://react-baron.herokuapp.com/graphql',{
             method: 'POST',
@@ -133,7 +128,6 @@ class EventPage extends Component{
         };
 
         const token = this.context.token;
-        console.log(`token = ${token}`)
 
         fetch('https://react-baron.herokuapp.com/graphql',{
             method: 'POST',

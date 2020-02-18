@@ -19,7 +19,6 @@ module.exports = {
         });
         try {
             const result = await youtubeLink.save();
-            console.log(result);
             return result;
         }catch (e) {
             throw e;
@@ -32,7 +31,6 @@ module.exports = {
         }
         try{
             const youtubeLink = await YoutubeLink.findById(args.youtubeLinkId);
-            console.log(youtubeLink);
             await YoutubeLink.deleteOne({_id: args.youtubeLinkId});
             return youtubeLink;
         }catch (e) {

@@ -13,7 +13,7 @@ const EncartEventMd12 = (props) => (
     <div className="event-card">
       <div className="row">
         <div className="col-md-3 date">
-          <h3 className="dateSize whiteText">
+          <h3 className="dateSize flex whiteText">
             {new Date(props.date).getDate()}
             <span>
               {helpers.monthToString(new Date(props.date))}

@@ -27,7 +27,6 @@ export default function Footer2(props) {
     [classes.a]: true,
     [classes.footerWhiteFont]: whiteFont
   });
-  console.log(footerClasses);
   return (
     <footer className={footerClasses}>
       <div className={classes.container}>

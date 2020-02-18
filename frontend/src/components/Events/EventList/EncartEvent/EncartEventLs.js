@@ -13,7 +13,6 @@ const EncartEventLs = (props) => (
         <div className="dateLeft">
           <span className="dateLeft-dateJour">{new Date(props.date).getDate()}</span>
           <br />
-          {console.log(props.date)}
           <span className="dateLeft-dateJour2">
             {helpers.monthToString(new Date(props.date))}
             {' '}
@@ -24,7 +23,6 @@ const EncartEventLs = (props) => (
           <span className="dateLeft-dateJour2">{props.nomBar}</span>
         </div>
         <h4>{props.nomEvenement}</h4>
-        {console.log(props.lienFb)}
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -33,9 +31,6 @@ const EncartEventLs = (props) => (
         >
           {props.lienFb == '' ? 'COMING SOON' : 'SEE EVENT' }
         </a>
-        {console.log(`props.eventId ${props.eventId}`)}
-
-
       </div>
     </div>
   </div>

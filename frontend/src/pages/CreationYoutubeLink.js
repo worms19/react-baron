@@ -32,7 +32,6 @@ class YoutubeLinkPage extends Component{
         this.setState({creating:false});
         const link = this.linkElRef.current.value;
         const youtubeLink = {link};
-        console.log(youtubeLink);
         const requestBody = {
             query: `
                 mutation {
@@ -47,7 +46,6 @@ class YoutubeLinkPage extends Component{
         };
 
         const token = this.context.token;
-        console.log(`token = ${token}`)
         fetch('https://react-baron.herokuapp.com/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
@@ -97,7 +95,6 @@ class YoutubeLinkPage extends Component{
         };
 
         const token = this.context.token;
-        console.log(`token = ${token}`)
 
         fetch('https://react-baron.herokuapp.com/graphql',{
             method: 'POST',
@@ -154,7 +151,6 @@ class YoutubeLinkPage extends Component{
                 return res.json();
             })
             .then(resData =>{
-                console.log(resData);
                 this.setState( prevState =>{
                     const updatedYoutubeLinks= prevState.youtubeLinks.filter(youtubeLink => {
                         return youtubeLink._id !== youtubeLinkId;

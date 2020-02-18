@@ -11,7 +11,6 @@ const YoutubeList = (props) => {
       deleteThisLink={props.onDeleteYoutubeLink}
     />
   ));
-
   return (
     <ul className="youtubeLink__list">
       {youtubeLinks}

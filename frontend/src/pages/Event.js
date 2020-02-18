@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import Modal from '../components/Modal/Modal'
-import Backdrop from '../components/Backdrop/Backdrop'
 import './Events.css'
 import AuthContext from '../context/auth-context'
 import EventList from '../components/Events/EventList/EventList'
@@ -35,17 +34,12 @@ class EventPage extends Component{
         const date = this.dateElRef.current.value;
         const eventName = this.eventNameElRef.current.value;
         const fbLink = this.fbLinkElRef.current.value;
-
         if(barName.trim().length === 0 ||
             date.trim().length === 0 ||
             eventName.trim().length === 0 ||
             fbLink.trim().length === 0 ){
             return;
         }
-
-        const event = {barName, eventName, date, fbLink};
-
-
         const requestBody = {
             query: `
                 mutation {
@@ -115,10 +109,6 @@ class EventPage extends Component{
                 }
             `
         };
-
-        const token = this.context.token;
-
-
         fetch('https://react-baron.herokuapp.com/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
@@ -178,7 +168,6 @@ class EventPage extends Component{
                 return res.json();
             })
             .then(resData =>{
-                console.log(resData);
                 this.setState( prevState =>{
                     const updatedEvents = prevState.events.filter(event => {
                         return event._id !== eventId;

@@ -1,6 +1,5 @@
 import React from 'react';
 import '../CSS/YoutubeList.css';
-import EncartYoutube from './EncartYoutube/EncartYoutube';
 import EncartYoutubeLs from './EncartYoutube/EncartYoutubeLs';
 
 const   YoutubeList = (props) => {
