@@ -93,7 +93,7 @@ class DisplayYoutubeLink extends Component{
                             <div  style={!this.state.isDisplay ? noDisplay : {}}>
                                 <div className="slide-img bg-img"   >
                                     <EncartBlanc text1 = {'See What NeWs'}
-                                                 text2 = {'Latests Videos'}
+                                                 text2 = {'Latest Videos'}
                                                  size = {1}
                                     />
                                   <div className="background-grey">

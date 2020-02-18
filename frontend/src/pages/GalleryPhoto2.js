@@ -40,7 +40,7 @@ export default class GalleryPhoto2 extends React.Component {
       <div className="container">
         <EncartBlanc
           text1="See What’s NeWs"
-          text2="Latests Photos"
+          text2="Latest Photos"
           size={1}
         />
         <div className="background-grey2">
