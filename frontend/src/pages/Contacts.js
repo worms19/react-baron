@@ -41,7 +41,7 @@ class Contacts extends Component {
                 }
             `
         };
-        fetch('https://react-baron.herokuapp.com/graphql',{
+        fetch('http://51.178.18.81/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
@@ -83,7 +83,7 @@ class Contacts extends Component {
         const token = this.context.token;
 
 
-        fetch('https://react-baron.herokuapp.com/graphql',{
+        fetch('http://51.178.18.81/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {

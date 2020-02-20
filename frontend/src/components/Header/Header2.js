@@ -16,111 +16,144 @@ export default function SectionNavbars() {
     const handleDrawerToggle2 = () => {
         setMobileOpen2(!mobileOpen2);
     };
+    const handleHome = (e) => {
+        document.getElementById("home").click();
+    };
+    const handleVideos = (e) => {
+        document.getElementById("videos").click();
+    };
+    const handlePhotos = (e) => {
+        document.getElementById("photos").click();
+    };
+    const handleTour= (e) => {
+        document.getElementById("tour").click();
+    };
+    const handleContact = (e) => {
+        document.getElementById("contactH").click();
+    };
+    const handleShop = (e) => {
+        document.getElementById("shop").click();
+    };
+    const handleMusic = (e) => {
+        document.getElementById("music").click();
+    };
     const classes = useStyles();
-  return (
-      <div className={classes.section}>
-        <div id="navbar" className={classes.navbar}>
-          <div
-              className={classes.navigation}
-          >
-            <Header
-                brand=""
-                color="transparent"
-                prout={mobileOpen2}
-                rightLinks={
-                  <List className={classes.list}>
-                    <ListItem className={classes.listItem}>
-                      <Button
-                          color="transparent"
-                          className={
-                            classes.navLink + " " + classes.socialIconsButton 
-                          }
-                      >
-                            <Link onClick={handleDrawerToggle2} to="/react-baron"><span className="p">HOME</span></Link>
-                      </Button>
+    return (
+        <div className={classes.section}>
+            <div id="navbar" className={classes.navbar}>
+                <div
+                    className={classes.navigation}
+                >
+                    <Header
+                        brand=""
+                        color="transparent"
+                        prout={mobileOpen2}
+                        rightLinks={
+                            <List className={classes.list}>
+                                <ListItem className={classes.listItem}>
+                                    <Button
+                                        color="transparent"
+                                        className={
+                                            classes.navLink + " " + classes.socialIconsButton
+                                        }
+                                        onClick={handleHome}
+                                    >
+                                        <Link id="home" onClick={handleDrawerToggle2} to="/react-baron"><span
+                                            className="p">HOME</span></Link>
+                                    </Button>
 
-                    </ListItem>
-                      <ListItem className={classes.listItem}>
-                      <Button
-                          color="transparent"
-                          className={
-                            classes.navLink + " " + classes.socialIconsButton
-                          }
-                      >
-                          <div className="prout">
-                            <Link onClick={handleDrawerToggle2}
-                                  to="/Mp3">VIDEOS</Link>
-                          </div>
-                      </Button>
-                    </ListItem>
-                      <ListItem className={classes.listItem}>
-                          <Button
-                              color="transparent"
-                              className={
-                                  classes.navLink + " " + classes.socialIconsButton
-                              }
+                                </ListItem>
+                                <ListItem className={classes.listItem}>
+                                    <Button
+                                        color="transparent"
+                                        className={
+                                            classes.navLink + " " + classes.socialIconsButton
+                                        }
+                                        onClick={handleVideos}
+                                    >
+                                            <Link id="videos" onClick={handleDrawerToggle2}
+                                                  to="/Mp3">VIDEOS</Link>
+                                    </Button>
+                                </ListItem>
+                                <ListItem className={classes.listItem}>
+                                    <Button
+                                        color="transparent"
+                                        className={
+                                            classes.navLink + " " + classes.socialIconsButton
+                                        }
+                                        onClick={handlePhotos}
+                                    >
+                                        <Link
+                                            id="photos"
+                                            onClick={handleDrawerToggle2}
+                                            className={classes.socialIconsButton}
+                                            to="/GalleryPhoto"
+                                        >
+                                            PHOTOS
+                                        </Link>
+                                    </Button>
+                                </ListItem>
+                                <ListItem className={classes.listItem}>
+                                    <Button
+                                        color="transparent"
+                                        className={
+                                            classes.navLink + " " + classes.socialIconsButton
+                                        }
+                                        onClick={handleTour}
 
-                          >
-                              <Link
-                                  onClick={handleDrawerToggle2}
-                                  className={classes.socialIconsButton}
-                                  to="/GalleryPhoto"
-                              >
-                                  PHOTOS
-                              </Link>
-                          </Button>
-                      </ListItem>
-                      <ListItem className={classes.listItem}>
-                          <Button
-                              color="transparent"
-                              className={
-                                  classes.navLink + " " + classes.socialIconsButton
-                              }
-
-                          >
-                              <Link
-                                  onClick={handleDrawerToggle2}
-                                  to="/Events">TOUR</Link>
-                          </Button>
-                      </ListItem>
-                      <ListItem className={classes.listItem}>
-                          <Button
-                              color="transparent"
-                              className={
-                                  classes.navLink + " " + classes.socialIconsButton
-                              }
-
-                          >
-                              <Link
-                                  onClick={handleDrawerToggle2}
-                                  to="/Contact">CONTACT</Link>
-                          </Button>
-                      </ListItem>
-                      <ListItem className={classes.listItem}>
-                          <Button
-                              color="transparent"
-                              className={
-                                  classes.navLink + " " + classes.socialIconsButton
-                              }
-
-                          >
-                              <a onClick={handleDrawerToggle2} target="_blank" rel="noopener noreferrer" href="https://baroncrane.bigcartel.com/" >SHOP</a>                          </Button>
-                      </ListItem>
-                      <ListItem className={classes.listItem}>
-                          <Button
-                              color="transparent"
-                              className={
-                                  classes.navLink + " " + classes.socialIconsButton
-                              }
-                          >
-                              <a onClick={handleDrawerToggle2} target="_blank" rel="noopener noreferrer" href="https://baroncrane.bandcamp.com/" >MUSIC</a>
-                          </Button>
-                      </ListItem>
-                  </List>
-                }
-            />
-          </div>
+                                    >
+                                        <Link
+                                            id="tour"
+                                            onClick={handleDrawerToggle2}
+                                            to="/Events">TOUR</Link>
+                                    </Button>
+                                </ListItem>
+                                <ListItem className={classes.listItem}>
+                                    <Button
+                                        color="transparent"
+                                        className={
+                                            classes.navLink + " " + classes.socialIconsButton
+                                        }
+                                        onClick={handleContact}
+                                    >
+                                        <Link
+                                            id="contactH"
+                                            onClick={handleDrawerToggle2}
+                                            to="/Contact">CONTACT</Link>
+                                    </Button>
+                                </ListItem>
+                                <ListItem className={classes.listItem}>
+                                    <Button
+                                        color="transparent"
+                                        className={
+                                            classes.navLink + " " + classes.socialIconsButton
+                                        }
+                                        onClick={handleShop}
+                                    >
+                                        <a
+                                            id="shop"
+                                            onClick={handleDrawerToggle2} target="_blank" rel="noopener noreferrer"
+                                           href="https://baroncrane.bigcartel.com/">SHOP</a> </Button>
+                                </ListItem>
+                                <ListItem className={classes.listItem}>
+                                    <Button
+                                        color="transparent"
+                                        className={
+                                            classes.navLink + " " + classes.socialIconsButton
+                                        }
+                                        onClick={handleMusic}
+                                    >
+                                        <a
+                                            id="music"
+                                            onClick={handleDrawerToggle2} target="_blank" rel="noopener noreferrer"
+                                           href="https://baroncrane.bandcamp.com/">MUSIC</a>
+                                    </Button>
+                                </ListItem>
+                            </List>
+                        }
+                    />
+                </div>
+            </div>
         </div>
-      </div>
-  );
+    );
 }

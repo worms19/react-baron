@@ -58,7 +58,7 @@ class EventPage extends Component{
         const token = this.context.token;
 
 
-        fetch('https://react-baron.herokuapp.com/graphql',{
+        fetch('http://51.178.18.81/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
@@ -109,7 +109,7 @@ class EventPage extends Component{
                 }
             `
         };
-        fetch('https://react-baron.herokuapp.com/graphql',{
+        fetch('/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
@@ -152,7 +152,7 @@ class EventPage extends Component{
         const token = this.context.token;
 
 
-        fetch('https://react-baron.herokuapp.com/graphql',{
+        fetch('http://51.178.18.81/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
@@ -185,6 +185,7 @@ class EventPage extends Component{
     };
 
     render(){
+
         return(
             <React.Fragment>
                 {this.state.creating &&  (

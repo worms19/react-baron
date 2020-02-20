@@ -5,6 +5,8 @@ import Spinner from '../components/Spinner/Spinner'
 import EncartBlanc from "../components/Encart/EncartBlanc";
 import YoutubeListLs from "../components/Youtube/YoutubeListLs";
 import Footer2 from "../components/Footer2/Footer2";
+import { useQuery } from '@apollo/react-hooks';
+import gql from "graphql-tag";
 
 class DisplayYoutubeLink extends Component{
 
@@ -45,7 +47,7 @@ class DisplayYoutubeLink extends Component{
 
         const token = this.context.token;
 
-        fetch('https://react-baron.herokuapp.com/graphql',{
+        fetch('http://51.178.18.81/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
@@ -82,6 +84,7 @@ class DisplayYoutubeLink extends Component{
             display: 'none',
 
         };
+
 
         return(
             <React.Fragment>

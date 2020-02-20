@@ -11,10 +11,13 @@ import { faFacebookF, faInstagram, faYoutube } from '@fortawesome/free-brands-sv
 
 import styles from "../MaterialUi/footerStyle.js";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import gql from "graphql-tag";
+import {useQuery} from "@apollo/react-hooks";
 
 const useStyles = makeStyles(styles);
 
 export default function Footer2(props) {
+
   const classes = useStyles();
   const { whiteFont, noBack } = props;
   const footerClasses = classNames({
