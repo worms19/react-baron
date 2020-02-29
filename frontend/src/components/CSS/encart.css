@@ -3,13 +3,16 @@
 }
 
 .bradcumbContent2{
-    display: block;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     /* position: absolute; */
     background-color: #bbb;
-    width: 60%;
+    width: 50%;
     margin: 0px 20%;
     padding: 10px;
     text-align: center;
+    border-radius: 15px;
     height: 100px;
     /*bottom: 30%; */
     /*left: 50%; */

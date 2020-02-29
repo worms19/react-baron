@@ -8,49 +8,41 @@ const moment = require('moment');
 
 const eventListLs = (props) => {
   const pastEvent = props.events
-    .filter((event) => moment(event.date).isBefore(moment().endOf('day')))
+    .filter((event) => moment(event.date).isBefore(moment().startOf('day')))
     .sort((a, b) => moment(b.date).valueOf() - moment(a.date).valueOf())
     .map((event, index) => (
-      index === 0
-        ? (
-          <EncartEventMd12
-            date={event.date}
-            nomBar={event.barName}
-            nomEvenement={event.eventName}
-            lienFb={event.fbLink}
-          />
-        )
-        : (
           <EncartEventMd6
             date={event.date}
             nomBar={event.barName}
             nomEvenement={event.eventName}
             lienFb={event.fbLink}
           />
-        )
+
     ));
   const futurEvent = props.events
-    .filter((event) => moment(event.date).isAfter(moment().endOf('day')))
-    .sort((a, b) => moment(b.date).valueOf() - moment(a.date).valueOf())
-    .map((event, index) => (
-      index === 0
-        ? (
+    .filter((event) => moment(event.date).isAfter(moment().startOf('day')))
+    .sort((a, b) =>  moment(a.date).valueOf() - moment(b.date).valueOf())
+    .map((event,index) =>
+        (
+         index === 0 ?
           <EncartEventMd12
             date={event.date}
             nomBar={event.barName}
             nomEvenement={event.eventName}
             lienFb={event.fbLink}
           />
+          :
+             <EncartEventMd6
+                 date={event.date}
+                 nomBar={event.barName}
+                 nomEvenement={event.eventName}
+                 lienFb={event.fbLink}
+             />
+
         )
-        : (
-          <EncartEventMd6
-            date={event.date}
-            nomBar={event.barName}
-            nomEvenement={event.eventName}
-            lienFb={event.fbLink}
-          />
-        )
-    ));
+    );
+
+
   return (
     <div>
 

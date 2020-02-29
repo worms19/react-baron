@@ -4,6 +4,7 @@ import helpers from '../../../helpers/date';
 import './E.css';
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faFacebookF} from "@fortawesome/free-brands-svg-icons";
+import {faCalendar} from "@fortawesome/free-regular-svg-icons/faCalendar";
 
 
 const EncartEventMd12 = (props) => (
@@ -27,7 +28,7 @@ const EncartEventMd12 = (props) => (
           <h4 className="whiteText">{props.nomEvenement}</h4>
           <div className="row">
             <div className="col-md-12 center">
-              <FontAwesomeIcon icon={faFacebookF} color={"white"} className={"beige"}/>
+              <FontAwesomeIcon icon={faCalendar} color={"white"} className={"beige"}/>
               <a
                   target="_blank"
                   rel="noopener noreferrer"

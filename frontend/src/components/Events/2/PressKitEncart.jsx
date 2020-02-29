@@ -1,5 +1,8 @@
 import React from 'react';
 import './E.css';
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faCalendar} from "@fortawesome/free-regular-svg-icons/faCalendar";
+import {faFilePdf} from "@fortawesome/free-solid-svg-icons";
 
 
 const PressKitEncart = (props) => (
@@ -31,13 +34,13 @@ const PressKitEncart = (props) => (
             <div className="col-md-12 center beige">
 
 
-                <i className="fas fa-file-pdf">&nbsp;&nbsp;</i>
+                <FontAwesomeIcon icon={faFilePdf} color={"white"} className={"beige"}/>
                 <a
                     target="_blank"
                     rel="noopener noreferrer"
                     href={props.l1}
                 >
-                        {props.t4}
+                    &nbsp;&nbsp;{props.t4}
 
                 </a>
 

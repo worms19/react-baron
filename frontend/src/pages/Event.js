@@ -11,7 +11,7 @@ class EventPage extends Component{
     state = {
         creating:false,
         events:[],
-        isLoading: false,
+        isLoading: true,
         selectedEvent: null
     };
     static contextType = AuthContext;
@@ -109,7 +109,7 @@ class EventPage extends Component{
                 }
             `
         };
-        fetch('/graphql',{
+        fetch('http://51.178.18.81/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {

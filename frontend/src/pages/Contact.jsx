@@ -22,10 +22,11 @@ const Contact = (props) => (
           <BookingEncart />
         </div>
           <div className="row">
-            <div className="col-md-4 col-md-offset-4 center back">
-                <h2>PressKit</h2>
+
             </div>
-          </div>
+              <EncartBlanc
+                  text2="PressKit"
+              />
         <div className="marg">
             <PressKitEncart
                 t1={"ENGLISH VERSION"}

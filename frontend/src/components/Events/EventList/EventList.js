@@ -5,25 +5,11 @@ import EncartEventMd12Adm from '../2/EncartEventMd12Adm';
 import EncartEventMd6Adm from '../2/EncartEventMd6Adm';
 import EncartBlanc from '../../Encart/EncartBlanc';
 
-const eventList = (props) => {
+const EventList = (props) => {
   const pastEvent = props.events
     .filter((event) => moment(event.date).isBefore(moment().endOf('day')))
     .sort((a, b) => moment(b.date).valueOf() - moment(a.date).valueOf())
     .map((event, index) => (
-      index === 0
-        ? (
-          <EncartEventMd12Adm
-            date={event.date}
-            nomBar={event.barName}
-            nomEvenement={event.eventName}
-            lienFb={event.fbLink}
-            index={index}
-            key={event._id}
-            eventId={event._id}
-            deleteThisEvent={props.onDeleteEvent}
-          />
-        )
-        : (
           <EncartEventMd6Adm
             date={event.date}
             nomBar={event.barName}
@@ -34,38 +20,37 @@ const eventList = (props) => {
             eventId={event._id}
             deleteThisEvent={props.onDeleteEvent}
           />
-        )
+
     ));
-  const futurEvent = props.events
-    .filter((event) => moment(event.date).isAfter(moment().endOf('day')))
-    .sort((a, b) => moment(b.date).valueOf() - moment(a.date).valueOf())
-    .map((event, index) => (
-      index === 0
-        ? (
-          <EncartEventMd12Adm
-            date={event.date}
-            nomBar={event.barName}
-            nomEvenement={event.eventName}
-            lienFb={event.fbLink}
-            index={index}
-            key={event._id}
-            eventId={event._id}
-            deleteThisEvent={props.onDeleteEvent}
-          />
-        )
-        : (
+    const futurEvent = props.events
+        .filter((event) => moment(event.date).isAfter(moment().startOf('day')))
+        .sort((a, b) => moment(b.date).valueOf() - moment(a.date).valueOf());
+
+    const nextEvent = futurEvent.pop();
+
+
+  const md6 = futurEvent.map((event) =>
           <EncartEventMd6Adm
             date={event.date}
             nomBar={event.barName}
             nomEvenement={event.eventName}
             lienFb={event.fbLink}
-            index={index}
             key={event._id}
             eventId={event._id}
             deleteThisEvent={props.onDeleteEvent}
           />
-        )
-    ));
+    );
+    const md12 =
+          <EncartEventMd12Adm
+            date={nextEvent.date}
+            nomBar={nextEvent.barName}
+            nomEvenement={nextEvent.eventName}
+            lienFb={nextEvent.fbLink}
+            key={nextEvent._id}
+            eventId={nextEvent._id}
+            deleteThisEvent={props.onDeleteEvent}
+          />;
+
 
 
   return (
@@ -79,7 +64,8 @@ const eventList = (props) => {
           />
 
           <section className="displayBlock">
-              {futurEvent}
+              {md12}
+              {md6}
           </section>
 
           <EncartBlanc
@@ -99,4 +85,4 @@ const eventList = (props) => {
 };
 
 
-export default eventList;
+export default EventList;
