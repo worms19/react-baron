@@ -1,0 +1,14 @@
+.bandCampPlayer{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-flow: wrap-reverse;
+    justify-content: flex-end;
+    border: none!important;
+}
+
+.frame{
+    border: none;
+    height: 124px;
+    z-index: 1000;
+}
