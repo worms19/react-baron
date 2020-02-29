@@ -4,7 +4,6 @@ const graphQlHttp = require('express-graphql');
 const mongoose = require('mongoose');
 const path = require('path');
 require('dotenv').config();
-
 const graphQlSchema = require('./graphql/schema/index');
 const graphQlResolver = require('./graphql/resolvers/index');
 const isAuth = require('./middleware/is-auth');
@@ -13,7 +12,7 @@ const app = express();
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 8000;
 
 app.use(bodyParser.json());
 

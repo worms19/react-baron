@@ -30,9 +30,14 @@ export default function Footer2(props) {
     [classes.a]: true,
     [classes.footerWhiteFont]: whiteFont
   });
+
+  const contClasses = classNames({
+    [classes.container]: true,
+    [classes.noBack2]: noBack
+  });
   return (
     <footer className={footerClasses}>
-      <div className={classes.container}>
+      <div className={contClasses}>
         <div className={classes.left}>
           <List className={classes.list}>
             <ListItem className={classes.inlineBlock}>

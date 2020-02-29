@@ -4,10 +4,22 @@
 
 .MuiButtonBase-root a {
     color: white;
-    font-size:18px;
+    font-size:25px;
 }
 
 .MuiButtonBase-root:hover a {
     text-decoration:none;
 }
 }
+@media (max-width: 959.95px){
+
+    .MuiButtonBase-root a {
+        color: black;
+
+    }
+
+    .MuiButtonBase-root:hover a {
+        text-decoration:none;
+    }
+}
+

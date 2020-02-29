@@ -13,6 +13,7 @@ const useStyles = makeStyles(styles);
 
 export default function SectionNavbars() {
     const [mobileOpen2, setMobileOpen2] = React.useState(false);
+
     const handleDrawerToggle2 = () => {
         setMobileOpen2(!mobileOpen2);
     };

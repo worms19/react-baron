@@ -32,7 +32,10 @@ const footerStyle = {
     backgroundColor: "black"
   },
   noBack: {
-    backgroundColor: "none"
+    backgroundColor: "none",
+  },
+  noBack2: {
+    marginLeft: "5%!important",
   },
   a: {
     color: primaryColor,
