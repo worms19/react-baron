@@ -3,6 +3,8 @@ import React from 'react';
 import './Modal.css';
 
 const modal = (props) => (
+    <div className="modal-background">
+
   <div className="modal_">
     <header className="modal__header_">
       <h1>
@@ -19,6 +21,7 @@ const modal = (props) => (
 
     </section>
   </div>
+    </div>
 );
 
 export default modal;

@@ -46,7 +46,7 @@ class YoutubeLinkPage extends Component{
         };
 
         const token = this.context.token;
-        fetch('http://51.178.18.81/graphql',{
+        fetch('http://51.83.129.201/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
@@ -96,7 +96,7 @@ class YoutubeLinkPage extends Component{
 
         const token = this.context.token;
 
-        fetch('http://51.178.18.81/graphql',{
+        fetch('http://51.83.129.201/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
@@ -136,7 +136,7 @@ class YoutubeLinkPage extends Component{
 
         const token = this.context.token;
 
-        fetch('http://51.178.18.81/graphql',{
+        fetch('http://51.83.129.201/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {

@@ -102,7 +102,7 @@ export default class ContactForm2 extends Component{
                 `
             };
 
-        fetch('http://51.178.18.81/graphql',{
+        fetch('http://51.83.129.201/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
