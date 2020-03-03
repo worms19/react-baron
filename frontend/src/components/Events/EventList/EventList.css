@@ -57,8 +57,8 @@
         letter-spacing: 5px; } }
 
 .displayBlock{
-    display: inline-block;
-    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .testBlanc{
