@@ -8,15 +8,20 @@
     -moz-transition: all .6s ease-in;
     -o-transition: all .6s ease-in;
     transition: all .6s ease-in;
+    height: 100%;
 }
 
 .padded {
-    padding: 0px 3px !important;
+    padding: 3px 3px !important;
 }
 
 .date {
     text-align: center;
     color: white;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media (min-width: 767px) {

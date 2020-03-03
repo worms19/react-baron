@@ -11,7 +11,6 @@ const EncartEventMd6 = (props) => (
 
   <div className="col-md-6 padded">
     <div className="event-card">
-      <div className="row">
         <div className="col-md-3 date">
           <h3 className="dateSize flex  whiteText">
             {new Date(props.date).getDate()}
@@ -38,7 +37,6 @@ const EncartEventMd6 = (props) => (
             </div>
           </div>
         </div>
-      </div>
     </div>
   </div>
 );
