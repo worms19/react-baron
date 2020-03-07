@@ -21,12 +21,13 @@ const EncartEventMd6 = (props) => (
             </span>
           </h3>
         </div>
-        <div className="col-md-9 center ">
+        <div className="col-md-9 center large ">
           <span className="text-capitalize whiteText">{props.nomBar}</span>
           <h4 className="whiteText">{props.nomEvenement}</h4>
-          <div className="row">
-            <div className="col-md-12">
-              <FontAwesomeIcon icon={faCalendar} color={"white"} className={"beige"}/>
+
+          <div className="proutiprout">
+
+          <FontAwesomeIcon icon={faCalendar} color={"white"} className={"beige"}/>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -34,7 +35,6 @@ const EncartEventMd6 = (props) => (
               >
                 &nbsp;&nbsp;SEE EVENT
               </a>
-            </div>
           </div>
         </div>
     </div>
