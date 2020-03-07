@@ -169,9 +169,6 @@ export default class GalleryPhoto2 extends React.Component {
                 onClick={this.handleClick}
             />
         </div>
-          <button type="button" onClick={() => this.setState({ isOpen: true })}>
-              Open Lightbox
-          </button>
           {isOpen && (
           <Lightbox
               mainSrc={images[photoIndex]}
