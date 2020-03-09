@@ -129,12 +129,14 @@ export default function SectionNavbars() {
                                         className={
                                             classes.navLink + " " + classes.socialIconsButton
                                         }
-                                        onClick={handleShop}
+                                        onClick={handleDrawerToggle2}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href="https://baroncrane.bigcartel.com/"
                                     >
                                         <a
-                                            id="shop"
-                                            onClick={handleDrawerToggle2} target="_blank" rel="noopener noreferrer"
-                                           href="https://baroncrane.bigcartel.com/">SHOP</a> </Button>
+
+                                        >SHOP</a> </Button>
                                 </ListItem>
                                 <ListItem className={classes.listItem}>
                                     <Button
@@ -142,12 +144,12 @@ export default function SectionNavbars() {
                                         className={
                                             classes.navLink + " " + classes.socialIconsButton
                                         }
-                                        onClick={handleMusic}
+                                        onClick={handleDrawerToggle2}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        href="https://baroncrane.bandcamp.com/"
                                     >
-                                        <a
-                                            id="music"
-                                            onClick={handleDrawerToggle2} target="_blank" rel="noopener noreferrer"
-                                           href="https://baroncrane.bandcamp.com/">MUSIC</a>
+                                        <a>MUSIC</a>
                                     </Button>
                                 </ListItem>
                             </List>
