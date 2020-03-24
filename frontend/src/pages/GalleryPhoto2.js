@@ -50,7 +50,14 @@ export default class GalleryPhoto2 extends React.Component {
               { src:'img/br-img/thumbnails/DSC_9702_tn.jpg', index: 35},
               { src:'img/br-img/thumbnails/DSC_9807_tn.jpg', index: 36},
               { src:'img/br-img/thumbnails/DSC_9833_tn.jpg', index: 37},
-
+              { src:'img/s/thumbnails/90525481_2568839440052653_857821074862112768_n_tn.jpg', index: 38},
+              { src:'img/s/thumbnails/90528153_160923881708807_4128829542854819840_n_tn.jpg', index: 39},
+              { src:'img/s/thumbnails/90528971_202380831094092_3672688313619185664_n_tn.jpg', index: 40},
+              { src:'img/s/thumbnails/90559980_986744631722905_9218820449557807104_n_tn.jpg', index: 41},
+              { src:'img/s/thumbnails/90642265_213575803079895_8818855395394060288_n_tn.jpg', index: 42},
+              { src:'img/s/thumbnails/90735703_530625244259060_5300557523839877120_n_tn.jpg', index: 43},
+              { src:'img/s/thumbnails/Baron-Crane_851_hdhhrdc1_tn.jpg', index: 44},
+              { src:'img/s/thumbnails/Baron-Crane_851_nrxa6e1v_tn.jpg', index: 45},
           ],
           photoIndex: 0,
           isOpen: false,
@@ -82,6 +89,7 @@ export default class GalleryPhoto2 extends React.Component {
           'img/br-img/Baron Crane - International-4277.jpg',
           'img/br-img/Baron Crane - International-4412.jpg',
           'img/br-img/Baron Crane - International-4416.jpg',
+          'img/br-img/thumbnails/Baron Crane - Portrait-.jpg',
           'img/br-img/Baron Crane - International-4455.jpg',
           'img/br-img/DSC_0639.jpg',
           'img/br-img/DSC_9395.jpg',
@@ -93,8 +101,14 @@ export default class GalleryPhoto2 extends React.Component {
           'img/br-img/DSC_9702.jpg',
           'img/br-img/DSC_9807.jpg',
           'img/br-img/DSC_9833.jpg',
-          'img/br-img/thumbnails',
-          'img/br-img/thumbnails.zip'
+          'img/s/90525481_2568839440052653_857821074862112768_n.jpg',
+          'img/s/90528153_160923881708807_4128829542854819840_n.jpg',
+          'img/s/90528971_202380831094092_3672688313619185664_n.jpg',
+          'img/s/90559980_986744631722905_9218820449557807104_n.jpg',
+          'img/s/90642265_213575803079895_8818855395394060288_n.jpg',
+          'img/s/90735703_530625244259060_5300557523839877120_n.jpg',
+          'img/s/Baron-Crane_851_hdhhrdc1.jpg',
+          'img/s/Baron-Crane_851_nrxa6e1v.jpg'
       ];
   }
 
@@ -159,3 +173,8 @@ export default class GalleryPhoto2 extends React.Component {
     );
   }
 }
+
+
+
+
+
