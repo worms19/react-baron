@@ -40,7 +40,7 @@ const EventList = (props) => {
             deleteThisEvent={props.onDeleteEvent}
           />
     );
-    const md12 =
+    const md12 = (nextEvent && nextEvent.length > 0) ?
           <EncartEventMd12Adm
             date={nextEvent.date}
             nomBar={nextEvent.barName}
@@ -49,7 +49,7 @@ const EventList = (props) => {
             key={nextEvent._id}
             eventId={nextEvent._id}
             deleteThisEvent={props.onDeleteEvent}
-          />;
+          /> : <div></div>;
 
 
 
