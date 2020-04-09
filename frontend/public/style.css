@@ -17,6 +17,10 @@ body {
   font-family: "Libel Suit", arial !important;
   font-size: 14px; }
 
+.modalBackground{
+  background-image: url(img/s/test.JPG) !important;
+}
+
 h1,
 h2,
 h3,

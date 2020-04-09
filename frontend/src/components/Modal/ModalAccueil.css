@@ -1,6 +1,6 @@
 .modal__Accueuil{
     width: 90%;
-    background: white;
+    background: #b4b4b4;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
     position: fixed;
     top: 20vh;
@@ -17,12 +17,17 @@
     }
 }
 
+@media (max-width: 768px){
+    .modal__Accueuil {
+        top: calc((100% - 38rem) / 2) ;
+    }
+}
+
 .modal__header__Accueuil{
     display: grid;
     grid-template-columns: repeat(24, 1fr);
     grid-gap: 1px;
-    padding: 1rem;
-    background: #white;
+    /*background: #white;*/
     color: white;
 
 }
@@ -42,15 +47,16 @@
     border: 1px solid #000000;
     border-radius: 3px;
     padding: 0.25rem 0.6rem;
-    margin-right: 1rem;
+    margin-right: 0.2rem;
+    margin-top: 0.1rem;
     color: white;
     cursor: pointer;
-    height: 60%;
-    align-self: center;
-    justify-self: end;
+    height: 90%;
+/* align-self: center; */
+/* justify-self: end;*/
 }
 
 .h1Grid {
-    grid-column: 10 / 18;
+grid-column: 10 / 18;
 }
 

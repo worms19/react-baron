@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Footer2 from "../components/Footer2/Footer2";
 import './Accueil.css'
 import helpers from "../helpers/date";
@@ -17,22 +17,27 @@ const height ={
 
 
 
-
 export default function Accueil() {
 
+    const [displayModal, setDisplayModal] = useState(true);
     const isMobile = helpers.isMobileDevice();
+
+    const closeModal = () => {
+      setDisplayModal(false);
+    };
     return (
         <div style={height}>
+            {displayModal &&
             <ModalAccueil
                 title="News"
                 canCancel={true}
-                onCancel={() => {}}
+                onCancel={closeModal}
                 onConfirm={() => {}}
                 confirmText="">
                 <img className="appImage"
                      src="img/s/92953669_832875450532001_5435424805513854976_n.jpg"
                 />
-            </ModalAccueil>
+            </ModalAccueil> }
                 {
                     !isMobile &&
                         <div className="bandCampPlayer">
