@@ -10,10 +10,10 @@
 
 @media (min-width: 768px){
     .modal__Accueuil {
-        width:35rem;
+        width: 28%;
         max-height: 50rem;
-        left: calc((100% - 35rem) / 2) ;
-        top: calc((100% - 45rem) / 2) ;
+        left: calc((100% - 27%)/2);
+        top: calc((100% - 75%)/2);
     }
 }
 
