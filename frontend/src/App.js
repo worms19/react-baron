@@ -14,6 +14,7 @@ import YoutubeLinkPage from "./pages/CreationYoutubeLink";
 import DisplayYoutubeLink from "./pages/DisplayYoutubeLink";
 import SectionNavbars from "./components/Header/Header2";
 import SectionNavbars2 from "./components/Header/Header3";
+import Bio from "./pages/Bio";
 
 class App extends Component {
 
@@ -50,6 +51,7 @@ class App extends Component {
           <Route path="/GalleryPhoto" component={GalleryPhoto2} />
           <Route path="/Events" component={Events} />
           <Route path="/Contact" component={Contact} />
+          <Route path="/Bio" component={Bio} />
           {!this.state.token && <Route path="/auth" component={AuthPage} />}
           {this.state.token && <Route path="/eventpage" component={EventPage} />}
           {this.state.token && <Route path="/youtubePage" component={YoutubeLinkPage} />}
