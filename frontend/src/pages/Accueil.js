@@ -34,18 +34,23 @@ export default function Accueil() {
                 onCancel={closeModal}
                 onConfirm={() => {}}
                 confirmText="">
+                <a href="https://baroncrane.bandcamp.com/album/commotions"
+                   target="_blank"
+                   rel="noopener noreferrer">
                 <img className="appImage"
-                     src="img/s/92953669_832875450532001_5435424805513854976_n.jpg"
+                     src="img/s/94138658_286230899041410_5262851774020059136_n.jpg"
                 />
+                </a>
             </ModalAccueil> }
                 {
                     !isMobile &&
                         <div className="bandCampPlayer">
+
                             <iframe className="frame"
-                                    src="https://bandcamp.com/EmbeddedPlayer/album=3971644861/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+                                    src="https://bandcamp.com/EmbeddedPlayer/album=4111236393/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
                                     seamless>
-                                <a href="http://baroncrane.bandcamp.com/album/electric-shades">Electric Shades by Baron
-                                    Crâne</a>
+                                <a href="http://baroncrane.bandcamp.com/album/commotions">Commotions by Baron Crâne
+                                </a>
                             </iframe>
                         </div>
                 }
