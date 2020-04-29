@@ -1,11 +1,11 @@
 import React from 'react';
-
 import EncartBlanc from '../components/Encart/EncartBlanc';
 import Footer2 from "../components/Footer2/Footer2";
 import ReactMediaView from "react-media-view";
 import helpers from "../helpers/date";
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css'; // This only needs to be imported once in your app
+import './GalleryPhoto.css'; // This only needs to be imported once in your app
 
 export default class GalleryPhoto2 extends React.Component {
   constructor() {
