@@ -12,7 +12,7 @@ const app = express();
 
 // set the port of our application
 // process.env.PORT lets the port be set by Heroku
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 8080;
 
 app.use(bodyParser.json());
 
@@ -45,7 +45,7 @@ mongoose.connect(
  process.env.DB_CONNECTION,
 ).then(() => {
   console.log('application connecté sur le port ' + port);
-  app.listen(port);
+  app.listen(port, '51.83.129.201');
 }).catch((err) => {
   console.log(err);
 });

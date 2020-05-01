@@ -66,7 +66,7 @@ class EventPage extends Component{
 
         const token = this.context.token;
 
-        fetch('http://51.83.129.201/graphql',{
+        fetch('https://www.baroncrane.com/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
@@ -129,7 +129,7 @@ class EventPage extends Component{
 
         const token = this.context.token;
 
-        fetch('http://51.83.129.201/graphql',{
+        fetch('https://www.baroncrane.com/graphql',{
             method: 'POST',
             body: JSON.stringify(requestBody),
             headers: {
