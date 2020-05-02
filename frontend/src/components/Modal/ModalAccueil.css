@@ -19,7 +19,7 @@
 
 @media (max-width: 768px){
     .modal__Accueuil {
-        top: calc((100% - 38rem) / 2) ;
+        top: calc((100% - 70%) / 2);
     }
 }
 
