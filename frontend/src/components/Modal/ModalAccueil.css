@@ -1,62 +1,60 @@
-.modal__Accueuil{
-    width: 90%;
-    background: #b4b4b4;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
-    position: fixed;
-    top: 20vh;
-    left: 5%;
-    z-index: 100;
+.modal__Accueuil {
+  width: 90%;
+  background: #b4b4b4;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+  position: fixed;
+  top: 20vh;
+  left: 5%;
+  z-index: 100;
 }
 
-@media (min-width: 768px){
-    .modal__Accueuil {
-        width: 28%;
-        max-height: 50rem;
-        left: calc((100% - 27%)/2);
-        top: calc((100% - 75%)/2);
-    }
+@media (min-width: 768px) {
+  .modal__Accueuil {
+    width: 707px;
+    padding: 34px 34px 34px;
+    background-color: rgba(63, 63, 63, 0.527);
+    left: calc((100% - 640px) / 2);
+    top: calc((100% - 75%) / 2);
+  }
+  .topBarAccueil {
+    display: flex;
+    flex-direction: row-reverse;
+  }
 }
 
-@media (max-width: 768px){
-    .modal__Accueuil {
-        top: calc((100% - 70%) / 2);
-    }
+@media (max-width: 768px) {
+  .modal__Accueuil {
+    top: calc((100% - 70%) / 2);
+  }
 }
 
-.modal__header__Accueuil{
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    grid-gap: 1px;
-    /*background: #white;*/
-    color: white;
-
+.modal__header__Accueuil {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+  grid-gap: 1px;
+  /*background: #white;*/
+  color: white;
 }
-.modal__header__Accueuil h1{
-    margin: 0;
-    font-size: 2.6rem;
-}
-
-.modal__content__Accueuil{
+.modal__header__Accueuil h1 {
+  margin: 0;
+  font-size: 2.6rem;
 }
 
 .btn__Accueuil {
-    grid-column: 24 / 25;
-    display: flex;
-    background: black;
-    font: inherit;
-    border: 1px solid #000000;
-    border-radius: 3px;
-    padding: 0.25rem 0.6rem;
-    margin-right: 0.2rem;
-    margin-top: 0.1rem;
-    color: white;
-    cursor: pointer;
-    height: 90%;
-/* align-self: center; */
-/* justify-self: end;*/
+  font: inherit;
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+
+  /* align-self: center; */
+  /* justify-self: end;*/
 }
 
 .h1Grid {
-grid-column: 10 / 18;
+  grid-column: 10 / 18;
 }
-

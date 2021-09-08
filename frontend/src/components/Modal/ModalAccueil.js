@@ -1,19 +1,17 @@
-import React from 'react';
+import React from "react";
+import EncartBlanc from "../Encart/EncartBlanc.js";
 
-import './ModalAccueil.css';
+import "./ModalAccueil.css";
 const ModalAccueil = (props) => (
-    <div className="modal-background_Accueuil">
-
   <div className="modal__Accueuil">
-    <header className="modal__header__Accueuil modalBackground">
-      {props.canCancel && <button className="btn__Accueuil" onClick={props.onCancel}>x</button>}
-    </header>
-    <section className="modal__content__Accueuil">
-      {props.children}
-    </section>
-
+    {props.canCancel && (
+      <button className="btn__Accueuil" onClick={props.onCancel}>
+        X
+      </button>
+    )}
+    <div className="topBarAccueil"></div>
+    <section className="modal__content__Accueuil">{props.children}</section>
   </div>
-    </div>
 );
 
 export default ModalAccueil;
