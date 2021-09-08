@@ -28,7 +28,7 @@ export default function Accueil() {
   };
   return (
     <div style={height}>
-      {displayModal && (
+      {displayModal && !isMobile && (
         <ModalAccueil
           title="News"
           canCancel={true}
