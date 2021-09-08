@@ -55,6 +55,18 @@
   /* justify-self: end;*/
 }
 
+.buttonBlack {
+  color: white !important;
+  background-color: black !important;
+}
 .h1Grid {
   grid-column: 10 / 18;
+}
+.center {
+  display: flex;
+  place-content: center;
+  /* flex-direction: row; */
+  align-items: center;
+  align-content: flex-start;
+  border-bottom: 20px;
 }
