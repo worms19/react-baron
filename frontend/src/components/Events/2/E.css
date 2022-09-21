@@ -23,13 +23,11 @@
     justify-content: center;
     align-items: center;
 }
-
-@media (min-width: 767px) {
     .date {
         height: 100%;
         border-right: 2px dashed #6e7183;
     }
-}
+
 .date h3 span {
     font-size: 15px;
     display: block;
@@ -113,16 +111,18 @@ font-size: 2.3rem;
     }
 }
 
-@media (min-width: 767px) {
-    .large{
-     height: 100%;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-    }
+.large{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
 }
 
-.proutiprout{
+.eventText{
+    margin: auto;
+}
+
+.eventElement{
     margin-bottom: 7px;
-    margin-top: auto;
+
 }

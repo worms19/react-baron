@@ -13,8 +13,11 @@
     width: 707px;
     padding: 34px 34px 34px;
     background-color: rgba(63, 63, 63, 0.527);
-    left: calc((100% - 640px) / 2);
-    top: calc((100% - 75%) / 2);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 1000000;
   }
   .topBarAccueil {
     display: flex;
@@ -41,15 +44,7 @@
 }
 
 .btn__Accueuil {
-  font: inherit;
-  position: absolute;
-  top: 6px;
-  right: 7px;
-  height: 30px;
-  background-color: transparent;
-  border: none;
-  color: white;
-  cursor: pointer;
+
 
   /* align-self: center; */
   /* justify-self: end;*/
@@ -69,4 +64,22 @@
   align-items: center;
   align-content: flex-start;
   border-bottom: 20px;
+}
+
+.buttonA{
+  font: inherit;
+  position: absolute;
+  top: 6px;
+  right: 7px;
+  height: 28px;
+  width: 28px;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  cursor: pointer;
 }

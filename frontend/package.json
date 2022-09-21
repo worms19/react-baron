@@ -35,7 +35,8 @@
     "react-responsive-gallery": "^1.1.0",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.5",
-    "react-youtube": "^7.9.0"
+    "react-youtube": "^7.9.0",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "react-scripts start",

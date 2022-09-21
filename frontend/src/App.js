@@ -15,9 +15,18 @@ import DisplayYoutubeLink from "./pages/DisplayYoutubeLink";
 import SectionNavbars from "./components/Header/Header2";
 import SectionNavbars2 from "./components/Header/Header3";
 import Bio from "./pages/Bio";
+import WebFont from 'webfontloader';
 
 class App extends Component {
 
+  constructor(props) {
+    super(props)
+    WebFont.load({
+      google: {
+        families: ['Source Sans Pro']
+      }
+    });
+  }
   state = {
     token:null,
     userId:null
@@ -30,6 +39,7 @@ class App extends Component {
       tokenExpiration:tokenExpiration
     });
   };
+
 
   logout =() =>{
     this.setState({
@@ -45,7 +55,6 @@ class App extends Component {
           <AuthContext.Provider value={{token: this.state.token,userId: this.state.userId, login: this.login, logout: this.logout}}>
           {this.state.token ? <SectionNavbars2/> : <SectionNavbars />}
           <Switch>
-          <Route exact path="/react-baron" component={Accueil} />
           <Route exact path="/" component={Accueil} />
           <Route path="/Mp3" component={DisplayYoutubeLink} />
           <Route path="/GalleryPhoto" component={GalleryPhoto2} />

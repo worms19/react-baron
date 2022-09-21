@@ -60,7 +60,7 @@ export default function SectionNavbars() {
                                         }
                                         onClick={handleHome}
                                     >
-                                        <Link id="home" onClick={handleDrawerToggle2} to="/react-baron"><span
+                                        <Link id="home" onClick={handleDrawerToggle2} to="/"><span
                                             className="p">HOME</span></Link>
                                     </Button>
 

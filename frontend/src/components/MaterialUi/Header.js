@@ -54,7 +54,6 @@ export default function Header(props) {
     }
   };
   const { color, rightLinks, leftLinks, brand, fixed, absolute, prout } = props;
-  console.log(rightLinks);
 
   const appBarClasses = classNames({
     [classes.appBar]: true,

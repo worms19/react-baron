@@ -144,6 +144,8 @@ export default class GalleryPhoto2 extends React.Component {
                 onMouseEnter={this.handleMouseEnter}
                 onMouseLeave={this.handleMouseLeave}
                 columnCount={row}
+
+                style={{ gap: '51px'}}
                 onClick={this.handleClick}
             />
         </div>

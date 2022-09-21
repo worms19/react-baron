@@ -8,7 +8,20 @@
 }
 
 .frame{
-    border: none;
-    height: 124px;
+    border: 0;
+    width: 400px; 
+    height: 120px;
     z-index: 1000;
+    margin-bottom: 10px;
+    margin-right: 19px;
+    
+}
+
+.vv:hover{
+    text-decoration: none !important;
+}
+
+.vv:focus{
+    text-decoration: none !important;
+    outline: none !important;
 }
