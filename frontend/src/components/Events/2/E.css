@@ -105,11 +105,6 @@ font-size: 2.3rem;
     color: #000000;
 }
 
-@media (max-width: 767px) {
-    .flex {
-        display: inline-flex;
-    }
-}
 
 .large{
     height: 100%;
