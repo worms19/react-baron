@@ -59,7 +59,7 @@ export default function Footer2(props) {
         </div>
         {
           props.isOn &&
-        <div className={classes.right}>
+        <div className={`white ${classes.right}`}>
           &copy; {1900 + new Date().getYear()} Copyright:
           <a href="https:/github.com/worms19"> Worms19</a>
         </div>
