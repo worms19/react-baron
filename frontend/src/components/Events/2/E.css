@@ -40,6 +40,9 @@ font-size: 2.3rem;
 .whiteText {
     color: white;
 }
+.col{
+    flex-direction: column;
+}
 
 .event-card:hover .whiteText {
     -webkit-transition: all .6s ease-in;
