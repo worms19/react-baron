@@ -62,9 +62,11 @@ class DisplayYoutubeLink extends Component{
                 return res.json();
             })
             .then(resData =>{
-                const youtubeLinks = resData.data.youtubeLinks;
-                this.setState({youtubeLinks: youtubeLinks});
-                // this.setState({isLoading:false});
+                const youtubeLinks = [...resData.data.youtubeLinks];
+                const el3 = youtubeLinks.pop()
+                const el2 = youtubeLinks.pop()
+                const el1 = youtubeLinks.pop()
+                this.setState({youtubeLinks: [el1, el2, el3, ...youtubeLinks]});
 
             })
             .catch(err =>{
