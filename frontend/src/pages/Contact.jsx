@@ -24,23 +24,21 @@ const Contact = (props) => (
           <div className="row">
 
             </div>
-              <EncartBlanc
-                  text2="PressKit"
-              />
+
         <div className="marg">
-            <PressKitEncart
+            {/* <PressKitEncart
                 t1={"ENGLISH VERSION"}
                 t2={"Bio"}
                 t3={"Review"}
                 t4={"DOWNLOAD"}
-                l1={"dummy/press-kit-baron-crane.pdf"}
-            />
+                l1={"dummy/BARONCRANE_Pressbook_2023.pdf"}
+            /> */}
             <PressKitEncart
-                t1={"VERSION FRANCAISE"}
+                t1={"PRESS KIT"}
                 t2={"Bio"}
-                t3={"Presse"}
+                t3={"Presse / Review"}
                 t4={"TELECHARGER"}
-                l1={"dummy/dossier-presse-baron-crane.pdf"}
+                l1={"dummy/BARONCRANE_Pressbook_2023.pdf"}
             />
         </div>
       </div>

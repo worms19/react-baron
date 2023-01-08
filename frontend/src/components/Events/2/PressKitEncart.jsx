@@ -7,7 +7,7 @@ import {faFilePdf} from "@fortawesome/free-solid-svg-icons";
 
 const PressKitEncart = (props) => (
 
-  <div className="col-md-6 ">
+  <div className="col-md-8 col-md-offset-2 ">
     <div className="event-card">
       <div className="row">
         <div className="col-md-12 center">

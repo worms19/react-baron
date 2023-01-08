@@ -38,7 +38,7 @@ export default function Accueil() {
         >
           <div style={mb}>
             <a
-              href="https://marsredsky.bigcartel.com/products"
+              href="https://marsredsky.bigcartel.com/products?search=Baron"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -48,19 +48,19 @@ export default function Accueil() {
               />
             </a>
           </div>
-          <div className="center" style={mb}>
+          <div className="center" >
             <a
-              href="https://marsredsky.bigcartel.com/products"
+              href="https://marsredsky.bigcartel.com/products?search=Baron"
               target="_blank"
               rel="noopener noreferrer"
               className="vv"
             >
               <button className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-colorInherit buttonBlack vv">
-                PRE-ORDER
+                ORDER
               </button>
             </a>
           </div>
-          <YouTube videoId={"alta1B3zpCA"} onReady={() => {}} />
+
         </ModalAccueil>
       )}
       {!isMobile && (

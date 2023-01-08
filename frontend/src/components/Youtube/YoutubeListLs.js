@@ -5,7 +5,9 @@ import EncartYoutubeLs from './EncartYoutube/EncartYoutubeLs';
 const   YoutubeList = (props) => {
     const createYouLink = (youtubeLink, index, length) => {
         let prop ={};
-        prop.link= youtubeLink.link;
+  prop.link= youtubeLink.link;
+
+
         prop.onReady = index === (length-1) ? props.onReady : () => {};
         return  (<EncartYoutubeLs{ ...prop }/>);
     };
@@ -19,6 +21,7 @@ const   YoutubeList = (props) => {
       {youtubeLinks}
     </ul>
   );
+  
 };
 
 export default YoutubeList;
