@@ -60,7 +60,7 @@ const eventListLs = (props) => {
         />
 
         <section className="pastEvent">
-          <div className="container text-uppercase">
+          <div className=" text-uppercase">
             <div className="wrap">
               {pastEvent}
             </div>
