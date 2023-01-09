@@ -9,7 +9,7 @@ import {faCalendar} from "@fortawesome/free-regular-svg-icons/faCalendar";
 const EncartEventMd6 = (props) => (
 
   <div className="col-md-6 px-4 padded">
-    <div className="row event-card">
+    <div className="wrap event-card">
         <div className="col-3 date">
           <h3 className="dateSize flex  whiteText">
             {new Date(props.date).getDate()}
