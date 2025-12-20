@@ -35,7 +35,7 @@ export default defineConfig({
   optimizeDeps: {
     // This repo contains multiple legacy HTML files (CRA build artifacts).
     // Point the dependency scanner at the actual app entry instead.
-    entries: ["src/main.js"],
+    entries: ["src/main.jsx"],
     esbuildOptions: {
       // This codebase uses JSX in .js files extensively.
       jsx: "automatic",
