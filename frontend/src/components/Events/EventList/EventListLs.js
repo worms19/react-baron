@@ -4,7 +4,7 @@ import EncartBlanc from '../../Encart/EncartBlanc';
 import EncartEventMd6 from '../2/EncartEventMd6';
 import EncartEventMd12 from '../2/EncartEventMd12';
 
-const moment = require('moment');
+import moment from 'moment';
 
 const eventListLs = (props) => {
   const pastEvent = props.events

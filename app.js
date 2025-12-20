@@ -1,12 +1,12 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const graphQlHttp = require('express-graphql');
-const mongoose = require('mongoose');
-const path = require('path');
-require('dotenv').config();
-const graphQlSchema = require('./graphql/schema/index');
-const graphQlResolver = require('./graphql/resolvers/index');
-const isAuth = require('./middleware/is-auth');
+const express = require("express");
+const bodyParser = require("body-parser");
+const graphQlHttp = require("express-graphql");
+const mongoose = require("mongoose");
+const path = require("path");
+require("dotenv").config();
+const graphQlSchema = require("./graphql/schema/index");
+const graphQlResolver = require("./graphql/resolvers/index");
+const isAuth = require("./middleware/is-auth");
 
 const app = express();
 
@@ -17,10 +17,10 @@ var port = process.env.PORT || 8080;
 app.use(bodyParser.json());
 
 app.use((req, res, next) => {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'POST,GET,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-  if (req.method === 'OPTIONS') {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST,GET,OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type, Authorization");
+  if (req.method === "OPTIONS") {
     return res.sendStatus(200);
   }
   next();
@@ -28,24 +28,28 @@ app.use((req, res, next) => {
 
 app.use(isAuth);
 
-app.use('/graphql', graphQlHttp({
-  schema: graphQlSchema,
-  rootValue: graphQlResolver,
-  graphiql: true,
-}));
+app.use(
+  "/graphql",
+  graphQlHttp({
+    schema: graphQlSchema,
+    rootValue: graphQlResolver,
+    graphiql: true,
+  })
+);
 
-app.use(express.static('frontend/build'));
+app.use(express.static("frontend/dist"));
 //app.use(express.static(path.join(__dirname, 'frontend/build')));
 
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname+'/frontend/build/index.html'));
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname + "/frontend/dist/index.html"));
 });
 
-mongoose.connect(
- process.env.DB_CONNECTION,
-).then(() => {
-  console.log('application connecté sur le port ' + port);
-  app.listen(port, '51.83.129.201');
-}).catch((err) => {
-  console.log(err);
-});
+mongoose
+  .connect(process.env.DB_CONNECTION)
+  .then(() => {
+    console.log("application connecté sur le port " + port);
+    app.listen(port, "51.83.129.201");
+  })
+  .catch((err) => {
+    console.log(err);
+  });

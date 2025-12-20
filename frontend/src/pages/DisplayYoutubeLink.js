@@ -1,40 +1,34 @@
-import React, {Component} from 'react';
-import './CreationEvenement.css'
-import AuthContext from '../context/auth-context'
-import Spinner from '../components/Spinner/Spinner'
+import React, { Component } from "react";
+import "./CreationEvenement.css";
+import AuthContext from "../context/auth-context";
+import Spinner from "../components/Spinner/Spinner";
 import EncartBlanc from "../components/Encart/EncartBlanc";
 import YoutubeListLs from "../components/Youtube/YoutubeListLs";
 import Footer2 from "../components/Footer2/Footer2";
-import { useQuery } from '@apollo/react-hooks';
-import gql from "graphql-tag";
 
-class DisplayYoutubeLink extends Component{
+class DisplayYoutubeLink extends Component {
+  static contextType = AuthContext;
 
+  constructor(props) {
+    super(props);
+    this.finishLoading = this.finishLoading.bind(this);
+    this.state = {
+      creating: false,
+      youtubeLinks: [],
+      isLoading: true,
+      selectedYoutubeLink: null,
+      isDisplay: false,
+    };
+  }
 
+  componentDidMount() {
+    this.fetchYoutubeLinks();
+  }
 
-
-    static contextType = AuthContext;
-
-    constructor(props) {
-        super(props);
-        this.finishLoading = this.finishLoading.bind(this);
-        this.state= {
-            creating:false,
-            youtubeLinks:[],
-            isLoading: true,
-            selectedYoutubeLink: null,
-            isDisplay: false
-        };
-    }
-
-    componentDidMount() {
-        this.fetchYoutubeLinks();
-    }
-
-    fetchYoutubeLinks = () => {
-        this.setState({isLoading: true})
-        const requestBody = {
-            query: `
+  fetchYoutubeLinks = () => {
+    this.setState({ isLoading: true });
+    const requestBody = {
+      query: `
                 query {
                     youtubeLinks
                     {
@@ -42,80 +36,72 @@ class DisplayYoutubeLink extends Component{
                         link
                     }
                 }
-            `
-        };
-
-        const token = this.context.token;
-
-        fetch('https://www.baroncrane.com/graphql',{
-            method: 'POST',
-            body: JSON.stringify(requestBody),
-            headers: {
-                'Content-Type': 'application/json',
-
-            }
-        })
-            .then(res =>{
-                if(res.status !== 200 && res.status !== 201){
-                    throw new Error('Failed!');
-                }
-                return res.json();
-            })
-            .then(resData =>{
-                const youtubeLinks = [...resData.data.youtubeLinks];
-                const el3 = youtubeLinks.pop()
-                const el2 = youtubeLinks.pop()
-                const el1 = youtubeLinks.pop()
-                this.setState({youtubeLinks: [el1, el2, el3, ...youtubeLinks]});
-
-            })
-            .catch(err =>{
-                console.log(err)
-            });
+            `,
     };
 
-    finishLoading = () => {
-        this.setState({
-            isLoading:false,
-            isDisplay: true
-        });
+    const token = this.context.token;
+
+    fetch("https://www.baroncrane.com/graphql", {
+      method: "POST",
+      body: JSON.stringify(requestBody),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        if (res.status !== 200 && res.status !== 201) {
+          throw new Error("Failed!");
+        }
+        return res.json();
+      })
+      .then((resData) => {
+        const youtubeLinks = [...resData.data.youtubeLinks];
+        const el3 = youtubeLinks.pop();
+        const el2 = youtubeLinks.pop();
+        const el1 = youtubeLinks.pop();
+        this.setState({ youtubeLinks: [el1, el2, el3, ...youtubeLinks] });
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  finishLoading = () => {
+    this.setState({
+      isLoading: false,
+      isDisplay: true,
+    });
+  };
+
+  render() {
+    const noDisplay = {
+      display: "none",
     };
 
-    render(){
-        const noDisplay ={
-            display: 'none',
-
-        };
-
-
-        return(
-            <React.Fragment>
-                <div className="container">
-                            {this.state.isLoading
-                             &&
-                                   <Spinner/>
-                            }
-                            <div  style={!this.state.isDisplay ? noDisplay : {}}>
-                                <div className="slide-img bg-img"   >
-                                    <EncartBlanc text1 = {'See What NeWs'}
-                                                 text2 = {'Latest Videos'}
-                                                 size = {1}
-                                    />
-                                  <div className="background-grey">
-                                        <YoutubeListLs
-                                        youtubeLinks={this.state.youtubeLinks}
-                                        onReady={this.finishLoading}
-                                        />
-                                    </div>
-                            </div>
-                    </div>
-                </div>
-                <Footer2
-        isOn={true}
-        />
-            </React.Fragment>
-        );
-    }
+    return (
+      <React.Fragment>
+        <div className="container">
+          {this.state.isLoading && <Spinner />}
+          <div style={!this.state.isDisplay ? noDisplay : {}}>
+            <div className="slide-img bg-img">
+              <EncartBlanc
+                text1={"See What NeWs"}
+                text2={"Latest Videos"}
+                size={1}
+              />
+              <div className="background-grey">
+                <YoutubeListLs
+                  youtubeLinks={this.state.youtubeLinks}
+                  onReady={this.finishLoading}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <Footer2 isOn={true} />
+      </React.Fragment>
+    );
+  }
 }
 
-export default  DisplayYoutubeLink;
+export default DisplayYoutubeLink;

@@ -1,90 +1,75 @@
 import React from "react";
-// @material-ui/core components
-import { makeStyles } from "@material-ui/core/styles";
-import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import Header from "../MaterialUi/Header.js";
-import Button from "../MaterialUi/Button.js";
-import styles from "../MaterialUi/navbarsStyle.js";
-import {Link, NavLink} from "react-router-dom";
-import './Header2.css'
-import AuthContext from "../../context/auth-context";
+import { NavLink } from "react-router-dom";
+import "./Header2.css";
 
-const useStyles = makeStyles(styles);
+import AuthContext from "../../context/auth-context";
+import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
+
+const links = [
+  { to: "/eventpage", label: "Events" },
+  { to: "/contactPage", label: "Bookings" },
+  { to: "/youtubePage", label: "Youtube" },
+];
 
 export default function SectionNavbars2() {
-    const [mobileOpen2, setMobileOpen2] = React.useState(false);
-    const handleDrawerToggle2 = () => {
-        setMobileOpen2(!mobileOpen2);
-    };
-    const classes = useStyles();
   return (
-      <div className={classes.section}>
-        <div id="navbar" className={classes.navbar}>
-          <div
-              className={classes.navigation}
-          >
-            <Header
-                brand=""
-                color="transparent"
-                prout={mobileOpen2}
-                rightLinks={
-                    <AuthContext.Consumer>
-                        { (context) => (
-                  <List className={classes.list}>
-                    <ListItem className={classes.listItem}>
+    <AuthContext.Consumer>
+      {(context) => (
+        <header className="sticky top-0 z-40 w-full border-b bg-background/80 backdrop-blur">
+          <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4">
+            <NavLink
+              to="/eventpage"
+              className="text-sm font-semibold tracking-wide"
+            >
+              Admin
+            </NavLink>
+
+            <nav className="hidden items-center gap-2 md:flex">
+              {links.map((item) => (
+                <Button key={item.to} asChild variant="ghost" size="sm">
+                  <NavLink to={item.to}>{item.label}</NavLink>
+                </Button>
+              ))}
+              <Button variant="ghost" size="sm" onClick={context.logout}>
+                Logout
+              </Button>
+            </nav>
+
+            <div className="md:hidden">
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Button variant="ghost" size="icon" aria-label="Open menu">
+                    <Menu className="h-5 w-5" />
+                  </Button>
+                </SheetTrigger>
+                <SheetContent side="right" className="p-4">
+                  <div className="flex flex-col gap-2 pt-8">
+                    {links.map((item) => (
                       <Button
-                          color="transparent"
-                          className={
-                            classes.navLink + " " + classes.socialIconsButton
-                          }
+                        key={item.to}
+                        asChild
+                        variant="ghost"
+                        className="justify-start"
                       >
-                          <NavLink onClick={handleDrawerToggle2} to="/eventpage">Events</NavLink>
+                        <NavLink to={item.to}>{item.label}</NavLink>
                       </Button>
-                    </ListItem>
-                      <ListItem className={classes.listItem}>
-                      <Button
-                          color="transparent"
-                          className={
-                            classes.navLink + " " + classes.socialIconsButton
-                          }
-                      >
-                              <NavLink onClick={handleDrawerToggle2} to="/contactPage">Bookings</NavLink>
-                      </Button>
-                    </ListItem>
-                      <ListItem className={classes.listItem}>
-                          <Button
-                              color="transparent"
-                              className={
-                                  classes.navLink + " " + classes.socialIconsButton
-                              }
-
-                          >
-                              <NavLink onClick={handleDrawerToggle2} to="/youtubePage">Youtube</NavLink>
-
-                          </Button>
-                      </ListItem>
-                      <ListItem className={classes.listItem}>
-                          <Button
-                              color="transparent"
-                              className={
-                                  classes.navLink + " " + classes.socialIconsButton
-                              }
-                              onClick={context.logout}
-                          >
-                              Logout
-
-
-                          </Button>
-                      </ListItem>
-
-                  </List>
-                        )}
-                    </AuthContext.Consumer>
-                }
-            />
+                    ))}
+                    <Button
+                      variant="ghost"
+                      className="justify-start"
+                      onClick={context.logout}
+                    >
+                      Logout
+                    </Button>
+                  </div>
+                </SheetContent>
+              </Sheet>
+            </div>
           </div>
-        </div>
-      </div>
+        </header>
+      )}
+    </AuthContext.Consumer>
   );
 }
