@@ -1,9 +1,10 @@
 import React from "react";
+
 import EncartBlanc from "../components/Encart/EncartBlanc";
 import Footer2 from "../components/Footer2/Footer2";
 
-import { Dialog, DialogContent } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent } from "@/components/ui/dialog";
 
 export default class GalleryPhoto extends React.Component {
   constructor() {

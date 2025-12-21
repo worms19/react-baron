@@ -1,13 +1,13 @@
 .App {
   text-align: center;
 }
-@media (max-width:800px){
-h2 {
-    font-size: 1rem!important;
-}
+@media (max-width: 800px) {
+  h2 {
+    font-size: 1rem !important;
+  }
 }
 
-.baron{
+.baron {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -49,12 +49,12 @@ h2 {
   cursor: default;
 }
 
- .footerStyle  {
-  backgroundColor: purple;
-  fontSize: 20px;
+.footerStyle {
+  backgroundcolor: purple;
+  fontsize: 20px;
   color: white;
-  borderTop: 1px solid #E7E7E7;
-  textAlign: center;
+  bordertop: 1px solid #e7e7e7;
+  textalign: center;
   padding: 20px;
   position: fixed;
   left: 0;
@@ -63,7 +63,5 @@ h2 {
   width: 100%;
 }
 
- .imageEventLarge{
-
-
- }
+.imageEventLarge {
+}

@@ -1,0 +1,7 @@
+node_modules
+/dist
+/build
+/frontend/build
+*.min.js
+*.min.css
+/public

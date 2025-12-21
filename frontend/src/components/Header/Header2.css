@@ -1,25 +1,3 @@
-
-
-@media (min-width: 959.95px){
-
-.MuiButtonBase-root a {
-    color: white;
-    font-size:25px;
-}
-
-.MuiButtonBase-root:hover a {
-    text-decoration:none;
-}
-}
-@media (max-width: 959.95px){
-
-    .MuiButtonBase-root a {
-        color: black;
-
-    }
-
-    .MuiButtonBase-root:hover a {
-        text-decoration:none;
-    }
-}
-
+/* Legacy file kept intentionally empty.
+ * Material UI selectors were removed as the project now uses shadcn/ui.
+ */

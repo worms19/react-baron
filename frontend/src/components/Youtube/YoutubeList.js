@@ -1,6 +1,7 @@
-import React from 'react';
-import '../CSS/YoutubeList.css';
-import EncartYoutube from './EncartYoutube/EncartYoutube';
+import React from "react";
+
+import "../CSS/YoutubeList.css";
+import EncartYoutube from "./EncartYoutube/EncartYoutube";
 
 const YoutubeList = (props) => {
   const youtubeLinks = props.youtubeLinks.map((youtubeLink) => (
@@ -11,11 +12,7 @@ const YoutubeList = (props) => {
       deleteThisLink={props.onDeleteYoutubeLink}
     />
   ));
-  return (
-    <ul className="youtubeLink__list">
-      {youtubeLinks}
-    </ul>
-  );
+  return <ul className="youtubeLink__list">{youtubeLinks}</ul>;
 };
 
 export default YoutubeList;

@@ -16,7 +16,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 1000000;
   }
   .topBarAccueil {
@@ -44,8 +44,6 @@
 }
 
 .btn__Accueuil {
-
-
   /* align-self: center; */
   /* justify-self: end;*/
 }
@@ -66,7 +64,7 @@
   border-bottom: 20px;
 }
 
-.buttonA{
+.buttonA {
   font: inherit;
   position: absolute;
   top: 6px;

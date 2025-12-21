@@ -1,25 +1,25 @@
-.encule{
-    color: white;
+.encule {
+  color: white;
 }
 
-.bradcumbContent2{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    /* position: absolute; */
-    background-color: #bbb;
-    width: 50%;
-    margin: 0px 20%;
-    padding: 10px;
-    text-align: center;
-    border-radius: 15px;
-    height: 100px;
-    /*bottom: 30%; */
-    /*left: 50%; */
-    /*z-index: 100; */
-    /*text-align: center; */
-    /*padding-top: 20px; */
-    /*padding-bottom: 20px; */
-    /*-webkit-transform: translateX(-50%); */
-    /*transform: translateX(-50%);*/
+.bradcumbContent2 {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  /* position: absolute; */
+  background-color: #bbb;
+  width: 50%;
+  margin: 0px 20%;
+  padding: 10px;
+  text-align: center;
+  border-radius: 15px;
+  height: 100px;
+  /*bottom: 30%; */
+  /*left: 50%; */
+  /*z-index: 100; */
+  /*text-align: center; */
+  /*padding-top: 20px; */
+  /*padding-bottom: 20px; */
+  /*-webkit-transform: translateX(-50%); */
+  /*transform: translateX(-50%);*/
 }

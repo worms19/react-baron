@@ -61,22 +61,16 @@
 body {
   margin: 0;
   padding: 0;
- 
-
-
 }
-
-
-
 
 .form-control_ label,
 .form-control_ input,
-.form-control_ textarea{
+.form-control_ textarea {
   width: 100%;
   display: block;
 }
 
-.form-control_ label{
+.form-control_ label {
   margin-bottom: 0.5rem;
 }
 
@@ -99,8 +93,7 @@ body {
 .form-action_ button:hover,
 .form-action_ button:active,
 .btn_:hover,
-.btn_:active
-{
-  background:  #4268ff ;
-  border-color: #4268ff ;
+.btn_:active {
+  background: #4268ff;
+  border-color: #4268ff;
 }

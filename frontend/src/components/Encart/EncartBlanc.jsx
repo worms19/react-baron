@@ -1,5 +1,5 @@
-import React from 'react';
-import '../CSS/encart.css';
+import React from "react";
+import "../CSS/encart.css";
 
 const EncartBlanc = ({ text1, text2, size }) => (
   <section className="whitePage">

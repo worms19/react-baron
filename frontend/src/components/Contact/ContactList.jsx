@@ -1,10 +1,10 @@
-import React from 'react';
-import EncartContact from './EncartContact';
-import '../Events/EventList/EventList.css';
+import React from "react";
+
+import EncartContact from "./EncartContact";
+import "../Events/EventList/EventList.css";
 
 const ContactList = (props) => {
   const contacts = props.contacts.map((contactMessage, index) => (
-
     <EncartContact
       nom={contactMessage.nom}
       mail={contactMessage.mail}
@@ -19,12 +19,7 @@ const ContactList = (props) => {
     />
   ));
 
-  return (
-    <div className="container newBooking">
-      {contacts}
-    </div>
-  );
+  return <div className="container newBooking">{contacts}</div>;
 };
-
 
 export default ContactList;

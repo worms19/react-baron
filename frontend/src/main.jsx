@@ -1,11 +1,12 @@
-import React from 'react'
-import { createRoot } from 'react-dom/client'
-import './index.css'
-import App from './App'
+import React from "react";
+import { createRoot } from "react-dom/client";
 
-const container = document.getElementById('baronCrane')
+import "./index.css";
+import App from "./App";
+
+const container = document.getElementById("baronCrane");
 if (!container) {
-  throw new Error('Missing #baronCrane mount element')
+  throw new Error("Missing #baronCrane mount element");
 }
 
-createRoot(container).render(<App />)
+createRoot(container).render(<App />);

@@ -1,15 +1,13 @@
+import React from "react";
 
-import React from 'react';
-import helpers from '../../../helpers/date';
-import './E.css';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faFacebookF} from "@fortawesome/free-brands-svg-icons";
-import {faCalendar} from "@fortawesome/free-regular-svg-icons/faCalendar";
+import helpers from "../../../helpers/date";
 
+import "./E.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { faCalendar } from "@fortawesome/free-regular-svg-icons/faCalendar";
 
 const EncartEventMd12 = (props) => (
-
-
   <div className="col-md-12 padded">
     <div className="event-card">
       <div className="row">
@@ -28,12 +26,12 @@ const EncartEventMd12 = (props) => (
           <h4 className="whiteText">{props.nomEvenement}</h4>
           <div className="row">
             <div className="col-md-12 center">
-              <FontAwesomeIcon icon={faCalendar} color={"white"} className={"beige"}/>
-              <a
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={props.lienFb}
-              >
+              <FontAwesomeIcon
+                icon={faCalendar}
+                color={"white"}
+                className={"beige"}
+              />
+              <a target="_blank" rel="noopener noreferrer" href={props.lienFb}>
                 &nbsp;&nbsp;SEE EVENT
               </a>
             </div>
@@ -42,8 +40,6 @@ const EncartEventMd12 = (props) => (
       </div>
     </div>
   </div>
-
 );
-
 
 export default EncartEventMd12;

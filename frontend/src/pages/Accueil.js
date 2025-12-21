@@ -1,9 +1,13 @@
 import React, { useState } from "react";
+
 import Footer2 from "../components/Footer2/Footer2";
 import "./Accueil.css";
-import helpers from "../helpers/date";
 import ModalAccueil from "../components/Modal/ModalAccueil";
+import helpers from "../helpers/date";
+
 import YouTube from "react-youtube";
+
+import { Button } from "@/components/ui/button";
 
 const bottom = {
   position: "absolute",
@@ -48,25 +52,31 @@ export default function Accueil() {
               />
             </a>
           </div>
-          <div className="center" >
-            <a
-              href="https://marsredsky.bigcartel.com/products?search=Baron"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="vv"
-            >
-              <button className="MuiButtonBase-root MuiButton-root MuiButton-outlined MuiButton-colorInherit buttonBlack vv">
+          <div className="center">
+            <Button asChild variant="outline" className="buttonBlack vv">
+              <a
+                href="https://marsredsky.bigcartel.com/products?search=Baron"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="vv"
+              >
                 ORDER
-              </button>
-            </a>
+              </a>
+            </Button>
           </div>
-
         </ModalAccueil>
       )}
       {!isMobile && (
         <div className="bandCampPlayer">
-          
-          <iframe className="frame" src="https://bandcamp.com/EmbeddedPlayer/album=3686361986/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://baroncrane.bandcamp.com/album/les-beaux-jours">Les Beaux Jours by Baron Crâne</a></iframe>
+          <iframe
+            className="frame"
+            src="https://bandcamp.com/EmbeddedPlayer/album=3686361986/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/"
+            seamless
+          >
+            <a href="https://baroncrane.bandcamp.com/album/les-beaux-jours">
+              Les Beaux Jours by Baron Crâne
+            </a>
+          </iframe>
           {/* <iframe  src="https://bandcamp.com/EmbeddedPlayer/album=3686361986/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/artwork=small/transparent=true/" seamless><a href="https://baroncrane.bandcamp.com/album/les-beaux-jours">Les Beaux Jours by Baron Crâne</a></iframe> */}
         </div>
       )}
@@ -77,5 +87,3 @@ export default function Accueil() {
     </div>
   );
 }
-
-

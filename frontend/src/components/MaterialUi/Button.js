@@ -1,27 +1,12 @@
-import React from "react";
-// nodejs library to set properties for components
 import PropTypes from "prop-types";
-// nodejs library that concatenates classes
-import classNames from "classnames";
+import React from "react";
 
-// @material-ui/core components
-import makeStyles from "@material-ui/core/styles/makeStyles";
-import Button from "@material-ui/core/Button";
-import buttonStyle from "./buttonStyle";
-
-// core components
-
-
-const makeComponentStyles = makeStyles(() => ({
-  ...buttonStyle
-}));
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const RegularButton = React.forwardRef((props, ref) => {
   const {
-    color,
-    round,
     children,
-    fullWidth,
     disabled,
     simple,
     size,
@@ -32,43 +17,33 @@ const RegularButton = React.forwardRef((props, ref) => {
     ...rest
   } = props;
 
-  const classes = makeComponentStyles();
+  const variant = link ? "link" : simple ? "ghost" : "default";
+  const mappedSize = justIcon
+    ? "icon"
+    : size === "lg"
+      ? "lg"
+      : size === "sm"
+        ? "sm"
+        : "default";
 
-  const btnClasses = classNames({
-    [classes.button]: true,
-    [classes[size]]: size,
-    [classes[color]]: color,
-    [classes.round]: round,
-    [classes.fullWidth]: fullWidth,
-    [classes.disabled]: disabled,
-    [classes.simple]: simple,
-    [classes.block]: block,
-    [classes.link]: link,
-    [classes.justIcon]: justIcon,
-    [className]: className
-  });
   return (
-    <Button {...rest} ref={ref} className={btnClasses}>
+    <Button
+      {...rest}
+      ref={ref}
+      disabled={disabled}
+      variant={variant}
+      size={mappedSize}
+      className={cn(block ? "w-full" : null, className)}
+    >
       {children}
     </Button>
   );
 });
 
+RegularButton.displayName = "RegularButton";
+
 RegularButton.propTypes = {
-  color: PropTypes.oneOf([
-    "primary",
-    "info",
-    "success",
-    "warning",
-    "danger",
-    "rose",
-    "white",
-    "facebook",
-    "twitter",
-    "google",
-    "github",
-    "transparent"
-  ]),
+  color: PropTypes.any,
   size: PropTypes.oneOf(["sm", "lg"]),
   simple: PropTypes.bool,
   round: PropTypes.bool,
@@ -78,7 +53,7 @@ RegularButton.propTypes = {
   link: PropTypes.bool,
   justIcon: PropTypes.bool,
   children: PropTypes.node,
-  className: PropTypes.string
+  className: PropTypes.string,
 };
 
 export default RegularButton;

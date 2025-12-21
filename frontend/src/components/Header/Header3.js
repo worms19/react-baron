@@ -1,11 +1,11 @@
+import { Menu } from "lucide-react";
 import React from "react";
 import { NavLink } from "react-router-dom";
-import "./Header2.css";
 
 import AuthContext from "../../context/auth-context";
+
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
 
 const links = [
   { to: "/eventpage", label: "Events" },

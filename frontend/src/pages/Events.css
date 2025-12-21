@@ -1,17 +1,17 @@
 .events-control_ {
-    text-align: center;
-    border: 1px solid;
-    padding: 1rem;
-    margin: 2rem auto;
-    width: 30rem;
-    max-width: 80%;
-    background: whitesmoke;
+  text-align: center;
+  border: 1px solid;
+  padding: 1rem;
+  margin: 2rem auto;
+  width: 30rem;
+  max-width: 80%;
+  background: whitesmoke;
 }
 
-.caca{
-    height: 100vh   ;
+.caca {
+  height: 100vh;
 }
 
-.pr{
- min-height: 80vh;
+.pr {
+  min-height: 80vh;
 }

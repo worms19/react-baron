@@ -1,44 +1,41 @@
+import React from "react";
 
-import React from 'react';
-import helpers from '../../../helpers/date';
-import './E.css';
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faCalendar} from "@fortawesome/free-regular-svg-icons/faCalendar";
+import helpers from "../../../helpers/date";
 
+import "./E.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendar } from "@fortawesome/free-regular-svg-icons/faCalendar";
 
 const EncartEventMd6 = (props) => (
-
   <div className="col-md-6 px-4 padded">
     <div className="wrap event-card">
-        <div className="col-3 date">
-          <h3 className="dateSize flex  whiteText">
-            {new Date(props.date).getDate()}
-            <span>
-              {helpers.monthToString(new Date(props.date))}
-              <br />
-              {new Date(props.date).getFullYear()}
-            </span>
-          </h3>
-        </div>
-        <div className="col-8  center large ">
-          <span className="text-capitalize whiteText">{props.nomBar}</span>
-          <h4 className="whiteText">{props.nomEvenement}</h4>
+      <div className="col-3 date">
+        <h3 className="dateSize flex  whiteText">
+          {new Date(props.date).getDate()}
+          <span>
+            {helpers.monthToString(new Date(props.date))}
+            <br />
+            {new Date(props.date).getFullYear()}
+          </span>
+        </h3>
+      </div>
+      <div className="col-8  center large ">
+        <span className="text-capitalize whiteText">{props.nomBar}</span>
+        <h4 className="whiteText">{props.nomEvenement}</h4>
 
-          <div className="eventElement">
-
-          <FontAwesomeIcon icon={faCalendar} color={"white"} className={"beige"}/>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={props.lienFb}
-              >
-                &nbsp;&nbsp;SEE EVENT
-              </a>
-          </div>
+        <div className="eventElement">
+          <FontAwesomeIcon
+            icon={faCalendar}
+            color={"white"}
+            className={"beige"}
+          />
+          <a target="_blank" rel="noopener noreferrer" href={props.lienFb}>
+            &nbsp;&nbsp;SEE EVENT
+          </a>
         </div>
+      </div>
     </div>
   </div>
 );
-
 
 export default EncartEventMd6;

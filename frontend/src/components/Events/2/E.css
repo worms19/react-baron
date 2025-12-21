@@ -1,126 +1,122 @@
 .event-card {
-    background-color: black;
-    padding: 8px 5px;
-    margin-bottom: 4px;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
-    position: relative;
-    -webkit-transition: all .6s ease-in;
-    -moz-transition: all .6s ease-in;
-    -o-transition: all .6s ease-in;
-    transition: all .6s ease-in;
-    height: 100%;
+  background-color: black;
+  padding: 8px 5px;
+  margin-bottom: 4px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.3);
+  position: relative;
+  -webkit-transition: all 0.6s ease-in;
+  -moz-transition: all 0.6s ease-in;
+  -o-transition: all 0.6s ease-in;
+  transition: all 0.6s ease-in;
+  height: 100%;
 }
 
 .padded {
-    padding: 3px 3px !important;
+  padding: 3px 3px !important;
 }
 
 .date {
-    text-align: center;
-    color: white;
+  text-align: center;
+  color: white;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-    .date {
-        height: 100%;
-        border-right: 2px dashed #6e7183;
-    }
+.date {
+  height: 100%;
+  border-right: 2px dashed #6e7183;
+}
 
 .date h3 span {
-    font-size: 15px;
-    display: block;
-    color: #bbb;
+  font-size: 15px;
+  display: block;
+  color: #bbb;
 }
-.dateSize
-{
-font-size: 2.3rem;
+.dateSize {
+  font-size: 2.3rem;
 }
 .whiteText {
-    color: white;
+  color: white;
 }
-.col{
-    flex-direction: column;
+.col {
+  flex-direction: column;
 }
 
 .event-card:hover .whiteText {
-    -webkit-transition: all .6s ease-in;
-    -moz-transition: all .6s ease-in;
-    -o-transition: all .6s ease-in;
-    transition: all .6s ease-in;
-    color: black;
+  -webkit-transition: all 0.6s ease-in;
+  -moz-transition: all 0.6s ease-in;
+  -o-transition: all 0.6s ease-in;
+  transition: all 0.6s ease-in;
+  color: black;
 }
-.event-card:hover .date h3 span{
-    -webkit-transition: all .6s ease-in;
-    -moz-transition: all .6s ease-in;
-    -o-transition: all .6s ease-in;
-    transition: all .6s ease-in;
-    color: black;
-}
-
-.event-card:hover{
-    background: #d3d3d4;
-
+.event-card:hover .date h3 span {
+  -webkit-transition: all 0.6s ease-in;
+  -moz-transition: all 0.6s ease-in;
+  -o-transition: all 0.6s ease-in;
+  transition: all 0.6s ease-in;
+  color: black;
 }
 
-.center{
-    text-align: center;
+.event-card:hover {
+  background: #d3d3d4;
 }
 
-.text-right{
-    text-align: right;
+.center {
+  text-align: center;
 }
 
-.border-right{
-    border-right: 3px solid;
+.text-right {
+  text-align: right;
 }
 
-.inline{
-    padding-right: 10px;
-    display: inline-block;
-    position: relative;
+.border-right {
+  border-right: 3px solid;
 }
 
-.beige{
-    color: #a7b7c1;
-    -webkit-transition: all .6s ease-in;
-    -moz-transition: all .6s ease-in;
-    -o-transition: all .6s ease-in;
-    transition: all .6s ease-in;
+.inline {
+  padding-right: 10px;
+  display: inline-block;
+  position: relative;
+}
+
+.beige {
+  color: #a7b7c1;
+  -webkit-transition: all 0.6s ease-in;
+  -moz-transition: all 0.6s ease-in;
+  -o-transition: all 0.6s ease-in;
+  transition: all 0.6s ease-in;
 }
 .your-item span:first-child::after {
-    position: absolute;
-    content: '-';
-    top: 0;
-    right: -6px;
-    z-index: 1;
-    color: #ddd;
-    position: relative;
-    -webkit-transition: all .6s ease-in;
-    -moz-transition: all .6s ease-in;
-    -o-transition: all .6s ease-in;
-    transition: all .6s ease-in;
+  position: absolute;
+  content: "-";
+  top: 0;
+  right: -6px;
+  z-index: 1;
+  color: #ddd;
+  position: relative;
+  -webkit-transition: all 0.6s ease-in;
+  -moz-transition: all 0.6s ease-in;
+  -o-transition: all 0.6s ease-in;
+  transition: all 0.6s ease-in;
 }
 
- .event-card:hover .your-item span:first-child::after,
- .event-card:hover .beige {
-    color: #000000;
+.event-card:hover .your-item span:first-child::after,
+.event-card:hover .beige {
+  color: #000000;
 }
 
-
-.large{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.large {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.eventText{
-    margin: auto;
+.eventText {
+  margin: auto;
 }
 
-.eventElement{
-    margin-bottom: 7px;
-
+.eventElement {
+  margin-bottom: 7px;
 }
