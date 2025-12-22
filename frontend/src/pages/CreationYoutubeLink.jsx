@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+
 import Modal from "../components/Modal/Modal";
 import "./CreationEvenement.css";
-import AuthContext from "../context/auth-context";
 import Spinner from "../components/Spinner/Spinner";
 import YoutubeList from "../components/Youtube/YoutubeList";
+import AuthContext from "../context/auth-context";
 
 class YoutubeLinkPage extends Component {
   state = {
@@ -51,9 +52,15 @@ class YoutubeLinkPage extends Component {
       body: JSON.stringify(requestBody),
       headers: {
         "Content-Type": "application/json",
+        Authorization: "Bearer " + token,
       },
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.status !== 200 && res.status !== 201) {
+          throw new Error("Failed!");
+        }
+        return res.json();
+      })
       .then((resData) => {
         this.setState((prevState) => {
           const updatedYoutubeLink = [...prevState.youtubeLinks];
@@ -96,7 +103,12 @@ class YoutubeLinkPage extends Component {
         "Content-Type": "application/json",
       },
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.status !== 200 && res.status !== 201) {
+          throw new Error("Failed!");
+        }
+        return res.json();
+      })
       .then((resData) => {
         const youtubeLinks = resData.data.youtubeLinks;
         this.setState({ youtubeLinks: youtubeLinks, isLoading: false });
@@ -127,9 +139,15 @@ class YoutubeLinkPage extends Component {
       body: JSON.stringify(requestBody),
       headers: {
         "Content-Type": "application/json",
+        Authorization: "Bearer " + token,
       },
     })
-      .then((res) => res.json())
+      .then((res) => {
+        if (res.status !== 200 && res.status !== 201) {
+          throw new Error("Failed!");
+        }
+        return res.json();
+      })
       .then((resData) => {
         this.setState((prevState) => {
           const updatedYoutubeLinks = prevState.youtubeLinks.filter(

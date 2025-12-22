@@ -1,11 +1,9 @@
-import React from "react";
+import moment from "moment";
 
-import "./EventList.css";
 import EncartBlanc from "../../Encart/EncartBlanc";
 import EncartEventMd12 from "../2/EncartEventMd12";
 import EncartEventMd6 from "../2/EncartEventMd6";
-
-import moment from "moment";
+import "./EventList.css";
 
 const eventListLs = (props) => {
   const pastEvent = props.events
